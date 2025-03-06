@@ -1,0 +1,15 @@
+--- /src/java/org/apache/commons/codec/binary/Base64.java
++++ /src/java/org/apache/commons/codec/binary/Base64.java
+@@ -443,7 +443,11 @@
+                     }
+                     break;
+             }
+-            if (lineLength > 0) {
++                    }
++
++        if (lineSeparator!= null) {
++            // line separator
++            if (lineSeparator.length > 0) {
+                 System.arraycopy(lineSeparator, 0, buf, pos, lineSeparator.length);
+                 pos += lineSeparator.length;
+             }

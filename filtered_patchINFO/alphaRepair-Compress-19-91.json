@@ -1,0 +1,7 @@
+{
+    "ID": "alphaRepair-Compress-19-91",
+    "tool": "alphaRepair",
+    "correctness": "-",
+    "bug_id": "19",
+    "project": "Compress"
+}

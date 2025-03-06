@@ -1,0 +1,7 @@
+{
+    "ID": "simfix_patches-Lang-59-150",
+    "tool": "simfix_patches",
+    "correctness": "-",
+    "bug_id": "59",
+    "project": "Lang"
+}

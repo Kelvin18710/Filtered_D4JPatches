@@ -1,0 +1,14 @@
+--- /src/main/java/org/apache/commons/math/stat/Frequency.java
++++ /src/main/java/org/apache/commons/math/stat/Frequency.java
+@@ -299,9 +299,8 @@
+      * @deprecated replaced by {@link #getPct(Comparable)} as of 2.0
+      */
+     @Deprecated
+-    public double getPct(Object v) {
+-        return getCumPct((Comparable<?>) v);
+-    }
++public double getPct(Object v) {
++return getCumPct().getCumPct(v);    }
+ 
+     /**
+      * Returns the percentage of values that are equal to v

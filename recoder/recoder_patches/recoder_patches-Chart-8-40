@@ -1,0 +1,17 @@
+--- /source/org/jfree/data/time/Week.java
++++ /source/org/jfree/data/time/Week.java
+@@ -170,10 +170,11 @@
+      *
+      * @deprecated As of 1.0.7, use {@link #Week(Date, TimeZone, Locale)}.
+      */
+-    public Week(Date time, TimeZone zone) {
++public Week(Date time, TimeZone zone) {
+         // defer argument checking...
+-        this(time, RegularTimePeriod.DEFAULT_TIME_ZONE, Locale.getDefault());
+-    }
++if((time != null)){
++}
++        this(time, RegularTimePeriod.DEFAULT_TIME_ZONE, Locale.getDefault());    }
+ 
+     /**
+      * Creates a time period for the week in which the specified date/time

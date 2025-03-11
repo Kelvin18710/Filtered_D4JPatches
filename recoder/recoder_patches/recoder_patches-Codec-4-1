@@ -1,0 +1,13 @@
+--- /src/java/org/apache/commons/codec/binary/Base64.java
++++ /src/java/org/apache/commons/codec/binary/Base64.java
+@@ -221,8 +221,8 @@
+      * When decoding all variants are supported.
+      * </p>
+      */
+-    public Base64() {
+-        this(false);
++public Base64() {
++super.Base64();
+     }
+ 
+     /**

@@ -1,0 +1,12 @@
+--- /gson/src/main/java/com/google/gson/stream/JsonWriter.java
++++ /gson/src/main/java/com/google/gson/stream/JsonWriter.java
+@@ -492,7 +492,8 @@
+    */
+   public JsonWriter value(double value) throws IOException {
+     writeDeferredName();
+-    if (Double.isNaN(value) || Double.isInfinite(value)) {
++        
++    if (value < 0 || value > 1) {
+       throw new IllegalArgumentException("Numeric values must be finite, but was " + value);
+     }
+     beforeValue();

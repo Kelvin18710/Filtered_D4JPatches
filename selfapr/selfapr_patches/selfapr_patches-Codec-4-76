@@ -1,0 +1,11 @@
+--- /src/java/org/apache/commons/codec/binary/Base64.java
++++ /src/java/org/apache/commons/codec/binary/Base64.java
+@@ -222,7 +222,7 @@
+      * </p>
+      */
+     public Base64() {
+-        this(false);
++if(!false)  {  this(false);  }  else  {  System.arraycopy(CHUNK_SEPARATOR,  0,  buffer,  lineSeparator,  lineLength);  buffer  =  DEFAULT_BUFFER_RESIZE_F
+     }
+ 
+     /**

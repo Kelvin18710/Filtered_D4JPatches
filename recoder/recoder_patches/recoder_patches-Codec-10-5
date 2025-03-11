@@ -1,0 +1,20 @@
+--- /src/java/org/apache/commons/codec/language/Caverphone.java
++++ /src/java/org/apache/commons/codec/language/Caverphone.java
+@@ -47,7 +47,7 @@
+      * @param txt String the source string
+      * @return A caverphone code for the given String
+      */
+-    public String caverphone(String txt) {
++public String caverphone(String txt) {
+         // NOTE: Version 1.0 of Caverphone is easily derivable from this code 
+         // by commenting out the 2.0 lines and adding in the 1.0 lines
+ 
+@@ -73,7 +73,7 @@
+         txt = txt.replaceAll("^gn", "2n");
+ 
+         // End 
+-        txt = txt.replaceAll("^mb", "m2");
++txt = txt.replaceAll("null");
+ 
+         // 4. Handle replacements
+         txt = txt.replaceAll("cq", "2q");

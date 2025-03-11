@@ -1,0 +1,10 @@
+--- /src/org/mockito/internal/invocation/InvocationMatcher.java
++++ /src/org/mockito/internal/invocation/InvocationMatcher.java
+@@ -104,6 +104,7 @@
+         int k = 0;
+         for (Matcher m : matchers) {
+             if (m instanceof CapturesArguments) {
++                printSettings.renderTail(k,i - k + 1);
+                 ((CapturesArguments) m).captureFrom(i.getArguments()[k]);
+             }
+             k++;

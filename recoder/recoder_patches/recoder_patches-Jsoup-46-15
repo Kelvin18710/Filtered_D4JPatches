@@ -1,0 +1,20 @@
+--- /src/main/java/org/jsoup/nodes/Entities.java
++++ /src/main/java/org/jsoup/nodes/Entities.java
+@@ -76,7 +76,7 @@
+     }
+ 
+     // this method is ugly, and does a lot. but other breakups cause rescanning and stringbuilder generations
+-    static void escape(StringBuilder accum, String string, Document.OutputSettings out,
++static void escape(StringBuilder accum, String string, Document.OutputSettings out,
+                        boolean inAttribute, boolean normaliseWhite, boolean stripLeadingWhite) {
+ 
+         boolean lastWasWhite = false;
+@@ -115,7 +115,7 @@
+                         if (escapeMode != EscapeMode.xhtml)
+                             accum.append("&nbsp;");
+                         else
+-                            accum.append(c);
++accum.append("null").append(map.get(c)).append("null");
+                         break;
+                     case '<':
+                         if (!inAttribute)

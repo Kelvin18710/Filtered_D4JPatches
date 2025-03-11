@@ -1,0 +1,21 @@
+--- /src/main/java/org/jsoup/parser/HtmlTreeBuilder.java
++++ /src/main/java/org/jsoup/parser/HtmlTreeBuilder.java
+@@ -379,7 +379,7 @@
+         queue.set(i, in);
+     }
+ 
+-    void resetInsertionMode() {
++void resetInsertionMode() {
+         boolean last = false;
+         for (int pos = stack.size() -1; pos >= 0; pos--) {
+             Element node = stack.get(pos);
+@@ -391,8 +391,7 @@
+             if ("select".equals(name)) {
+                 transition(HtmlTreeBuilderState.InSelect);
+                 break; // frag
+-            } else if (("td".equals(name) || "td".equals(name) && !last)) {
+-                transition(HtmlTreeBuilderState.InCell);
++            } else if (("td".equals(name) || "td".equals(name) && !last)) {                transition(HtmlTreeBuilderState.InCell);
+                 break;
+             } else if ("tr".equals(name)) {
+                 transition(HtmlTreeBuilderState.InRow);

@@ -1,0 +1,22 @@
+--- /src/main/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java
++++ /src/main/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java
+@@ -1945,7 +1945,7 @@
+         return JsonToken.VALUE_STRING;
+     }
+ 
+-    private String _handleOddName2(int startPtr, int hash, int[] codes) throws IOException
++private String _handleOddName2(int startPtr, int hash, int[] codes) throws IOException
+     {
+         _textBuffer.resetWithShared(_inputBuffer, startPtr, (_inputPtr - startPtr));
+         char[] outBuf = _textBuffer.getCurrentSegment();
+@@ -1960,8 +1960,8 @@
+             }
+             char c = _inputBuffer[_inputPtr];
+             int i = (int) c;
+-            if (i <= maxCode) {
+-                if (codes[i] != 0) {
++Character._updateLocation();
++            if (i <= maxCode) {                if (codes[i] != 0) {
+                     break;
+                 }
+             } else if (!Character.isJavaIdentifierPart(c)) {

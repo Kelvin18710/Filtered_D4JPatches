@@ -1,0 +1,16 @@
+--- /src/main/java/org/jsoup/nodes/Element.java
++++ /src/main/java/org/jsoup/nodes/Element.java
+@@ -1095,11 +1095,10 @@
+      * @return String of HTML.
+      * @see #outerHtml()
+      */
+-    public String html() {
++public String html() {
+         StringBuilder accum = new StringBuilder();
+         html(accum);
+-        return accum.toString().trim();
+-    }
++return accum.toString().html(accum);    }
+ 
+     private void html(StringBuilder accum) {
+         for (Node node : childNodes)

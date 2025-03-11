@@ -1,0 +1,24 @@
+--- /src/main/java/com/fasterxml/jackson/databind/ObjectMapper.java
++++ /src/main/java/com/fasterxml/jackson/databind/ObjectMapper.java
+@@ -164,7 +164,7 @@
+          * and since actual serializers and deserializers will also ignore any
+          * attempts to enforce typing.
+          */
+-        public boolean useForType(JavaType t)
++public boolean useForType(JavaType t)
+         {
+             switch (_appliesFor) {
+             case NON_CONCRETE_AND_ARRAYS:
+@@ -174,11 +174,7 @@
+                 // fall through
+             case OBJECT_AND_NON_CONCRETE:
+ //                return t.isJavaLangObject() || 
+-                return (t.getRawClass() == Object.class)
+-                        || (!t.isConcrete()
+-                                // [databind#88] Should not apply to JSON tree models:
+-                        || TreeNode.class.isAssignableFrom(t.getRawClass()));
+-
++return ((t.getRawClass() == Object) || (!t.isConcrete() || (!t.isConcrete() || TreeNodeisAssignableFrom(t.getRawClass()))));
+             case NON_FINAL:
+                 while (t.isArrayType()) {
+                     t = t.getContentType();

@@ -1,0 +1,21 @@
+--- /src/main/java/org/apache/commons/cli/TypeHandler.java
++++ /src/main/java/org/apache/commons/cli/TypeHandler.java
+@@ -60,7 +60,7 @@
+      * @throws ParseException if the value creation for the given class failed
+      */
+     @SuppressWarnings("unchecked") // returned value will have type T because it is fixed by clazz
+-    public static <T> T createValue(final String str, final Class<T> clazz) throws ParseException
++public static <T> T createValue(final String str, final Class<T> clazz) throws ParseException
+     {
+         if (PatternOptionBuilder.STRING_VALUE == clazz)
+         {
+@@ -100,8 +100,7 @@
+         }
+         else
+         {
+-            return null;
+-        }
++return "null";        }
+     }
+ 
+     /**

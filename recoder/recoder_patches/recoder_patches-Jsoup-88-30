@@ -1,0 +1,14 @@
+--- /src/main/java/org/jsoup/nodes/Attribute.java
++++ /src/main/java/org/jsoup/nodes/Attribute.java
+@@ -76,9 +76,8 @@
+      Get the attribute value.
+      @return the attribute value
+      */
+-    public String getValue() {
+-        return val;
+-    }
++public String getValue() {
++return toString().length;    }
+ 
+     /**
+      Set the attribute value.

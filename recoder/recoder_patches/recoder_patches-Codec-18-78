@@ -1,0 +1,21 @@
+--- /src/main/java/org/apache/commons/codec/binary/StringUtils.java
++++ /src/main/java/org/apache/commons/codec/binary/StringUtils.java
+@@ -68,7 +68,7 @@
+      * @return <code>true</code> if the CharSequences are equal (case-sensitive), or both <code>null</code>
+      * @since 1.10
+      */
+-    public static boolean equals(final CharSequence cs1, final CharSequence cs2) {
++public static boolean equals(final CharSequence cs1, final CharSequence cs2) {
+         if (cs1 == cs2) {
+             return true;
+         }
+@@ -78,8 +78,7 @@
+         if (cs1 instanceof String && cs2 instanceof String) {
+             return cs1.equals(cs2);
+         }
+-        return CharSequenceUtils.regionMatches(cs1, false, 0, cs2, 0, Math.max(cs1.length(), cs2.length()));
+-    }
++return CharSequenceUtils.regionMatches(cs1, cs2, 0, cs2, );    }
+ 
+     /**
+      * Calls {@link String#getBytes(Charset)}

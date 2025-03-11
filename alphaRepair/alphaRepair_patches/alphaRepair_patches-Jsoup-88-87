@@ -1,0 +1,14 @@
+--- /src/main/java/org/jsoup/nodes/Attribute.java
++++ /src/main/java/org/jsoup/nodes/Attribute.java
+@@ -77,7 +77,10 @@
+      @return the attribute value
+      */
+     public String getValue() {
+-        return val;
++                Validate.notNull(val);
++        this.val = val;
++        this.parent = parent;
++        //return val;
+     }
+ 
+     /**

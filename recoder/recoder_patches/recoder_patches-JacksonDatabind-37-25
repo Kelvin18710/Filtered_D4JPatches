@@ -1,0 +1,23 @@
+--- /src/main/java/com/fasterxml/jackson/databind/type/SimpleType.java
++++ /src/main/java/com/fasterxml/jackson/databind/type/SimpleType.java
+@@ -117,7 +117,7 @@
+     }
+ 
+     @Override
+-    protected JavaType _narrow(Class<?> subclass)
++protected JavaType _narrow(Class<?> subclass)
+     {
+         if (_class == subclass) {
+             return this;
+@@ -132,9 +132,9 @@
+         }
+         */
+         // 15-Jan-2015, tatu: Not correct; should really re-resolve...
++super._narrow();
+         return new SimpleType(subclass, _bindings, _superClass, _superInterfaces,
+-                _valueHandler, _typeHandler, _asStatic);
+-    }
++                _valueHandler, _typeHandler, _asStatic);    }
+     
+     @Override
+     public JavaType withContentType(JavaType contentType) {

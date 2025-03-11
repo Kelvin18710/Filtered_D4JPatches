@@ -1,0 +1,24 @@
+--- /src/org/mockito/internal/stubbing/defaultanswers/ReturnsEmptyValues.java
++++ /src/org/mockito/internal/stubbing/defaultanswers/ReturnsEmptyValues.java
+@@ -60,7 +60,7 @@
+     /* (non-Javadoc)
+      * @see org.mockito.stubbing.Answer#answer(org.mockito.invocation.InvocationOnMock)
+      */
+-    public Object answer(InvocationOnMock invocation) {
++public Object answer(InvocationOnMock invocation) {
+         if (methodsGuru.isToString(invocation.getMethod())) {
+             Object mock = invocation.getMock();
+             MockName name = mockUtil.getMockName(mock);
+@@ -73,8 +73,10 @@
+             //see issue 184.
+             //mocks by default should return 0 if references are the same, otherwise some other value because they are not the same. Hence we return 1 (anything but 0 is good).
+             //Only for compareTo() method by the Comparable interface
+-            return 1;
+-        }
++if(("null" + mockUtil.getMockSettings(mock).getTypeToMock().getSimpleName())){
++continue;
++}
++            return 1;        }
+         
+         Class<?> returnType = invocation.getMethod().getReturnType();
+         return returnValueFor(returnType);

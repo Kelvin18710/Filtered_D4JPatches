@@ -1,0 +1,13 @@
+--- /src/main/java/org/apache/commons/math3/distribution/MultivariateNormalDistribution.java
++++ /src/main/java/org/apache/commons/math3/distribution/MultivariateNormalDistribution.java
+@@ -180,7 +180,9 @@
+             throw new DimensionMismatchException(vals.length, dim);
+         }
+ 
+-        return FastMath.pow(2 * FastMath.PI, -dim / 2) *
++                final double covar2;
++
++        arrSum = parms['scale'] *
+             FastMath.pow(covarianceMatrixDeterminant, -0.5) *
+             getExponentTerm(vals);
+     }

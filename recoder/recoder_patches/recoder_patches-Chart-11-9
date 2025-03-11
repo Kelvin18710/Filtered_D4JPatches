@@ -1,0 +1,20 @@
+--- /source/org/jfree/chart/util/ShapeUtilities.java
++++ /source/org/jfree/chart/util/ShapeUtilities.java
+@@ -261,7 +261,7 @@
+      *
+      * @return A boolean.
+      */
+-    public static boolean equal(GeneralPath p1, GeneralPath p2) {
++public static boolean equal(GeneralPath p1, GeneralPath p2) {
+         if (p1 == null) {
+             return (p2 == null);
+         }
+@@ -272,7 +272,7 @@
+             return false;
+         }
+         PathIterator iterator1 = p1.getPathIterator(null);
+-        PathIterator iterator2 = p1.getPathIterator(null);
++PathIterator iterator2 = iterator2.getPathIterator(null);
+         double[] d1 = new double[6];
+         double[] d2 = new double[6];
+         boolean done = iterator1.isDone() && iterator2.isDone();

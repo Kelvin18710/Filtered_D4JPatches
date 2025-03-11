@@ -1,0 +1,11 @@
+--- /src/java/org/apache/commons/codec/binary/Base64.java
++++ /src/java/org/apache/commons/codec/binary/Base64.java
+@@ -222,7 +222,7 @@
+      * </p>
+      */
+     public Base64() {
+-        this(false);
++this(contains(DEFAULT_BUFFER_SIZE_FACTOR,  DEFAULT_BUFFER_SIZE_FACTOR,  DEFAULT_BUFFER_SIZE_BASE_SIZE_FACTOR
+     }
+ 
+     /**

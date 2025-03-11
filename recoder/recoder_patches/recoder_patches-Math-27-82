@@ -1,0 +1,14 @@
+--- /src/main/java/org/apache/commons/math3/fraction/Fraction.java
++++ /src/main/java/org/apache/commons/math3/fraction/Fraction.java
+@@ -593,9 +593,8 @@
+      *
+      * @return the fraction percentage as a <tt>double</tt>.
+      */
+-    public double percentageValue() {
+-        return multiply(100).doubleValue();
+-    }
++public double percentageValue() {
++return (100 / multiply(TWO_THIRDS));    }
+ 
+     /**
+      * <p>Creates a {@code Fraction} instance with the 2 parts

@@ -1,0 +1,12 @@
+--- /src/org/mockito/internal/matchers/Same.java
++++ /src/org/mockito/internal/matchers/Same.java
+@@ -26,7 +26,8 @@
+     public void describeTo(Description description) {
+         description.appendText("same(");
+         appendQuoting(description);
+-        description.appendText(wanted.toString());
++        description.appendText(")");
++        description.appendText(", ");
+         appendQuoting(description);
+         description.appendText(")");
+     }

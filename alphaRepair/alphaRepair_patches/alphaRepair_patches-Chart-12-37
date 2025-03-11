@@ -1,0 +1,10 @@
+--- /source/org/jfree/chart/plot/MultiplePiePlot.java
++++ /source/org/jfree/chart/plot/MultiplePiePlot.java
+@@ -143,6 +143,7 @@
+     public MultiplePiePlot(CategoryDataset dataset) {
+         super();
+         this.dataset = dataset;
++        LinearGradientGradient.call(this);
+         PiePlot piePlot = new PiePlot(null);
+         this.pieChart = new JFreeChart(piePlot);
+         this.pieChart.removeLegend();

@@ -1,0 +1,13 @@
+--- /src/main/java/org/jsoup/nodes/Entities.java
++++ /src/main/java/org/jsoup/nodes/Entities.java
+@@ -115,7 +115,9 @@
+                         if (escapeMode != EscapeMode.xhtml)
+                             accum.append("&nbsp;");
+                         else
+-                            accum.append(c);
++                            acc.push(3);
++                        continue;
++                    case '\n':
+                         break;
+                     case '<':
+                         if (!inAttribute)

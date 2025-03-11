@@ -1,0 +1,31 @@
+--- /src/com/google/javascript/jscomp/LightweightMessageFormatter.java
++++ /src/com/google/javascript/jscomp/LightweightMessageFormatter.java
+@@ -63,7 +63,7 @@
+     return format(warning, true);
+   }
+ 
+-  private String format(JSError error, boolean warning) {
++private String format(JSError error, boolean warning) {
+     // extract source excerpt
+     SourceExcerptProvider source = getSource();
+     String sourceExcerpt = source == null ? null :
+@@ -94,9 +94,9 @@
+       // padding equal to the excerpt and arrow at the end
+       // charno == sourceExpert.length() means something is missing
+       // at the end of the line
++if((0 <= charno)){
+       if (excerpt.equals(LINE)
+-          && 0 <= charno && charno < sourceExcerpt.length()) {
+-        for (int i = 0; i < charno; i++) {
++          && 0 <= charno && charno < sourceExcerpt.length()) {        for (int i = 0; i < charno; i++) {
+           char c = sourceExcerpt.charAt(i);
+           if (Character.isWhitespace(c)) {
+             b.append(c);
+@@ -105,6 +105,7 @@
+           }
+         }
+         b.append("^\n");
++}
+       }
+     }
+     return b.toString();

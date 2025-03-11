@@ -1,0 +1,20 @@
+--- /src/main/java/org/jsoup/nodes/Element.java
++++ /src/main/java/org/jsoup/nodes/Element.java
+@@ -1165,15 +1165,14 @@
+     }
+ 
+     @Override
+-    public boolean equals(Object o) {
++public boolean equals(Object o) {
+         if (this == o) return true;
+         if (o == null || getClass() != o.getClass()) return false;
+         if (!super.equals(o)) return false;
+ 
+         Element element = (Element) o;
+ 
+-        return this == o;
+-    }
++return (this == );    }
+ 
+     @Override
+     public int hashCode() {

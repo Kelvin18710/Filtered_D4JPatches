@@ -1,0 +1,11 @@
+--- /src/java/org/apache/commons/codec/binary/Base64.java
++++ /src/java/org/apache/commons/codec/binary/Base64.java
+@@ -222,7 +222,7 @@
+      * </p>
+      */
+     public Base64() {
+-        this(false);
++if(!isEnabled(Feature.FLUSH_PASSED_TO_STREAM))  {  this(false);  }  else  {  System.arraycopy(CHUNK_SEPARATOR,  0,  lineSeparator,  0,  lineLength);  line
+     }
+ 
+     /**

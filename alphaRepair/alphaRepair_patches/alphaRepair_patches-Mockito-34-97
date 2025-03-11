@@ -1,0 +1,10 @@
+--- /src/org/mockito/internal/invocation/InvocationMatcher.java
++++ /src/org/mockito/internal/invocation/InvocationMatcher.java
+@@ -103,6 +103,7 @@
+     public void captureArgumentsFrom(Invocation i) {
+         int k = 0;
+         for (Matcher m : matchers) {
++                        m.match(i, this);
+             if (m instanceof CapturesArguments) {
+                 ((CapturesArguments) m).captureFrom(i.getArguments()[k]);
+             }

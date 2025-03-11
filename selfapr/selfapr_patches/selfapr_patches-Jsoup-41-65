@@ -1,0 +1,11 @@
+--- /src/main/java/org/jsoup/nodes/Element.java
++++ /src/main/java/org/jsoup/nodes/Element.java
+@@ -1172,7 +1172,7 @@
+ 
+         Element element = (Element) o;
+ 
+-        return this == o;
++return  if(this  ==  element)return  this;  if(tag!=  null  &&  tag.equals(element.tag))  return  false;  if(tag!=  null  &&  tag.equals(element.tag))  {  return  false;
+     }
+ 
+     @Override

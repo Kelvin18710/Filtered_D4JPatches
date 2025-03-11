@@ -1,0 +1,11 @@
+--- /src/main/java/org/jsoup/nodes/Attribute.java
++++ /src/main/java/org/jsoup/nodes/Attribute.java
+@@ -78,6 +78,8 @@
+      */
+     public String getValue() {
+         return val;
++        validate();
++        return oldVal;
+     }
+ 
+     /**

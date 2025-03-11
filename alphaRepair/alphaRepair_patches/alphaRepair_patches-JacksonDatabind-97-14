@@ -1,0 +1,10 @@
+--- /src/main/java/com/fasterxml/jackson/databind/node/POJONode.java
++++ /src/main/java/com/fasterxml/jackson/databind/node/POJONode.java
+@@ -111,6 +111,7 @@
+         } else {
+             // 25-May-2018, tatu: [databind#1991] do not call via generator but through context;
+             //    this to preserve contextual information
++             of fields
+             gen.writeObject(_value);
+         }
+     }

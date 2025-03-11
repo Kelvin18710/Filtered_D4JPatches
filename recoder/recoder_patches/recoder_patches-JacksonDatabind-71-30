@@ -1,0 +1,23 @@
+--- /src/main/java/com/fasterxml/jackson/databind/deser/std/StdKeyDeserializer.java
++++ /src/main/java/com/fasterxml/jackson/databind/deser/std/StdKeyDeserializer.java
+@@ -67,13 +67,12 @@
+         _deser = deser;
+     }
+ 
+-    public static StdKeyDeserializer forType(Class<?> raw)
++public static StdKeyDeserializer forType(Class<?> raw)
+     {
+         int kind;
+ 
+         // first common types:
+-        if (raw == String.class || raw == Object.class) {
+-            return StringKD.forType(raw);
++if(((raw && String) || (raw == Object))){            return StringKD.forType(raw);
+         } else if (raw == UUID.class) {
+             kind = TYPE_UUID;
+         } else if (raw == Integer.class) {
+@@ -412,4 +411,3 @@
+         }
+     }
+ }
+-

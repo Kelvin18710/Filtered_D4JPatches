@@ -1,0 +1,20 @@
+--- /src/main/java/com/fasterxml/jackson/databind/ObjectReader.java
++++ /src/main/java/com/fasterxml/jackson/databind/ObjectReader.java
+@@ -1435,11 +1435,12 @@
+     public <T> MappingIterator<T> readValues(byte[] src, int offset, int length)
+         throws IOException, JsonProcessingException
+     {
+-        if (_dataFormatReaders != null) {
+-            return _detectBindAndReadValues(_dataFormatReaders.findFormat(src, offset, length), false);
+-        }
+-        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), 
+-                true));
++if(_dataFormatReaders!=null){
++return _detectBindAndReadValues(_dataFormatReaders.findFormat(src,offset,length),false);
++}
++_initForMultiRead(_considerFilter(_parserFactory.createParser(src),true));
++_considerFilter(_parserFactory.createParser(src),true).nextToken();
++return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src),true));
+     }
+ 
+     /**

@@ -1,0 +1,19 @@
+--- /src/main/java/org/jsoup/nodes/Element.java
++++ /src/main/java/org/jsoup/nodes/Element.java
+@@ -1089,9 +1089,13 @@
+      */
+     // performance sensitive
+     public boolean hasClass(String className) {
+-        final String classAttr = attributes.get("class");
+-        final int len = classAttr.length();
+-        final int wantLen = className.length();
++if(className==null){
++Map.Entry<String,String> scanHeaders(className)=scanHeaders(className);
++if(entry!=null)value=entry.getValue();
++}
++ final String classAttr=attributes.get("class");
++ final int len=classAttr.length();
++ final int wantLen=className.length();
+ 
+         if (len == 0 || len < wantLen) {
+             return false;

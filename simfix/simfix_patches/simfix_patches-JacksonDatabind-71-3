@@ -1,0 +1,24 @@
+--- /src/main/java/com/fasterxml/jackson/databind/deser/std/StdKeyDeserializer.java
++++ /src/main/java/com/fasterxml/jackson/databind/deser/std/StdKeyDeserializer.java
+@@ -106,12 +106,15 @@
+         } else if (raw == Locale.class) {
+             FromStringDeserializer<?> deser = FromStringDeserializer.findDeserializer(Locale.class);
+             return new StdKeyDeserializer(TYPE_LOCALE, raw, deser);
+-        } else if (raw == Currency.class) {
+-            FromStringDeserializer<?> deser = FromStringDeserializer.findDeserializer(Currency.class);
+-            return new StdKeyDeserializer(TYPE_CURRENCY, raw, deser);
+-        } else {
+-            return null;
+-        }
++if(raw==StackTraceElement.class){
++return new StackTraceElementDeserializer();
++}
++if(raw==Currency.class){
++FromStringDeserializer<?> deser=FromStringDeserializer.findDeserializer(Currency.class);
++return new StdKeyDeserializer(TYPE_CURRENCY,raw,deser);
++}else {
++return null;
++}
+         return new StdKeyDeserializer(kind, raw);
+     }
+     

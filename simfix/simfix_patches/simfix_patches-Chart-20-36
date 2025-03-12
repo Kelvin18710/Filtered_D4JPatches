@@ -1,0 +1,17 @@
+--- /source/org/jfree/chart/plot/ValueMarker.java
++++ /source/org/jfree/chart/plot/ValueMarker.java
+@@ -92,8 +92,12 @@
+      */
+     public ValueMarker(double value, Paint paint, Stroke stroke, 
+                        Paint outlinePaint, Stroke outlineStroke, float alpha) {
+-        super(paint, stroke, paint, stroke, alpha);
+-        this.value = value;
++notifyListeners(new PlotChangeEvent(this));
++super(paint,stroke,paint,stroke,alpha);
++if(paint==null){
++throw new IllegalArgumentException("Null \'paint\' argument.");
++}
++this.value=value;
+     }
+     
+     /**

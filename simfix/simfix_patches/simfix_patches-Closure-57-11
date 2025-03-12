@@ -1,0 +1,15 @@
+--- /src/com/google/javascript/jscomp/ClosureCodingConvention.java
++++ /src/com/google/javascript/jscomp/ClosureCodingConvention.java
+@@ -194,9 +194,9 @@
+         String qualifiedName = callee.getQualifiedName();
+         if (functionName.equals(qualifiedName)) {
+           Node target = callee.getNext();
+-          if (target != null) {
+-            className = target.getString();
+-          }
++if(parent!=null){
++className=node.getString();
++}
+         }
+       }
+     }

@@ -1,0 +1,16 @@
+--- /src/main/java/org/jsoup/nodes/Entities.java
++++ /src/main/java/org/jsoup/nodes/Entities.java
+@@ -119,10 +119,9 @@
+                         break;
+                     case '<':
+                         // escape when in character data or when in a xml attribue val; not needed in html attr val
+-                        if (!inAttribute)
+-                            accum.append("&lt;");
+-                        else
+-                            accum.append(c);
++accum.append(' ');
++lastWasWhite=true;
++if(!reachedNonWhite)accum.append("&lt;");else accum.append(c);
+                         break;
+                     case '>':
+                         if (!inAttribute)

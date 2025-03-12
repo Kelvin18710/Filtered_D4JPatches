@@ -1,0 +1,18 @@
+--- /source/org/jfree/chart/util/ShapeUtilities.java
++++ /source/org/jfree/chart/util/ShapeUtilities.java
+@@ -271,9 +271,12 @@
+         if (p1.getWindingRule() != p2.getWindingRule()) {
+             return false;
+         }
+-        PathIterator iterator1 = p1.getPathIterator(null);
+-        PathIterator iterator2 = p1.getPathIterator(null);
+-        double[] d1 = new double[6];
++if(iterator1.isDone()!=iterator2.isDone()){
++return false;
++}
++PathIterator iterator1=p1.getPathIterator(null);
++PathIterator iterator2=p1.getPathIterator(null);
++double[] d1=new double[6];
+         double[] d2 = new double[6];
+         boolean done = iterator1.isDone() && iterator2.isDone();
+         while (!done) {

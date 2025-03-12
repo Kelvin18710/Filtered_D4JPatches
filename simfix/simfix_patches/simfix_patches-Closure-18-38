@@ -1,0 +1,23 @@
+--- /src/com/google/javascript/jscomp/Compiler.java
++++ /src/com/google/javascript/jscomp/Compiler.java
+@@ -1289,9 +1289,17 @@
+         for (CompilerInput input : inputs) {
+           // Forward-declare all the provided types, so that they
+           // are not flagged even if they are dropped from the process.
+-          for (String provide : input.getProvides()) {
+-            getTypeRegistry().forwardDeclareType(provide);
+-          }
++for(String provide : input.getProvides()){
++synthesizedExternsInput.getModule().remove(input);
++externs.add(synthesizedExternsInput);
++staleInputs=true;
++synthesizedExternsInput.setIsExtern(true);
++synthesizedExternsInput.getModule().remove(input);
++externs.add(synthesizedExternsInput);
++staleInputs=true;
++
++getTypeRegistry().forwardDeclareType(provide);
++}
+         }
+ 
+         try {

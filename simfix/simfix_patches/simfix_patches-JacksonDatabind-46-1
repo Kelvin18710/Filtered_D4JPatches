@@ -1,0 +1,20 @@
+--- /src/main/java/com/fasterxml/jackson/databind/type/ReferenceType.java
++++ /src/main/java/com/fasterxml/jackson/databind/type/ReferenceType.java
+@@ -150,11 +150,12 @@
+     @Override
+     public StringBuilder getGenericSignature(StringBuilder sb)
+     {
+-        _classSignature(_class, sb, false);
+-        sb.append('<');
+-        sb = _referencedType.getGenericSignature(sb);
+-        sb.append(';');
+-        return sb;
++_classSignature(_class,sb,false);
++sb.append('<');
++sb=_referencedType.getGenericSignature(sb);
++sb.append(';');
++sb.append(']');
++return sb;
+     }
+     
+     /*

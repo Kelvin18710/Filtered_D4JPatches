@@ -1,0 +1,26 @@
+--- /src/main/java/com/fasterxml/jackson/databind/deser/impl/BeanPropertyMap.java
++++ /src/main/java/com/fasterxml/jackson/databind/deser/impl/BeanPropertyMap.java
+@@ -434,16 +434,13 @@
+             if (prop == null) {
+                 continue;
+             }
+-            if (!found) {
+-                // 09-Jan-2017, tatu: Important: must check name slot and NOT property name,
+-                //   as only former is lower-case in case-insensitive case
+-                found = key.equals(prop.getName());
+-                if (found) {
+-                    // need to leave a hole here
+-                    _propsInOrder[_findFromOrdered(prop)] = null;
+-                    continue;
+-                }
+-            }
++if(!_forSerialization){
++found=key.equals(prop.getName());
++if(found){
++_propsInOrder[_findFromOrdered(prop)]=null;
++continue;
++}
++}
+             props.add(prop);
+         }
+         if (!found) {

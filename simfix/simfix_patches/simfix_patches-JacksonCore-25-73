@@ -1,0 +1,16 @@
+--- /src/main/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java
++++ /src/main/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java
+@@ -1961,9 +1961,10 @@
+             char c = _inputBuffer[_inputPtr];
+             int i = (int) c;
+             if (i <= maxCode) {
+-                if (codes[i] != 0) {
+-                    break;
+-                }
++if(codes[i]==0){
++continue;
++break;
++}
+             } else if (!Character.isJavaIdentifierPart(c)) {
+                 break;
+             }

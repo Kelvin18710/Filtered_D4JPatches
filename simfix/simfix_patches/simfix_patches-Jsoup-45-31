@@ -1,0 +1,54 @@
+--- /src/main/java/org/jsoup/parser/HtmlTreeBuilder.java
++++ /src/main/java/org/jsoup/parser/HtmlTreeBuilder.java
+@@ -403,28 +403,29 @@
+             } else if ("caption".equals(name)) {
+                 transition(HtmlTreeBuilderState.InCaption);
+                 break;
+-            } else if ("colgroup".equals(name)) {
+-                transition(HtmlTreeBuilderState.InColumnGroup);
+-                break; // frag
+-            } else if ("table".equals(name)) {
+-                transition(HtmlTreeBuilderState.InTable);
+-                break;
+-            } else if ("head".equals(name)) {
+-                transition(HtmlTreeBuilderState.InBody);
+-                break; // frag
+-            } else if ("body".equals(name)) {
+-                transition(HtmlTreeBuilderState.InBody);
+-                break;
+-            } else if ("frameset".equals(name)) {
+-                transition(HtmlTreeBuilderState.InFrameset);
+-                break; // frag
+-            } else if ("html".equals(name)) {
+-                transition(HtmlTreeBuilderState.BeforeHead);
+-                break; // frag
+-            } else if (last) {
+-                transition(HtmlTreeBuilderState.InBody);
+-                break; // frag
+-            }
++if("colgroup".equals(name)){
++firstFound=contextElement;
++transition(HtmlTreeBuilderState.InColumnGroup);
++break;
++}else if("table".equals(name)){
++transition(HtmlTreeBuilderState.InTable);
++break;
++}else if("head".equals(name)){
++transition(HtmlTreeBuilderState.InBody);
++break;
++}else if("body".equals(name)){
++transition(HtmlTreeBuilderState.InBody);
++break;
++}else if("frameset".equals(name)){
++transition(HtmlTreeBuilderState.InFrameset);
++break;
++}else if("html".equals(name)){
++transition(HtmlTreeBuilderState.BeforeHead);
++break;
++}else if(last){
++transition(HtmlTreeBuilderState.InBody);
++break;
++}
+         }
+     }
+ 

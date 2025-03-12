@@ -1,0 +1,22 @@
+--- /src/com/google/javascript/rhino/jstype/UnionType.java
++++ /src/com/google/javascript/rhino/jstype/UnionType.java
+@@ -290,11 +290,14 @@
+     JSType result = builder.build();
+     if (result != null) {
+       return result;
+-    } else if (this.isObject() && that.isObject()) {
+-      return getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+-    } else {
+-      return getNativeType(JSTypeNative.NO_TYPE);
+-    }
++if(isFunctionType()&&that.isFunctionType()){
++return getNativeType(JSTypeNative.NO_OBJECT_TYPE);
++}else {
++if(equals(that)){
++return this;
++}
++return getNativeType(JSTypeNative.NO_OBJECT_TYPE);
++}
+   }
+ 
+   /**

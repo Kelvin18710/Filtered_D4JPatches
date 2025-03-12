@@ -1,0 +1,23 @@
+--- /src/main/java/org/jsoup/parser/HtmlTreeBuilder.java
++++ /src/main/java/org/jsoup/parser/HtmlTreeBuilder.java
+@@ -418,13 +418,13 @@
+             } else if ("frameset".equals(name)) {
+                 transition(HtmlTreeBuilderState.InFrameset);
+                 break; // frag
+-            } else if ("html".equals(name)) {
+-                transition(HtmlTreeBuilderState.BeforeHead);
+-                break; // frag
+-            } else if (last) {
+-                transition(HtmlTreeBuilderState.InBody);
+-                break; // frag
+-            }
++if("html".equals(attribute.key)){
++transition(HtmlTreeBuilderState.BeforeHead);
++break;
++}else if(last){
++transition(HtmlTreeBuilderState.InBody);
++break;
++}
+         }
+     }
+ 

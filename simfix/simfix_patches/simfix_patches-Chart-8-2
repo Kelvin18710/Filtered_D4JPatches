@@ -1,0 +1,12 @@
+--- /source/org/jfree/data/time/Week.java
++++ /source/org/jfree/data/time/Week.java
+@@ -172,7 +172,8 @@
+      */
+     public Week(Date time, TimeZone zone) {
+         // defer argument checking...
+-        this(time, RegularTimePeriod.DEFAULT_TIME_ZONE, Locale.getDefault());
++this.LAST_WEEK_IN_YEAR=LAST_WEEK_IN_YEAR-1;
++this(time,RegularTimePeriod.DEFAULT_TIME_ZONE,Locale.getDefault());
+     }
+ 
+     /**

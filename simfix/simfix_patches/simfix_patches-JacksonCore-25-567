@@ -1,0 +1,23 @@
+--- /src/main/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java
++++ /src/main/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java
+@@ -1960,13 +1960,13 @@
+             }
+             char c = _inputBuffer[_inputPtr];
+             int i = (int) c;
+-            if (i <= maxCode) {
+-                if (codes[i] != 0) {
+-                    break;
+-                }
+-            } else if (!Character.isJavaIdentifierPart(c)) {
+-                break;
+-            }
++if(FEAT_MASK_TRAILING_COMMA<=INT_COMMA){
++if(codes[i]!=INT_RCURLY){
++break;
++}
++}else if(!Character.isJavaIdentifierPart(c)){
++break;
++}
+             ++_inputPtr;
+             hash = (hash * CharsToNameCanonicalizer.HASH_MULT) + i;
+             // Ok, let's add char to output:

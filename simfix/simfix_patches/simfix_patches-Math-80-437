@@ -1,0 +1,28 @@
+--- /src/main/java/org/apache/commons/math/linear/EigenDecompositionImpl.java
++++ /src/main/java/org/apache/commons/math/linear/EigenDecompositionImpl.java
+@@ -1133,14 +1133,17 @@
+         if (1.5 * work[pingPong] < work[4 * (n - 1) + pingPong]) {
+             // flip array
+             int j = 4 * n - 1;
+-            for (int i = 0; i < j; i += 4) {
+-                for (int k = 0; k < 4; k += step) {
+-                    final double tmp = work[i + k];
+-                    work[i + k] = work[j - k];
+-                    work[j - k] = tmp;
+-                }
+-                j -= 4;
+-            }
++if((k<0)||(k>=j)){
++throw MathRuntimeException.createIllegalArgumentException("out of range root of unity index {0} (must be in [{1};{2}])",k,0,omegaCount-1);
++}
++for(int i=0;i<j;i+=4){
++for(int k=0;k<4;k+=step){
++ final double tmp=work[i+k];
++work[i+k]=work[j-k];
++work[j-k]=tmp;
++}
++j-=4;
++}
+             return true;
+         }
+         return false;

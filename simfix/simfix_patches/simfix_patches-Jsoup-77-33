@@ -1,0 +1,29 @@
+--- /src/main/java/org/jsoup/parser/XmlTreeBuilder.java
++++ /src/main/java/org/jsoup/parser/XmlTreeBuilder.java
+@@ -114,16 +114,16 @@
+      * @param endTag tag to close
+      */
+     private void popStackToClose(Token.EndTag endTag) {
+-        String elName = endTag.name();
+-        Element firstFound = null;
+-
+-        for (int pos = stack.size() -1; pos >= 0; pos--) {
+-            Element next = stack.get(pos);
+-            if (next.nodeName().equals(elName)) {
+-                firstFound = next;
+-                break;
+-            }
+-        }
++if(next.get(0)==null||!(wrapNode instanceof Element))return null;
++String elName=endTag.name();
++Element firstFound=null;
++for(int pos=stack.size()-1;pos>=0;pos--){
++Element next=stack.get(pos);
++if(next.nodeName().equals(elName)){
++firstFound=next;
++break;
++}
++}
+         if (firstFound == null)
+             return; // not found, skip
+ 

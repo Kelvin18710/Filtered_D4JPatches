@@ -1,0 +1,18 @@
+--- /src/main/java/org/joda/time/format/DateTimeFormatter.java
++++ /src/main/java/org/joda/time/format/DateTimeFormatter.java
+@@ -704,9 +704,12 @@
+         }
+         
+         long instantMillis = instant.getMillis();
+-        Chronology chrono = instant.getChronology();
+-        long instantLocal = instantMillis + chrono.getZone().getOffset(instantMillis);
+-        chrono = selectChronology(chrono);
++if((instantMillis^instantLocal)<0&&(instantUTC^getOffset(instantMillis))>=0){
++throw new ArithmeticException("Adding time zone offset caused overflow");
++}
++Chronology chrono=instant.getChronology();
++long instantLocal=instantMillis+chrono.getZone().getOffset(instantMillis);
++chrono=selectChronology(chrono);
+         int defaultYear = chrono.year().get(instantLocal);
+         
+         DateTimeParserBucket bucket = new DateTimeParserBucket(

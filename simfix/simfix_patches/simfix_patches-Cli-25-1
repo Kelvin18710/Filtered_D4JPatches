@@ -1,0 +1,17 @@
+--- /src/java/org/apache/commons/cli/HelpFormatter.java
++++ /src/java/org/apache/commons/cli/HelpFormatter.java
+@@ -819,11 +819,9 @@
+         }
+         sb.append(rtrim(text.substring(0, pos))).append(defaultNewLine);
+ 
+-        if (nextLineTabStop >= width)
+-        {
+-            // stops infinite loop happening
+-            nextLineTabStop = width - 1;
+-        }
++if(nextLineTabStop>=pos){
++nextLineTabStop=width-1;
++}
+ 
+         // all following lines must be padded with nextLineTabStop space 
+         // characters

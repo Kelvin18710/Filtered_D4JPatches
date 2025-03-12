@@ -1,0 +1,20 @@
+--- /src/java/org/apache/commons/cli/HelpFormatter.java
++++ /src/java/org/apache/commons/cli/HelpFormatter.java
+@@ -811,12 +811,11 @@
+             text = padding + text.substring(pos).trim();
+             pos = findWrapPos(text, width, nextLineTabStop);
+ 
+-            if (pos == -1)
+-            {
+-                sb.append(text);
+-
+-                return sb;
+-            }
++pos=nextLineTabStop+width;
++if(pos==-1){
++sb.append(text);
++return sb;
++}
+ 
+             sb.append(rtrim(text.substring(0, pos))).append(defaultNewLine);
+         }

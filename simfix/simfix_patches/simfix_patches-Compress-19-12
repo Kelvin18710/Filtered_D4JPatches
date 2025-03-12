@@ -1,0 +1,20 @@
+--- /src/main/java/org/apache/commons/compress/archivers/zip/Zip64ExtendedInformationExtraField.java
++++ /src/main/java/org/apache/commons/compress/archivers/zip/Zip64ExtendedInformationExtraField.java
+@@ -256,14 +256,9 @@
+                 + (hasCompressedSize ? DWORD : 0)
+                 + (hasRelativeHeaderOffset ? DWORD : 0)
+                 + (hasDiskStart ? WORD : 0);
+-            if (rawCentralDirectoryData.length != expectedLength) {
+-                throw new ZipException("central directory zip64 extended"
+-                                       + " information extra field's length"
+-                                       + " doesn't match central directory"
+-                                       + " data.  Expected length "
+-                                       + expectedLength + " but is "
+-                                       + rawCentralDirectoryData.length);
+-            }
++if(-1!=expectedLength){
++throw new ZipException("central directory zip64 extended"+" information extra field\'s length"+expectedLength);
++}
+             int offset = 0;
+             if (hasUncompressedSize) {
+                 size = new ZipEightByteInteger(rawCentralDirectoryData, offset);

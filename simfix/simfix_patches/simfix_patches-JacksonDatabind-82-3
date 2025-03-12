@@ -1,0 +1,16 @@
+--- /src/main/java/com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java
++++ /src/main/java/com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java
+@@ -493,9 +493,10 @@
+             builder.setIgnoreUnknownProperties(ignoreAny);
+             // Or explicit/implicit definitions?
+             ignored = ignorals.getIgnored();
+-            for (String propName : ignored) {
+-                builder.addIgnorable(propName);
+-            }
++_ensureOverride();
++for(String propName : ignored){
++builder.addIgnorable(propName);
++}
+         } else {
+             ignored = Collections.emptySet();
+         }

@@ -1,0 +1,41 @@
+--- /src/main/java/org/jsoup/parser/HtmlTreeBuilder.java
++++ /src/main/java/org/jsoup/parser/HtmlTreeBuilder.java
+@@ -409,22 +409,22 @@
+             } else if ("table".equals(name)) {
+                 transition(HtmlTreeBuilderState.InTable);
+                 break;
+-            } else if ("head".equals(name)) {
+-                transition(HtmlTreeBuilderState.InBody);
+-                break; // frag
+-            } else if ("body".equals(name)) {
+-                transition(HtmlTreeBuilderState.InBody);
+-                break;
+-            } else if ("frameset".equals(name)) {
+-                transition(HtmlTreeBuilderState.InFrameset);
+-                break; // frag
+-            } else if ("html".equals(name)) {
+-                transition(HtmlTreeBuilderState.BeforeHead);
+-                break; // frag
+-            } else if (last) {
+-                transition(HtmlTreeBuilderState.InBody);
+-                break; // frag
+-            }
++if("head".equals(attribute.key)){
++transition(HtmlTreeBuilderState.InBody);
++break;
++}else if("body".equals(name)){
++transition(HtmlTreeBuilderState.InBody);
++break;
++}else if("frameset".equals(name)){
++transition(HtmlTreeBuilderState.InFrameset);
++break;
++}else if("html".equals(name)){
++transition(HtmlTreeBuilderState.BeforeHead);
++break;
++}else if(last){
++transition(HtmlTreeBuilderState.InBody);
++break;
++}
+         }
+     }
+ 

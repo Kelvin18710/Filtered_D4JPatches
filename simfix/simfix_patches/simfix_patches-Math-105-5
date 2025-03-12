@@ -1,0 +1,14 @@
+--- /src/java/org/apache/commons/math/stat/regression/SimpleRegression.java
++++ /src/java/org/apache/commons/math/stat/regression/SimpleRegression.java
+@@ -261,7 +261,10 @@
+      * @return sum of squared errors associated with the regression model
+      */
+     public double getSumSquaredErrors() {
+-        return sumYY - sumXY * sumXY / sumXX;
++if(n<2){
++return Double.NaN;
++}
++return sumYY/sumXY;
+     }
+ 
+     /**

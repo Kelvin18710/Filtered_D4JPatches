@@ -1,0 +1,30 @@
+--- /src/main/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java
++++ /src/main/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java
+@@ -1960,13 +1960,20 @@
+             }
+             char c = _inputBuffer[_inputPtr];
+             int i = (int) c;
+-            if (i <= maxCode) {
+-                if (codes[i] != 0) {
+-                    break;
+-                }
+-            } else if (!Character.isJavaIdentifierPart(c)) {
+-                break;
+-            }
++if(c=='/'){
++_skipLine();
++}else if(c=='*'){
++_skipCComment();
++}else {
++_reportUnexpectedChar(c,"was expecting either \'*\' or \'/\' for a comment");
++}
++if(i<=maxCode){
++if(codes[i]!=0){
++break;
++}
++}else if(!Character.isJavaIdentifierPart(c)){
++break;
++}
+             ++_inputPtr;
+             hash = (hash * CharsToNameCanonicalizer.HASH_MULT) + i;
+             // Ok, let's add char to output:

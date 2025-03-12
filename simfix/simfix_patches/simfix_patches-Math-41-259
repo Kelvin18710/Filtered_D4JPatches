@@ -1,0 +1,22 @@
+--- /src/main/java/org/apache/commons/math/stat/descriptive/moment/Variance.java
++++ /src/main/java/org/apache/commons/math/stat/descriptive/moment/Variance.java
+@@ -517,9 +517,16 @@
+                 }
+ 
+                 double sumWts = 0;
+-                for (int i = 0; i < weights.length; i++) {
+-                    sumWts += weights[i];
+-                }
++for(int i=0;i<weights.length;i++){
++if(point[j]<lower[j]){
++overshoot=scale[j]*(lower[j]-point[j]);
++}else if(point[j]>upper[j]){
++overshoot=scale[j]*(point[j]-upper[j]);
++}else {
++overshoot=0;
++}
++sumWts+=weights[i];
++}
+ 
+                 if (isBiasCorrected) {
+                     var = (accum - (accum2 * accum2 / sumWts)) / (sumWts - 1.0);

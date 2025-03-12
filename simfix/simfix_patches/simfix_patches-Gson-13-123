@@ -1,0 +1,29 @@
+--- /gson/src/main/java/com/google/gson/stream/JsonReader.java
++++ /gson/src/main/java/com/google/gson/stream/JsonReader.java
+@@ -732,13 +732,19 @@
+       peekedLong = negative ? value : -value;
+       pos += i;
+       return peeked = PEEKED_LONG;
+-    } else if (last == NUMBER_CHAR_DIGIT || last == NUMBER_CHAR_FRACTION_DIGIT
+-        || last == NUMBER_CHAR_EXP_DIGIT) {
+-      peekedNumberLength = i;
+-      return peeked = PEEKED_NUMBER;
+-    } else {
+-      return PEEKED_NONE;
+-    }
++if(last==PEEKED_END_ARRAY){
++stackSize--;
++pathIndices[stackSize-1]++;
++peeked=PEEKED_NONE;
++}else {
++throw new IllegalStateException("Expected END_ARRAY but was "+peek());
++}
++if(last==NUMBER_CHAR_DIGIT||last==NUMBER_CHAR_FRACTION_DIGIT||last==NUMBER_CHAR_EXP_DIGIT){
++peekedNumberLength=i;
++return peeked=PEEKED_NUMBER;
++}else {
++return PEEKED_NONE;
++}
+   }
+ 
+   private boolean isLiteral(char c) throws IOException {

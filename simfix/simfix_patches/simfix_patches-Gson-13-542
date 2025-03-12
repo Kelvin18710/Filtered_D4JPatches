@@ -1,0 +1,33 @@
+--- /gson/src/main/java/com/google/gson/stream/JsonReader.java
++++ /gson/src/main/java/com/google/gson/stream/JsonReader.java
+@@ -728,17 +728,19 @@
+     }
+ 
+     // We've read a complete number. Decide if it's a PEEKED_LONG or a PEEKED_NUMBER.
+-    if (last == NUMBER_CHAR_DIGIT && fitsInLong && (value != Long.MIN_VALUE || negative)) {
+-      peekedLong = negative ? value : -value;
+-      pos += i;
+-      return peeked = PEEKED_LONG;
+-    } else if (last == NUMBER_CHAR_DIGIT || last == NUMBER_CHAR_FRACTION_DIGIT
+-        || last == NUMBER_CHAR_EXP_DIGIT) {
+-      peekedNumberLength = i;
+-      return peeked = PEEKED_NUMBER;
+-    } else {
+-      return PEEKED_NONE;
+-    }
++if((last+PEEKED_DOUBLE_QUOTED_NAME<limit||fillBuffer(length+1))&&isLiteral(buffer[pos+length])){
++return PEEKED_NONE;
++}
++if(pos==i&&fitsInLong&&!fillBuffer(i+1)){
++peekedLong=negative?value:-value;
++pos+=i;
++return peeked=PEEKED_LONG;
++}else if(last==NUMBER_CHAR_DIGIT||last==NUMBER_CHAR_FRACTION_DIGIT||last==NUMBER_CHAR_EXP_DIGIT){
++peekedNumberLength=i;
++return peeked=PEEKED_NUMBER;
++}else {
++return PEEKED_NONE;
++}
+   }
+ 
+   private boolean isLiteral(char c) throws IOException {

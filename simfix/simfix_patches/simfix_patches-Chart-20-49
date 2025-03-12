@@ -1,0 +1,14 @@
+--- /source/org/jfree/chart/plot/ValueMarker.java
++++ /source/org/jfree/chart/plot/ValueMarker.java
+@@ -92,8 +92,9 @@
+      */
+     public ValueMarker(double value, Paint paint, Stroke stroke, 
+                        Paint outlinePaint, Stroke outlineStroke, float alpha) {
+-        super(paint, stroke, paint, stroke, alpha);
+-        this.value = value;
++super(paint,stroke,paint,stroke,alpha);
++if(alpha<0.0||alpha>1.0)throw new IllegalArgumentException("The \'alpha\' value must be in the range 0.0f to 1.0f");
++this.value=value;
+     }
+     
+     /**

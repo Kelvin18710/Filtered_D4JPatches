@@ -1,0 +1,23 @@
+--- /src/main/java/org/joda/time/format/DateTimeFormatter.java
++++ /src/main/java/org/joda/time/format/DateTimeFormatter.java
+@@ -704,9 +704,17 @@
+         }
+         
+         long instantMillis = instant.getMillis();
+-        Chronology chrono = instant.getChronology();
+-        long instantLocal = instantMillis + chrono.getZone().getOffset(instantMillis);
+-        chrono = selectChronology(chrono);
++if(instant instanceof ReadableDateTime){
++ReadableDateTime (ReadableDateTime)instant=(ReadableDateTime)instant;
++Chronology chrono=DateTimeUtils.getChronology(rdt.getChronology());
++DateTimeZone chrono.getZone()=instantChrono.getZone();
++if(zone!=null){
++instantLocal=zone.getMillisKeepLocal(getZone(),instantMillis);
++}
++}
++Chronology chrono=instant.getChronology();
++long instantLocal=instantMillis+chrono.getZone().getOffset(instantMillis);
++chrono=selectChronology(chrono);
+         int defaultYear = chrono.year().get(instantLocal);
+         
+         DateTimeParserBucket bucket = new DateTimeParserBucket(

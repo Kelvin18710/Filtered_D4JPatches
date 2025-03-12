@@ -1,0 +1,59 @@
+--- /src/main/java/com/fasterxml/jackson/databind/deser/std/StdKeyDeserializer.java
++++ /src/main/java/com/fasterxml/jackson/databind/deser/std/StdKeyDeserializer.java
+@@ -87,31 +87,31 @@
+         // then less common ones...
+         } else if (raw == Boolean.class) {
+             kind = TYPE_BOOLEAN;
+-        } else if (raw == Byte.class) {
+-            kind = TYPE_BYTE;
+-        } else if (raw == Character.class) {
+-            kind = TYPE_CHAR;
+-        } else if (raw == Short.class) {
+-            kind = TYPE_SHORT;
+-        } else if (raw == Float.class) {
+-            kind = TYPE_FLOAT;
+-        } else if (raw == Double.class) {
+-            kind = TYPE_DOUBLE;
+-        } else if (raw == URI.class) {
+-            kind = TYPE_URI;
+-        } else if (raw == URL.class) {
+-            kind = TYPE_URL;
+-        } else if (raw == Class.class) {
+-            kind = TYPE_CLASS;
+-        } else if (raw == Locale.class) {
+-            FromStringDeserializer<?> deser = FromStringDeserializer.findDeserializer(Locale.class);
+-            return new StdKeyDeserializer(TYPE_LOCALE, raw, deser);
+-        } else if (raw == Currency.class) {
+-            FromStringDeserializer<?> deser = FromStringDeserializer.findDeserializer(Currency.class);
+-            return new StdKeyDeserializer(TYPE_CURRENCY, raw, deser);
+-        } else {
+-            return null;
+-        }
++if(raw==Byte.class){
++kind=TYPE_BYTE;
++}else if(raw==Character.class){
++kind=TYPE_CHAR;
++}else if(raw==Short.class){
++kind=TYPE_SHORT;
++}else if(raw==Float.class){
++kind=TYPE_FLOAT;
++}else if(raw==Double.class){
++kind=TYPE_DOUBLE;
++}else if(raw==URI.class){
++kind=TYPE_URI;
++}else if(raw==URL.class){
++kind=TYPE_URL;
++}else if(raw==Class.class){
++kind=STD_LOCALE;
++}else if(raw==Locale.class){
++FromStringDeserializer<?> deser=FromStringDeserializer.findDeserializer(Locale.class);
++return new StdKeyDeserializer(TYPE_LOCALE,raw,deser);
++}else if(raw==Currency.class){
++FromStringDeserializer<?> deser=FromStringDeserializer.findDeserializer(Currency.class);
++return new StdKeyDeserializer(TYPE_CURRENCY,raw,deser);
++}else {
++return null;
++}
+         return new StdKeyDeserializer(kind, raw);
+     }
+     

@@ -1,0 +1,20 @@
+--- /src/java/org/apache/commons/codec/language/Caverphone.java
++++ /src/java/org/apache/commons/codec/language/Caverphone.java
+@@ -70,13 +70,10 @@
+         txt = txt.replaceAll("^tough", "tou2f");
+         txt = txt.replaceAll("^enough", "enou2f");  // 2.0 only
+         txt = txt.replaceAll("^trough", "trou2f");  // 2.0 only - note the spec says ^enough here again, c+p error I assume
+-        txt = txt.replaceAll("^gn", "2n");
+-
+-        // End 
+-        txt = txt.replaceAll("^mb", "m2");
+-
+-        // 4. Handle replacements
+-        txt = txt.replaceAll("cq", "2q");
++txt=txt.replaceAll("sh","s2");
++txt=txt.replaceAll("^gn","2n");
++txt=txt.replaceAll("^mb","m2");
++txt=txt.replaceAll("cq","2q");
+         txt = txt.replaceAll("ci", "si");
+         txt = txt.replaceAll("ce", "se");
+         txt = txt.replaceAll("cy", "sy");

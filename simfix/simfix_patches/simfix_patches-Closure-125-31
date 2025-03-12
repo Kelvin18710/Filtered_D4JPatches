@@ -1,0 +1,26 @@
+--- /src/com/google/javascript/jscomp/TypeCheck.java
++++ /src/com/google/javascript/jscomp/TypeCheck.java
+@@ -1658,12 +1658,17 @@
+     JSType type = getJSType(constructor).restrictByNotNullOrUndefined();
+     if (type.isConstructor() || type.isEmptyType() || type.isUnknownType()) {
+       FunctionType fnType = type.toMaybeFunctionType();
+-      if (fnType != null) {
+-        visitParameterList(t, n, fnType);
+-        ensureTyped(t, n, fnType.getInstanceType());
+-      } else {
+-        ensureTyped(t, n);
+-      }
++if(fnType!=null){
++visitParameterList(t,n,fnType);
++ensureTyped(t,n,fnType.getInstanceType());
++}else {
++if(inferTemplateTypesFromParameters(fnType,n).isEmpty()){
++type=fnType.getInstanceType();
++}else {
++type=typeRegistry.createTemplatizedType(fnType.getInstanceType(),inferTemplateTypesFromParameters(fnType,n));
++}
++ensureTyped(t,n);
++}
+     } else {
+       report(t, n, NOT_A_CONSTRUCTOR);
+       ensureTyped(t, n);

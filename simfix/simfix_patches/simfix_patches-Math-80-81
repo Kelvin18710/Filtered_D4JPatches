@@ -1,0 +1,23 @@
+--- /src/main/java/org/apache/commons/math/linear/EigenDecompositionImpl.java
++++ /src/main/java/org/apache/commons/math/linear/EigenDecompositionImpl.java
+@@ -1134,11 +1134,15 @@
+             // flip array
+             int j = 4 * n - 1;
+             for (int i = 0; i < j; i += 4) {
+-                for (int k = 0; k < 4; k += step) {
+-                    final double tmp = work[i + k];
+-                    work[i + k] = work[j - k];
+-                    work[j - k] = tmp;
+-                }
++for(int k=0;k<4;k+=step){
++d=dMin*tmp-tau;
++dMin=Math.min(dMin,dMin);
++eMin=Math.min(work[k],eMin);
++
++ final double tmp=work[i+k];
++work[i+k]=work[j-k];
++work[j-k]=tmp;
++}
+                 j -= 4;
+             }
+             return true;

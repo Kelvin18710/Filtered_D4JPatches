@@ -1,0 +1,10 @@
+--- /src/main/java/org/jsoup/nodes/Element.java
++++ /src/main/java/org/jsoup/nodes/Element.java
+@@ -1099,6 +1099,7 @@
+         StringBuilder accum = new StringBuilder();
+         html(accum);
+         return accum.toString().trim();
++	ownText(accum);
+     }
+ 
+     private void html(StringBuilder accum) {

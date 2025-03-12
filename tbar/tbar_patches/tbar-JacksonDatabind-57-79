@@ -1,0 +1,22 @@
+--- /src/main/java/com/fasterxml/jackson/databind/ObjectReader.java
++++ /src/main/java/com/fasterxml/jackson/databind/ObjectReader.java
+@@ -1429,18 +1429,7 @@
+         return _newIterator(p, ctxt, _findRootDeserializer(ctxt), true);
+     }
+ 
+-    /**
+-     * Overloaded version of {@link #readValue(InputStream)}.
+-     */
+-    public <T> MappingIterator<T> readValues(byte[] src, int offset, int length)
+-        throws IOException, JsonProcessingException
+-    {
+-        if (_dataFormatReaders != null) {
+-            return _detectBindAndReadValues(_dataFormatReaders.findFormat(src, offset, length), false);
+-        }
+-        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), 
+-                true));
+-    }
++    
+ 
+     /**
+      * Overloaded version of {@link #readValue(InputStream)}.

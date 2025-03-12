@@ -1,0 +1,14 @@
+--- /src/main/java/com/fasterxml/jackson/databind/type/SimpleType.java
++++ /src/main/java/com/fasterxml/jackson/databind/type/SimpleType.java
+@@ -132,7 +132,10 @@
+         }
+         */
+         // 15-Jan-2015, tatu: Not correct; should really re-resolve...
+-        return new SimpleType(subclass, _bindings, _superClass, _superInterfaces,
++        if (_superInterfaces == null) {
++	    return null;
++	}
++return new SimpleType(subclass, _bindings, _superClass, _superInterfaces,
+                 _valueHandler, _typeHandler, _asStatic);
+     }
+     

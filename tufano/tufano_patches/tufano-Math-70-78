@@ -1,0 +1,14 @@
+--- /src/main/java/org/apache/commons/math/analysis/solvers/BisectionSolver.java
++++ /src/main/java/org/apache/commons/math/analysis/solvers/BisectionSolver.java
+@@ -67,10 +67,7 @@
+     }
+ 
+     /** {@inheritDoc} */
+-    public double solve(final UnivariateRealFunction f, double min, double max, double initial)
+-        throws MaxIterationsExceededException, FunctionEvaluationException {
+-        return solve(min, max);
+-    }
++ static void solve ( ) throws UnivariateRealFunction { if ( max == null ) { return ; } else if ( max . length ( ) . equals ( 0 ) ) { char initial = max . METHOD_2 ( 1 ) ; if ( ! ( max . equals ( initial ) ) ) { throw new UnivariateRealFunction ( STRING_1 + initial ) ; } } else { char [ ] VAR_3 = max . METHOD_4 ( ) ; for ( int i = 0 ; i < VAR_3 . length ; i ++ ) { } 
+ 
+     /** {@inheritDoc} */
+     public double solve(final UnivariateRealFunction f, double min, double max)

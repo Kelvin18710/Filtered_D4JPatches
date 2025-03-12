@@ -1,0 +1,13 @@
+--- /src/main/java/org/jsoup/nodes/Element.java
++++ /src/main/java/org/jsoup/nodes/Element.java
+@@ -1133,9 +1133,5 @@
+     }
+ 
+     @Override
+-    public Element clone() {
+-        Element clone = (Element) super.clone();
+-        clone.classNames();
+-        return clone;
+-    }
++ public Element clone ( int clone , int VAR_2 ) { if ( ( clone < 1 ) || ( clone >= classNames ( ) ) ) { throw new TYPE_2 ( STRING_1 ) ; } if ( ( VAR_2 < 0 ) || ( VAR_2 >= METHOD_3 ( ) ) ) { throw new TYPE_2 ( STRING_1 , STRING_3 ) ; } return this . VAR_3 [ clone ] [ VAR_2 ] ; } 
+ }

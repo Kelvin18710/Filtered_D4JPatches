@@ -1,0 +1,14 @@
+--- /src/main/java/org/apache/commons/math/optimization/fitting/GaussianFitter.java
++++ /src/main/java/org/apache/commons/math/optimization/fitting/GaussianFitter.java
+@@ -116,10 +116,7 @@
+      * @return the parameters of the Gaussian function that best fits the
+      * observed points (in the same order as above).
+      */
+-    public double[] fit() {
+-        final double[] guess = (new ParameterGuesser(getObservations())).guess();
+-        return fit(new Gaussian.Parametric(), guess);
+-    }
++ protected final void fit ( java.lang.String guess ) { if ( ( guess == null ) || ( guess . length ( ) . isEmpty ( ) ) ) { return guess ; } int VAR_2 = guess . length ( ) ; while ( ( VAR_2 > 0 ) ) { -- VAR_2 ; } return guess . substring ( 0 , VAR_2 ) ; } 
+ 
+     /**
+      * Guesses the parameters {@code norm}, {@code mean}, and {@code sigma}

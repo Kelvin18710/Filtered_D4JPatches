@@ -1,0 +1,21 @@
+--- /src/main/java/org/apache/commons/compress/archivers/tar/TarArchiveEntry.java
++++ /src/main/java/org/apache/commons/compress/archivers/tar/TarArchiveEntry.java
+@@ -852,13 +852,14 @@
+             return file.isDirectory();
+         }
+ 
+-        if (linkFlag == LF_DIR) {
+-            return true;
+-        }
+-
+         if (getName().endsWith("/")) {
+             return true;
+         }
++	if (linkFlag == LF_DIR) {
++            return true;
++        }
++
++        
+ 
+         return false;
+     }

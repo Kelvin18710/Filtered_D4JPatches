@@ -1,0 +1,42 @@
+--- /src/main/java/org/joda/time/DateTimeZone.java
++++ /src/main/java/org/joda/time/DateTimeZone.java
+@@ -877,38 +877,7 @@
+      * @param instantLocal  the millisecond instant, relative to this time zone, to get the offset for
+      * @return the millisecond offset to subtract from local time to get UTC time
+      */
+-    public int getOffsetFromLocal(long instantLocal) {
+-        // get the offset at instantLocal (first estimate)
+-        final int offsetLocal = getOffset(instantLocal);
+-        // adjust instantLocal using the estimate and recalc the offset
+-        final long instantAdjusted = instantLocal - offsetLocal;
+-        final int offsetAdjusted = getOffset(instantAdjusted);
+-        // if the offsets differ, we must be near a DST boundary
+-        if (offsetLocal != offsetAdjusted) {
+-            // we need to ensure that time is always after the DST gap
+-            // this happens naturally for positive offsets, but not for negative
+-            if ((offsetLocal - offsetAdjusted) < 0) {
+-                // if we just return offsetAdjusted then the time is pushed
+-                // back before the transition, whereas it should be
+-                // on or after the transition
+-                long nextLocal = nextTransition(instantAdjusted);
+-                long nextAdjusted = nextTransition(instantLocal - offsetAdjusted);
+-                if (nextLocal != nextAdjusted) {
+-                    return offsetLocal;
+-                }
+-            }
+-        } else if (offsetLocal > 0) {
+-            long prev = previousTransition(instantAdjusted);
+-            if (prev < instantAdjusted) {
+-                int offsetPrev = getOffset(prev);
+-                int diff = offsetPrev - offsetLocal;
+-                if (instantAdjusted - prev <= diff) {
+-                    return offsetPrev;
+-                }
+-            }
+-        }
+-        return offsetAdjusted;
+-    }
++ public TYPE_1 getOffsetFromLocal ( TYPE_2 instantLocal , args [ ] offsetLocal , TYPE_3 instantAdjusted , boolean offsetAdjusted ) throws TYPE_4 { this . instantLocal = instantLocal ; nextLocal = instantLocal . getOffset ( ) ; nextAdjusted = new TYPE_1 ( ) ; boolean prev = false ; if ( offsetLocal == null ) { offsetLocal = new String [ 1 ] ; } TYPE_5 offsetPrev = TYPE_6 . nextTransition ( previousTransition ( this . instantLocal , offsetLocal , offsetAdjusted ) ) ; TYPE_7 iterator = offsetPrev . METHOD_5 ( ) ; while ( iterator . METHOD_6 ( ) ) { 
+ 
+     /**
+      * Converts a standard UTC instant to a local instant with the same

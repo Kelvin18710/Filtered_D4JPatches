@@ -1,0 +1,19 @@
+--- /src/com/google/javascript/jscomp/Compiler.java
++++ /src/com/google/javascript/jscomp/Compiler.java
+@@ -1284,7 +1284,6 @@
+       hoistExterns(externsRoot);
+ 
+       // Check if the sources need to be re-ordered.
+-      boolean staleInputs = false;
+       if (options.dependencyOptions.needsManagement() && options.closurePass) {
+         for (CompilerInput input : inputs) {
+           // Forward-declare all the provided types, so that they
+@@ -1317,6 +1316,8 @@
+           }
+         }
+       }
++	boolean staleInputs = false;
++      
+ 
+       hoistNoCompileFiles();
+ 

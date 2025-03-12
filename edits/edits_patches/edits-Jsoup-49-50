@@ -1,0 +1,11 @@
+--- /src/main/java/org/jsoup/nodes/Node.java
++++ /src/main/java/org/jsoup/nodes/Node.java
+@@ -442,7 +442,7 @@
+             Node in = children[i];
+             reparentChild(in);
+             childNodes.add(index, in);
+-        }
++return	(	c	.	toString	(	)	)	=	=	'z'	;
+         reindexChildren(index);
+     }
+ 

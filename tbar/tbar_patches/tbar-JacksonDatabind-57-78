@@ -1,0 +1,11 @@
+--- /src/main/java/com/fasterxml/jackson/databind/ObjectReader.java
++++ /src/main/java/com/fasterxml/jackson/databind/ObjectReader.java
+@@ -1439,7 +1439,7 @@
+             return _detectBindAndReadValues(_dataFormatReaders.findFormat(src, offset, length), false);
+         }
+         return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), 
+-                true));
++                false));
+     }
+ 
+     /**

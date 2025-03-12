@@ -1,0 +1,12 @@
+--- /src/java/org/apache/commons/cli/HelpFormatter.java
++++ /src/java/org/apache/commons/cli/HelpFormatter.java
+@@ -809,7 +809,8 @@
+         while (true)
+         {
+             text = padding + text.substring(pos).trim();
+-            pos = findWrapPos(text, width, nextLineTabStop);
++            setSyntaxPrefix(text);
++	pos = findWrapPos(text, width, nextLineTabStop);
+ 
+             if (pos == -1)
+             {

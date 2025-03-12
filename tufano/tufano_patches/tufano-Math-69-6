@@ -1,0 +1,27 @@
+--- /src/main/java/org/apache/commons/math/stat/correlation/PearsonsCorrelation.java
++++ /src/main/java/org/apache/commons/math/stat/correlation/PearsonsCorrelation.java
+@@ -157,23 +157,7 @@
+      * @return matrix of p-values
+      * @throws MathException if an error occurs estimating probabilities
+      */
+-    public RealMatrix getCorrelationPValues() throws MathException {
+-        TDistribution tDistribution = new TDistributionImpl(nObs - 2);
+-        int nVars = correlationMatrix.getColumnDimension();
+-        double[][] out = new double[nVars][nVars];
+-        for (int i = 0; i < nVars; i++) {
+-            for (int j = 0; j < nVars; j++) {
+-                if (i == j) {
+-                    out[i][j] = 0d;
+-                } else {
+-                    double r = correlationMatrix.getEntry(i, j);
+-                    double t = Math.abs(r * Math.sqrt((nObs - 2)/(1 - r * r)));
+-                    out[i][j] = 2 * (1 - tDistribution.cumulativeProbability(t));
+-                }
+-            }
+-        }
+-        return new BlockRealMatrix(out);
+-    }
++ protected RealMatrix getCorrelationPValues ( RealMatrix tDistribution , int nObs , MathException nVars , int correlationMatrix , int r ) { final TYPE_7 VAR_7 = getColumnDimension ( r ) ; int VAR_8 = 0 ; RealMatrix VAR_9 ; TDistribution tDistribution0 = new TDistributionImpl ( ) ; Math tDistribution1 ; TDistribution tDistribution2 = nVars . getEntry ( ) ; BlockRealMatrix . abs ( tDistribution2 , new TYPE_7 ( ) ) ; for ( TYPE_8 i = tDistribution2 . iterator ( ) ) ; i . sqrt ( ) ; return getColumnDimension ( r ) ; } 
+ 
+ 
+     /**

@@ -1,0 +1,11 @@
+--- /src/com/google/javascript/jscomp/PeepholeOptimizationsPass.java
++++ /src/com/google/javascript/jscomp/PeepholeOptimizationsPass.java
+@@ -123,7 +123,7 @@
+     do {
+       Node c = node.getFirstChild();
+       while(c != null) {
+-        traverse(c);
++traverse	(	remove	)	;
+         Node next = c.getNext();
+         c = next;
+       }

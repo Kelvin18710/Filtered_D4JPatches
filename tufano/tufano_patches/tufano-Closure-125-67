@@ -1,0 +1,26 @@
+--- /src/com/google/javascript/jscomp/TypeCheck.java
++++ /src/com/google/javascript/jscomp/TypeCheck.java
+@@ -1653,22 +1653,7 @@
+   /**
+    * Visits a NEW node.
+    */
+-  private void visitNew(NodeTraversal t, Node n) {
+-    Node constructor = n.getFirstChild();
+-    JSType type = getJSType(constructor).restrictByNotNullOrUndefined();
+-    if (type.isConstructor() || type.isEmptyType() || type.isUnknownType()) {
+-      FunctionType fnType = type.toMaybeFunctionType();
+-      if (fnType != null) {
+-        visitParameterList(t, n, fnType);
+-        ensureTyped(t, n, fnType.getInstanceType());
+-      } else {
+-        ensureTyped(t, n);
+-      }
+-    } else {
+-      report(t, n, NOT_A_CONSTRUCTOR);
+-      ensureTyped(t, n);
+-    }
+-  }
++ public void visitNew ( NodeTraversal event ) { if ( ! ( this . constructor ) ) { return ; } Node [ ] fnType = this . NOT_A_CONSTRUCTOR . getFirstChild ( ) ; for ( int i = 0 ; i < ( fnType . length ) ; i ++ ) { if ( false ) { ( ( JSType ) ( fnType . length ) ) . getJSType ( event ) ; } } } 
+ 
+   /**
+    * Check whether there's any property conflict for for a particular super

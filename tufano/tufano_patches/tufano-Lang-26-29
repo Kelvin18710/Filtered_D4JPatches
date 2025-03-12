@@ -1,0 +1,15 @@
+--- /src/main/java/org/apache/commons/lang3/time/FastDateFormat.java
++++ /src/main/java/org/apache/commons/lang3/time/FastDateFormat.java
+@@ -816,11 +816,7 @@
+      * @param date  the date to format
+      * @return the formatted string
+      */
+-    public String format(Date date) {
+-        Calendar c = new GregorianCalendar(mTimeZone);
+-        c.setTime(date);
+-        return applyRules(c, new StringBuffer(mMaxLengthEstimate)).toString();
+-    }
++ public boolean equals ( Date obj ) { if ( obj == this ) { return true ; } if ( ! ( obj instanceof Calendar ) ) { return false ; } Calendar mTimeZone = ( Calendar ) obj ; if ( ! ( this . VAR_3 . equals ( this . mMaxLengthEstimate , VAR_3 ) ) ) { return false ; } if ( this . VAR_4 != VAR_5 ) { return false ; } if ( this . VAR_6 != VAR_7 ) { return false ; } if ( this . VAR_6 != VAR_7 ) { return 
+ 
+     /**
+      * <p>Formats a <code>Calendar</code> object.</p>

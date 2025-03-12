@@ -1,0 +1,27 @@
+--- /src/java/org/apache/commons/cli/HelpFormatter.java
++++ /src/java/org/apache/commons/cli/HelpFormatter.java
+@@ -619,7 +619,11 @@
+             buff.append("[");
+         }
+ 
+-        if (option.getOpt() != null)
++        if (option.hasArg() && (option.getArgName() != null))
++        {
++            buff.append(" <").append(option.getArgName()).append(">");
++        }
++	if (option.getOpt() != null)
+         {
+             buff.append("-").append(option.getOpt());
+         }
+@@ -629,10 +633,7 @@
+         }
+ 
+         // if the Option has a value
+-        if (option.hasArg() && (option.getArgName() != null))
+-        {
+-            buff.append(" <").append(option.getArgName()).append(">");
+-        }
++        
+ 
+         // if the Option is not a required option
+         if (!required)

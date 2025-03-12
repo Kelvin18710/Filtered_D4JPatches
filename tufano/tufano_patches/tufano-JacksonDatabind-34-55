@@ -1,0 +1,22 @@
+--- /src/main/java/com/fasterxml/jackson/databind/ser/std/NumberSerializer.java
++++ /src/main/java/com/fasterxml/jackson/databind/ser/std/NumberSerializer.java
+@@ -71,18 +71,5 @@
+     }
+ 
+     @Override
+-    public void acceptJsonFormatVisitor(JsonFormatVisitorWrapper visitor, JavaType typeHint) throws JsonMappingException
+-    {
+-        if (_isInt) {
+-            visitIntFormat(visitor, typeHint, JsonParser.NumberType.BIG_INTEGER);
+-        } else {
+-            Class<?> h = handledType();
+-            if (h == BigDecimal.class) {
+-                visitFloatFormat(visitor, typeHint, JsonParser.NumberType.BIG_INTEGER);
+-            } else {
+-                // otherwise bit unclear what to call... but let's try:
+-                /*JsonNumberFormatVisitor v2 =*/ visitor.expectNumberFormat(typeHint);
+-            }
+-        }
+-    }
++ public boolean equals ( JsonFormatVisitorWrapper obj ) { if ( obj == ( this ) ) { return true ; } if ( ! ( obj instanceof JavaType ) ) { return false ; } if ( ! super . equals ( obj ) ) { return false ; } JavaType visitor = ( JavaType ) obj ; if ( ! ( this . typeHint . equals ( _isInt ) ) ) { return false ; } if ( ! true ) { return false ; } return true ; } 
+ }

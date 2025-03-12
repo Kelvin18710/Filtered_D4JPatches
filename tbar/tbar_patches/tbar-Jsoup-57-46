@@ -1,0 +1,14 @@
+--- /src/main/java/org/jsoup/nodes/Attributes.java
++++ /src/main/java/org/jsoup/nodes/Attributes.java
+@@ -121,7 +121,10 @@
+             return;
+         for (Iterator<String> it = attributes.keySet().iterator(); it.hasNext(); ) {
+             String attrKey = it.next();
+-            if (attrKey.equalsIgnoreCase(key))
++            if (key == null) {
++	    throw new IllegalArgumentException("Null 'key' argument.");
++	}
++if (attrKey.equalsIgnoreCase(key))
+                 attributes.remove(attrKey);
+         }
+     }

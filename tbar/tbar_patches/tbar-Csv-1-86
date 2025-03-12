@@ -1,0 +1,19 @@
+--- /src/main/java/org/apache/commons/csv/ExtendedBufferedReader.java
++++ /src/main/java/org/apache/commons/csv/ExtendedBufferedReader.java
+@@ -52,15 +52,7 @@
+         super(r);
+     }
+ 
+-    @Override
+-    public int read() throws IOException {
+-        int current = super.read();
+-        if (current == '\n') {
+-            lineCounter++;
+-        }
+-        lastChar = current;
+-        return lastChar;
+-    }
++    
+ 
+     /**
+      * Returns the last character that was read as an integer (0 to 65535). This

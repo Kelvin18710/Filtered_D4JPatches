@@ -1,0 +1,22 @@
+--- /src/main/java/org/apache/commons/lang3/math/NumberUtils.java
++++ /src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+@@ -455,14 +455,16 @@
+             // a wrong value.
+             return null;
+         }
+-        if (str.startsWith("0x") || str.startsWith("-0x")) {
+-            return createInteger(str);
+-        }   
++           
+         char lastChar = str.charAt(str.length() - 1);
+         String mant;
+         String dec;
+         String exp;
+         int decPos = str.indexOf('.');
++	if (str.startsWith("0x") || str.startsWith("-0x")) {
++            return createInteger(str);
++        }
++
+         int expPos = str.indexOf('e') + str.indexOf('E') + 1;
+ 
+         if (decPos > -1) {

@@ -1,0 +1,17 @@
+--- /source/org/jfree/chart/renderer/GrayPaintScale.java
++++ /source/org/jfree/chart/renderer/GrayPaintScale.java
+@@ -120,13 +120,7 @@
+      * 
+      * @return A paint for the specified value.
+      */
+-    public Paint getPaint(double value) {
+-        double v = Math.max(value, this.lowerBound);
+-        v = Math.min(v, this.upperBound);
+-        int g = (int) ((value - this.lowerBound) / (this.upperBound 
+-                - this.lowerBound) * 255.0);
+-        return new Color(g, g, g);
+-    }
++ public void getPaint ( Paint v , Math state , Color lowerBound , TYPE_4 upperBound , TYPE_5 g , TYPE_5 VAR_5 , TYPE_6 VAR_6 , int VAR_7 , int v1 , boolean VAR_8 , int VAR_9 ) { TYPE_7 v0 = upperBound . max ( ) ; TYPE_8 v1 = ( TYPE_8 ) state ; TYPE_9 v2 = ( TYPE_9 ) VAR_6 ; int v3 = v2 . METHOD_3 ( ) ; double v4 = VAR_6 . METHOD_4 ( VAR_7 , item ) ; double v5 = VAR_6 . METHOD_5 ( VAR_7 , item ) ; boolean t = } 
+     
+     /**
+      * Tests this <code>GrayPaintScale</code> instance for equality with an

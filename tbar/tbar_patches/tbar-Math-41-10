@@ -1,0 +1,10 @@
+--- /src/main/java/org/apache/commons/math/stat/descriptive/moment/Variance.java
++++ /src/main/java/org/apache/commons/math/stat/descriptive/moment/Variance.java
+@@ -520,6 +520,7 @@
+                 for (int i = 0; i < weights.length; i++) {
+                     sumWts += weights[i];
+                 }
++	clear();
+ 
+                 if (isBiasCorrected) {
+                     var = (accum - (accum2 * accum2 / sumWts)) / (sumWts - 1.0);

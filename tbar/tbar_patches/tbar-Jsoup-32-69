@@ -1,0 +1,14 @@
+--- /src/main/java/org/jsoup/nodes/Element.java
++++ /src/main/java/org/jsoup/nodes/Element.java
+@@ -1132,10 +1132,5 @@
+         return result;
+     }
+ 
+-    @Override
+-    public Element clone() {
+-        Element clone = (Element) super.clone();
+-        clone.classNames();
+-        return clone;
+-    }
++    
+ }

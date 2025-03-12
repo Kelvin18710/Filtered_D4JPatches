@@ -1,0 +1,20 @@
+--- /src/java/org/apache/commons/codec/language/Caverphone.java
++++ /src/java/org/apache/commons/codec/language/Caverphone.java
+@@ -73,7 +73,7 @@
+         txt = txt.replaceAll("^gn", "2n");
+ 
+         // End 
+-        txt = txt.replaceAll("^mb", "m2");
++        
+ 
+         // 4. Handle replacements
+         txt = txt.replaceAll("cq", "2q");
+@@ -93,6 +93,8 @@
+         txt = txt.replaceAll("b", "p");
+         txt = txt.replaceAll("sh", "s2");
+         txt = txt.replaceAll("z", "s");
++	txt = txt.replaceAll("^mb", "m2");
++
+         txt = txt.replaceAll("^[aeiou]", "A");
+         txt = txt.replaceAll("[aeiou]", "3");
+         txt = txt.replaceAll("j", "y");        // 2.0 only

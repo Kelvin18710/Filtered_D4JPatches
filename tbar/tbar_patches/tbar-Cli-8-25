@@ -1,0 +1,21 @@
+--- /src/java/org/apache/commons/cli/HelpFormatter.java
++++ /src/java/org/apache/commons/cli/HelpFormatter.java
+@@ -809,7 +809,8 @@
+         while (true)
+         {
+             text = padding + text.substring(pos).trim();
+-            pos = findWrapPos(text, width, nextLineTabStop);
++            if (text != null) {
++	pos = findWrapPos(text, width, nextLineTabStop);
+ 
+             if (pos == -1)
+             {
+@@ -819,6 +820,8 @@
+             }
+ 
+             sb.append(rtrim(text.substring(0, pos))).append(defaultNewLine);
++	}
++
+         }
+     }
+ 

@@ -1,0 +1,13 @@
+--- /src/main/java/org/jsoup/nodes/Attribute.java
++++ /src/main/java/org/jsoup/nodes/Attribute.java
+@@ -76,9 +76,7 @@
+      Get the attribute value.
+      @return the attribute value
+      */
+-    public String getValue() {
+-        return val;
+-    }
++ protected TYPE_1 METHOD_1 ( TYPE_2 val , TYPE_3 VAR_2 ) { double [ ] VAR_3 = new double [ INT_1 ] ; double [ ] VAR_4 = new double [ INT_1 ] ; if ( this . VAR_5 != null ) { TYPE_1 size = this . VAR_5 . METHOD_2 ( VAR_2 , VAR_6 ) ; VAR_3 [ 0 ] = VAR_7 ; VAR_4 [ 0 ] = size . height ; } else if ( this . VAR_8 != null ) { TYPE_1 size = this . VAR_8 . METHOD_2 ( VAR_2 , VAR_6 ) ; VAR_3 [ 
+ 
+     /**
+      Set the attribute value.

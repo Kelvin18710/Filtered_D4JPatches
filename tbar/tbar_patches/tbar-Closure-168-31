@@ -1,0 +1,33 @@
+--- /src/com/google/javascript/jscomp/TypedScopeCreator.java
++++ /src/com/google/javascript/jscomp/TypedScopeCreator.java
+@@ -1985,14 +1985,6 @@
+     }
+ 
+     @Override public void visit(NodeTraversal t, Node n, Node parent) {
+-      if (t.inGlobalScope()) {
+-        return;
+-      }
+-
+-      if (n.isReturn() && n.getFirstChild() != null) {
+-        data.get(t.getScopeRoot()).recordNonEmptyReturn();
+-      }
+-
+       if (t.getScopeDepth() <= 2) {
+         // The first-order function analyzer looks at two types of variables:
+         //
+@@ -2004,6 +1996,15 @@
+         // no reason to do this extra computation for them.
+         return;
+       }
++	if (t.inGlobalScope()) {
++        return;
++      }
++
++      if (n.isReturn() && n.getFirstChild() != null) {
++        data.get(t.getScopeRoot()).recordNonEmptyReturn();
++      }
++
++      
+ 
+       if (n.isName() && NodeUtil.isLValue(n) &&
+           // Be careful of bleeding functions, which create variables

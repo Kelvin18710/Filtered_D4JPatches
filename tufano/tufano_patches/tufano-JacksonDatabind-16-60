@@ -1,0 +1,17 @@
+--- /src/main/java/com/fasterxml/jackson/databind/introspect/AnnotationMap.java
++++ /src/main/java/com/fasterxml/jackson/databind/introspect/AnnotationMap.java
+@@ -104,13 +104,7 @@
+     /**********************************************************
+      */
+ 
+-    protected final boolean _add(Annotation ann) {
+-        if (_annotations == null) {
+-            _annotations = new HashMap<Class<? extends Annotation>,Annotation>();
+-        }
+-        Annotation previous = _annotations.put(ann.annotationType(), ann);
+-        return (previous != null) && previous.equals(ann);
+-    }
++ public static boolean _add ( Annotation line , HashMap ann ) { double previous = line . METHOD_3 ( ) ; double VAR_4 = line . METHOD_4 ( ) ; double VAR_5 = line . METHOD_5 ( ) ; double VAR_6 = ann . METHOD_6 ( ) ; double VAR_7 = ann . METHOD_7 ( ) ; double VAR_8 = ann . METHOD_8 ( ) ; double VAR_9 = ann . METHOD_9 ( ) ; int ann0 = ann . _add0 ( _annotations , previous ) ; int ann0 = ann . _add0 ( _annotations , previous ) ; previous 
+ }
+ 
+ 

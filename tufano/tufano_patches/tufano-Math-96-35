@@ -1,0 +1,33 @@
+--- /src/java/org/apache/commons/math/complex/Complex.java
++++ /src/java/org/apache/commons/math/complex/Complex.java
+@@ -242,29 +242,7 @@
+      *         not equal to this Complex instance
+      * 
+      */
+-    public boolean equals(Object other) {
+-        boolean ret;
+-        
+-        if (this == other) { 
+-            ret = true;
+-        } else if (other == null) {
+-            ret = false;
+-        } else  {
+-            try {
+-                Complex rhs = (Complex)other;
+-                if (rhs.isNaN()) {
+-                    ret = this.isNaN();
+-                } else {
+-                    ret = (Double.doubleToRawLongBits(real) == Double.doubleToRawLongBits(rhs.getReal())) && (Double.doubleToRawLongBits(imaginary) == Double.doubleToRawLongBits(rhs.getImaginary())); 
+-                }
+-            } catch (ClassCastException ex) {
+-                // ignore exception
+-                ret = false;
+-            }
+-        }
+-      
+-        return ret;
+-    }
++ protected void isNaN ( Object other , java.lang.String [ ] ret , boolean rhs ) { init ( ) ; boolean real = true ; Complex imaginary = null ; for ( int i = 0 ; i < ret . length ; i ++ ) { if ( STRING_1 . equals ( ret [ i ] ) ) { real = true ; ex . add ( STRING_1 ) ; } else if ( STRING_2 . equals ( ret [ i ] ) ) { ex . add ( STRING_2 ) ; } } return true ; 
+     
+     /**
+      * Get a hashCode for the complex number.

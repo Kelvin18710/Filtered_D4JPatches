@@ -1,0 +1,25 @@
+--- /src/com/google/javascript/jscomp/CollapseProperties.java
++++ /src/com/google/javascript/jscomp/CollapseProperties.java
+@@ -165,10 +165,6 @@
+       Name name = workList.pop();
+ 
+       // Don't attempt to inline a getter or setter property as a variable.
+-      if (name.type == Name.Type.GET || name.type == Name.Type.SET) {
+-        continue;
+-      }
+-
+       if (name.globalSets == 1 && name.localSets == 0 &&
+           name.aliasingGets > 0) {
+         // {@code name} meets condition (b). Find all of its local aliases
+@@ -183,6 +179,11 @@
+           }
+         }
+       }
++	if (name.type == Name.Type.GET || name.type == Name.Type.SET) {
++        continue;
++      }
++
++      
+ 
+       // Check if {@code name} has any aliases left after the
+       // local-alias-inlining above.

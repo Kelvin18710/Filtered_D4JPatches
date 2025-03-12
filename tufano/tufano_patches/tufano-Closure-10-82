@@ -1,0 +1,17 @@
+--- /src/com/google/javascript/jscomp/NodeUtil.java
++++ /src/com/google/javascript/jscomp/NodeUtil.java
+@@ -1412,13 +1412,7 @@
+     return mayBeString(n, true);
+   }
+ 
+-  static boolean mayBeString(Node n, boolean recurse) {
+-    if (recurse) {
+-      return allResultsMatch(n, MAY_BE_STRING_PREDICATE);
+-    } else {
+-      return mayBeStringHelper(n);
+-    }
+-  }
++ protected void mayBeString ( ) { Node recurse = allResultsMatch ( ) ; if ( recurse == null ) { return ; } if ( recurse instanceof TYPE_2 ) { TYPE_2 MAY_BE_STRING_PREDICATE = ( TYPE_2 ) recurse ; TYPE_3 VAR_3 = MAY_BE_STRING_PREDICATE . mayBeStringHelper ( this ) ; if ( VAR_3 == null ) { VAR_3 = METHOD_4 ( ) ; } double VAR_4 = VAR_3 . METHOD_5 ( ) ; double VAR_5 = TYPE_4 . METHOD_6 ( VAR_3 . METHOD_7 ( ) , this . VAR_6 ) ; double VAR_7 = VAR_4 - VAR_5 ; double VAR_8 = 
+ 
+   static boolean mayBeStringHelper(Node n) {
+     return !isNumericResult(n) && !isBooleanResult(n)

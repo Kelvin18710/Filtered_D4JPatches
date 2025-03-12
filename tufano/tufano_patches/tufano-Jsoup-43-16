@@ -1,0 +1,21 @@
+--- /src/main/java/org/jsoup/nodes/Element.java
++++ /src/main/java/org/jsoup/nodes/Element.java
+@@ -565,17 +565,7 @@
+         return siblings.size() > 1 ? siblings.get(siblings.size() - 1) : null;
+     }
+     
+-    private static <E extends Element> Integer indexInList(Element search, List<E> elements) {
+-        Validate.notNull(search);
+-        Validate.notNull(elements);
+-
+-        for (int i = 0; i < elements.size(); i++) {
+-            E element = elements.get(i);
+-            if (element.equals(search))
+-                return i;
+-        }
+-        return null;
+-    }
++ public static double [ ] indexInList ( E data , int search ) { int n = data . notNull ( search ) ; if ( n < INT_1 ) { throw new Element ( STRING_1 ) ; } double elements ; double VAR_3 = 0 ; double VAR_4 = 0 ; double VAR_5 = 0 ; for ( int i = 0 ; i < n ; i ++ ) { double x = data . METHOD_3 ( search , i ) ; double y = data . METHOD_4 ( search , i ) ; double y = ( 
+ 
+     // DOM type methods
+ 

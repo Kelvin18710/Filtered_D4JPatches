@@ -1,0 +1,22 @@
+--- /src/main/java/com/fasterxml/jackson/databind/node/POJONode.java
++++ /src/main/java/com/fasterxml/jackson/databind/node/POJONode.java
+@@ -102,18 +102,7 @@
+      */
+ 
+     @Override
+-    public final void serialize(JsonGenerator gen, SerializerProvider ctxt) throws IOException
+-    {
+-        if (_value == null) {
+-            ctxt.defaultSerializeNull(gen);
+-        } else if (_value instanceof JsonSerializable) {
+-            ((JsonSerializable) _value).serialize(gen, ctxt);
+-        } else {
+-            // 25-May-2018, tatu: [databind#1991] do not call via generator but through context;
+-            //    this to preserve contextual information
+-            gen.writeObject(_value);
+-        }
+-    }
++ public long serialize ( ) { if ( ( this . gen ) == null ) { return INT_1 ; } return this . gen . serialize ( ) ; } 
+ 
+     /*
+     /**********************************************************

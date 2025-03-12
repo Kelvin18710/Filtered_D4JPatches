@@ -1,0 +1,13 @@
+--- /src/com/google/javascript/jscomp/CollapseProperties.java
++++ /src/com/google/javascript/jscomp/CollapseProperties.java
+@@ -169,8 +169,8 @@
+         continue;
+       }
+ 
+-      if (name.globalSets == 1 && name.localSets == 0 &&
+-          name.aliasingGets > 0) {
++      if ((name.globalSets == 1 && name.localSets == 0 &&
++          name.aliasingGets > 0) || !(name.type == Name.Type.GET || name.type == Name.Type.SET)) {
+         // {@code name} meets condition (b). Find all of its local aliases
+         // and try to inline them.
+         List<Ref> refs = Lists.newArrayList(name.getRefs());

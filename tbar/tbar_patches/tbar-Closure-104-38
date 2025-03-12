@@ -1,0 +1,10 @@
+--- /src/com/google/javascript/rhino/jstype/UnionType.java
++++ /src/com/google/javascript/rhino/jstype/UnionType.java
+@@ -295,6 +295,7 @@
+     } else {
+       return getNativeType(JSTypeNative.NO_TYPE);
+     }
++	forgiveUnknownNames();
+   }
+ 
+   /**

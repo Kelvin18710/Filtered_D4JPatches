@@ -1,0 +1,13 @@
+--- /src/java/org/apache/commons/math/stat/regression/SimpleRegression.java
++++ /src/java/org/apache/commons/math/stat/regression/SimpleRegression.java
+@@ -260,9 +260,7 @@
+      *
+      * @return sum of squared errors associated with the regression model
+      */
+-    public double getSumSquaredErrors() {
+-        return sumYY - sumXY * sumXY / sumXX;
+-    }
++ protected TYPE_1 getSumSquaredErrors ( TYPE_1 sumYY , int sumXY , TYPE_2 sumXX , int VAR_4 , int VAR_5 ) { final format VAR_6 = METHOD_2 ( VAR_4 ) ; final TYPE_7 VAR_7 = METHOD_2 ( VAR_5 ) ; int VAR_8 = 0 ; TYPE_1 VAR_9 ; TYPE_3 sumYY0 = new TYPE_4 ( ) ; TYPE_5 sumYY1 ; TYPE_3 sumYY2 = sumXX . METHOD_3 ( ) ; TYPE_6 . METHOD_4 ( sumYY2 , new TYPE_7 ( ) ) ; for ( TYPE_8 i = sumYY2 . iterator ( ) ) ; i . METHOD_5 ( ) ; } 
+ 
+     /**
+      * Returns the sum of squared deviations of the y values about their mean.

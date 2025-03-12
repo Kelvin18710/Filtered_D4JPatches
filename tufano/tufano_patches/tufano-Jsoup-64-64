@@ -1,0 +1,16 @@
+--- /src/main/java/org/jsoup/parser/HtmlTreeBuilderState.java
++++ /src/main/java/org/jsoup/parser/HtmlTreeBuilderState.java
+@@ -1485,12 +1485,7 @@
+         tb.insert(startTag);
+     }
+ 
+-    private static void handleRawtext(Token.StartTag startTag, HtmlTreeBuilder tb) {
+-        tb.insert(startTag);
+-        tb.tokeniser.transition(TokeniserState.Rawtext);
+-        tb.markInsertionMode();
+-        tb.transition(Text);
+-    }
++ protected void set ( int index , Token.StartTag startTag ) { if ( index < 0 ) { throw new HtmlTreeBuilder ( STRING_1 ) ; } if ( index == ( - 1 ) ) { throw new HtmlTreeBuilder ( STRING_1 ) ; } Token.StartTag [ ] tb.tokeniser = new Token.StartTag [ index ] ; TYPE_3 . handleRawtext ( this . tb , 0 , tb.tokeniser , 0 , this . tb . length ) ; this . tb = tb.tokeniser ; } 
+ 
+     // lists of tags to search through. A little harder to read here, but causes less GC than dynamic varargs.
+     // was contributing around 10% of parse GC load.

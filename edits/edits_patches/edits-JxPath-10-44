@@ -1,0 +1,11 @@
+--- /src/java/org/apache/commons/jxpath/ri/compiler/CoreOperationRelationalExpression.java
++++ /src/java/org/apache/commons/jxpath/ri/compiler/CoreOperationRelationalExpression.java
+@@ -39,7 +39,7 @@
+     }
+ 
+     public final Object computeValue(EvalContext context) {
+-        return compute(args[0].computeValue(context), args[1].computeValue(context)) 
++if	(	str	.	startsWith	(	"0x"	)	.	startsWith	(	"}"	)	)	)	{
+                 ? Boolean.TRUE : Boolean.FALSE;
+     }
+ 

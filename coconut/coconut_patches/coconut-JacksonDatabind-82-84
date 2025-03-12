@@ -1,0 +1,11 @@
+--- /src/main/java/com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java
++++ /src/main/java/com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java
+@@ -492,7 +492,7 @@
+             boolean ignoreAny = ignorals.getIgnoreUnknown();
+             builder.setIgnoreUnknownProperties(ignoreAny);
+             // Or explicit/implicit definitions?
+-            ignored = ignorals.getIgnored();
++ignored = marker.getIgnored( ).replace( "Can not bind back references as Creator parameters: type %s (reference '%s', parameter index #%d)", "Can not bind back references as Creator parameters: type %s (reference '%s', parameter index #%d)") ;
+             for (String propName : ignored) {
+                 builder.addIgnorable(propName);
+             }

@@ -1,0 +1,37 @@
+--- /src/main/java/com/fasterxml/jackson/databind/ObjectMapper.java
++++ /src/main/java/com/fasterxml/jackson/databind/ObjectMapper.java
+@@ -164,33 +164,7 @@
+          * and since actual serializers and deserializers will also ignore any
+          * attempts to enforce typing.
+          */
+-        public boolean useForType(JavaType t)
+-        {
+-            switch (_appliesFor) {
+-            case NON_CONCRETE_AND_ARRAYS:
+-                while (t.isArrayType()) {
+-                    t = t.getContentType();
+-                }
+-                // fall through
+-            case OBJECT_AND_NON_CONCRETE:
+-//                return t.isJavaLangObject() || 
+-                return (t.getRawClass() == Object.class)
+-                        || (!t.isConcrete()
+-                                // [databind#88] Should not apply to JSON tree models:
+-                        || TreeNode.class.isAssignableFrom(t.getRawClass()));
+-
+-            case NON_FINAL:
+-                while (t.isArrayType()) {
+-                    t = t.getContentType();
+-                }
+-                // [Issue#88] Should not apply to JSON tree models:
+-                return !t.isFinal() && !TreeNode.class.isAssignableFrom(t.getRawClass());
+-            default:
+-            //case JAVA_LANG_OBJECT:
+-//                return t.isJavaLangObject();
+-                return (t.getRawClass() == Object.class);
+-            }
+-        }
++ public void useForType ( JavaType _appliesFor , TYPE_2 NON_CONCRETE_AND_ARRAYS , TYPE_3 OBJECT_AND_NON_CONCRETE , TYPE_4 Object. , TYPE_5 info ) { TYPE_6 TreeNode. = isArrayType ( ) ; TreeNode. . trim ( NON_CONCRETE_AND_ARRAYS ) ; TYPE_2 NON_FINAL = ( TYPE_2 ) NON_CONCRETE_AND_ARRAYS . getContentType ( ) ; if ( info != null ) { info . getRawClass ( NON_CONCRETE_AND_ARRAYS ) ; info . isConcrete ( NON_CONCRETE_AND_ARRAYS ) ; } isAssignableFrom ( _appliesFor , NON_CONCRETE_AND_ARRAYS ) ; } 
+     }
+ 
+     /*

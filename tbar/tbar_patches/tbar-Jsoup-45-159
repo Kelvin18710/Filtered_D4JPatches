@@ -1,0 +1,21 @@
+--- /src/main/java/org/jsoup/parser/HtmlTreeBuilder.java
++++ /src/main/java/org/jsoup/parser/HtmlTreeBuilder.java
+@@ -391,7 +391,8 @@
+             if ("select".equals(name)) {
+                 transition(HtmlTreeBuilderState.InSelect);
+                 break; // frag
+-            } else if (("td".equals(name) || "td".equals(name) && !last)) {
++            } else if (name != null && last != null) {
++	if (("td".equals(name) || "td".equals(name) && !last)) {
+                 transition(HtmlTreeBuilderState.InCell);
+                 break;
+             } else if ("tr".equals(name)) {
+@@ -425,6 +426,8 @@
+                 transition(HtmlTreeBuilderState.InBody);
+                 break; // frag
+             }
++	}
++
+         }
+     }
+ 

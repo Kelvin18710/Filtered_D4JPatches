@@ -1,0 +1,31 @@
+--- /src/main/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java
++++ /src/main/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java
+@@ -1953,13 +1953,6 @@
+         final int maxCode = codes.length;
+ 
+         while (true) {
+-            if (_inputPtr >= _inputEnd) {
+-                if (!_loadMore()) { // acceptable for now (will error out later)
+-                    break;
+-                }
+-            }
+-            char c = _inputBuffer[_inputPtr];
+-            int i = (int) c;
+             if (i <= maxCode) {
+                 if (codes[i] != 0) {
+                     break;
+@@ -1967,6 +1960,14 @@
+             } else if (!Character.isJavaIdentifierPart(c)) {
+                 break;
+             }
++	if (_inputPtr >= _inputEnd) {
++                if (!_loadMore()) { // acceptable for now (will error out later)
++                    break;
++                }
++            }
++            char c = _inputBuffer[_inputPtr];
++            int i = (int) c;
++            
+             ++_inputPtr;
+             hash = (hash * CharsToNameCanonicalizer.HASH_MULT) + i;
+             // Ok, let's add char to output:

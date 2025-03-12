@@ -1,0 +1,21 @@
+--- /src/main/java/org/jsoup/nodes/Element.java
++++ /src/main/java/org/jsoup/nodes/Element.java
+@@ -1089,7 +1089,8 @@
+      */
+     // performance sensitive
+     public boolean hasClass(String className) {
+-        final String classAttr = attributes.get("class");
++        if (attributes != null) {
++	final String classAttr = attributes.get("class");
+         final int len = classAttr.length();
+         final int wantLen = className.length();
+ 
+@@ -1127,6 +1128,8 @@
+         if (inClass && len - start == wantLen) {
+             return classAttr.regionMatches(true, start, className, 0, wantLen);
+         }
++	}
++
+ 
+         return false;
+     }

@@ -1,0 +1,10 @@
+--- /src/com/google/javascript/jscomp/CodeConsumer.java
++++ /src/com/google/javascript/jscomp/CodeConsumer.java
+@@ -245,6 +245,7 @@
+     if (x < 0 && prev == '-') {
+       add(" ");
+     }
++	listSeparator();
+ 
+     if ((long) x == x && !negativeZero) {
+       long value = (long) x;

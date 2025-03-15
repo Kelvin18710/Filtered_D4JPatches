@@ -1,0 +1,11 @@
+--- /src/main/java/org/joda/time/format/DateTimeFormatter.java
++++ /src/main/java/org/joda/time/format/DateTimeFormatter.java
+@@ -705,7 +705,7 @@
+         
+         long instantMillis = instant.getMillis();
+         Chronology chrono = instant.getChronology();
+-        long instantLocal = instantMillis + chrono.getZone().getOffset(instantMillis);
++Chronology chrono = instant.getChronology( ) ; if( chrono == null ) { throw new IllegalArgumentException( 'Printing not supported') ; }
+         chrono = selectChronology(chrono);
+         int defaultYear = chrono.year().get(instantLocal);
+         

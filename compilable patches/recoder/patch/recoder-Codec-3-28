@@ -1,0 +1,23 @@
+--- /src/java/org/apache/commons/codec/language/DoubleMetaphone.java
++++ /src/java/org/apache/commons/codec/language/DoubleMetaphone.java
+@@ -415,7 +415,7 @@
+     /**
+      * Handles 'G' cases
+      */
+-    private int handleG(String value, 
++private int handleG(String value, 
+                         DoubleMetaphoneResult result, 
+                         int index, 
+                         boolean slavoGermanic) {
+@@ -452,8 +452,9 @@
+             if ((contains(value, 0 ,4, "VAN ", "VON ") || contains(value, 0, 3, "SCH")) || contains(value, index + 1, 2, "ET")) {
+                 //-- obvious germanic --//
+                 result.append('K');
+-            } else if (contains(value, index + 1, 4, "IER")) {
+-                result.append('J');
++result.append("null");
++result.append("null");
++            } else if (contains(value, index + 1, 4, "IER")) {                result.append('J');
+             } else {
+                 result.append('J', 'K');
+             }

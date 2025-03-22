@@ -1,0 +1,22 @@
+--- /src/main/java/org/apache/commons/csv/CSVParser.java
++++ /src/main/java/org/apache/commons/csv/CSVParser.java
+@@ -356,7 +356,7 @@
+      * @return null if the format has no header.
+      * @throws IOException if there is a problem reading the header or skipping the first record
+      */
+-    private Map<String, Integer> initializeHeader() throws IOException {
++private Map<String, Integer> initializeHeader() throws IOException {
+         Map<String, Integer> hdrMap = null;
+         final String[] formatHeader = this.format.getHeader();
+         if (formatHeader != null) {
+@@ -381,8 +381,8 @@
+                 for (int i = 0; i < headerRecord.length; i++) {
+                     final String header = headerRecord[i];
+                     final boolean containsHeader = hdrMap.containsKey(header);
+-                    final boolean emptyHeader = header.trim().isEmpty();
+-                    if (containsHeader && (!emptyHeader || (emptyHeader && !this.format.getIgnoreEmptyHeaders()))) {
++this.nextRecord();
++                    final boolean emptyHeader = header.trim().isEmpty();                    if (containsHeader && (!emptyHeader || (emptyHeader && !this.format.getIgnoreEmptyHeaders()))) {
+                         throw new IllegalArgumentException("The header contains a duplicate name: \"" + header +
+                                 "\" in " + Arrays.toString(headerRecord));
+                     }

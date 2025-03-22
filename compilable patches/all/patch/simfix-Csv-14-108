@@ -1,0 +1,57 @@
+--- /src/main/java/org/apache/commons/csv/CSVFormat.java
++++ /src/main/java/org/apache/commons/csv/CSVFormat.java
+@@ -1036,33 +1036,27 @@
+                 char c = value.charAt(pos);
+ 
+                 // RFC4180 (https://tools.ietf.org/html/rfc4180) TEXTDATA =  %x20-21 / %x23-2B / %x2D-7E
+-                if (newRecord && (c < '0' || c > '9' && c < 'A' || c > 'Z' && c < 'a' || c > 'z')) {
+-                    quote = true;
+-                } else if (c <= COMMENT) {
+-                    // Some other chars at the start of a value caused the parser to fail, so for now
+-                    // encapsulate if we start in anything less than '#'. We are being conservative
+-                    // by including the default comment char too.
+-                    quote = true;
+-                } else {
+-                    while (pos < end) {
+-                        c = value.charAt(pos);
+-                        if (c == LF || c == CR || c == quoteChar || c == delimChar) {
+-                            quote = true;
+-                            break;
+-                        }
+-                        pos++;
+-                    }
+-
+-                    if (!quote) {
+-                        pos = end - 1;
+-                        c = value.charAt(pos);
+-                        // Some other chars at the end caused the parser to fail, so for now
+-                        // encapsulate if we end in anything less than ' '
+-                        if (c <= SP) {
+-                            quote = true;
+-                        }
+-                    }
+-                }
++if(c==CR||c==LF||c==delimChar&&(c<'0'||c>'9'&&c<'A'||c>'Z'&&c<'a'||c>'z')){
++quote=true;
++}else if(c<=COMMENT){
++quote=true;
++}else {
++while(pos<end){
++c=value.charAt(pos);
++if(c==LF||c==CR||c==quoteChar||c==delimChar){
++quote=true;
++break;
++}
++pos++;
++}
++if(!quote){
++pos=end-1;
++c=value.charAt(pos);
++if(c<=SP){
++quote=true;
++}
++}
++}
+             }
+ 
+             if (!quote) {

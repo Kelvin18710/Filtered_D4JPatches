@@ -1,0 +1,30 @@
+--- /src/main/java/org/apache/commons/csv/CSVFormat.java
++++ /src/main/java/org/apache/commons/csv/CSVFormat.java
+@@ -998,7 +998,7 @@
+      * Note: must only be called if quoting is enabled, otherwise will generate NPE
+      */
+     // the original object is needed so can check for Number
+-    private void printAndQuote(final Object object, final CharSequence value, final int offset, final int len,
++private void printAndQuote(final Object object, final CharSequence value, final int offset, final int len,
+             final Appendable out, final boolean newRecord) throws IOException {
+         boolean quote = false;
+         int start = offset;
+@@ -1036,8 +1036,8 @@
+                 char c = value.charAt(pos);
+ 
+                 // RFC4180 (https://tools.ietf.org/html/rfc4180) TEXTDATA =  %x20-21 / %x23-2B / %x2D-7E
+-                if (newRecord && (c < '0' || c > '9' && c < 'A' || c > 'Z' && c < 'a' || c > 'z')) {
+-                    quote = true;
++if((c <= COMMENT)){
++                if (newRecord && (c < '0' || c > '9' && c < 'A' || c > 'Z' && c < 'a' || c > 'z')) {                    quote = true;
+                 } else if (c <= COMMENT) {
+                     // Some other chars at the start of a value caused the parser to fail, so for now
+                     // encapsulate if we start in anything less than '#'. We are being conservative
+@@ -1063,6 +1063,7 @@
+                         }
+                     }
+                 }
++}
+             }
+ 
+             if (!quote) {

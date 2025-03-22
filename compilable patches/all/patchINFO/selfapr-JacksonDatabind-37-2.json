@@ -1,0 +1,7 @@
+{
+    "ID": "selfapr-JacksonDatabind-37-2",
+    "tool": "selfapr",
+    "correctness": "-",
+    "bug_id": "37",
+    "project": "JacksonDatabind"
+}

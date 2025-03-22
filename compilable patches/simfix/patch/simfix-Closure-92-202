@@ -1,0 +1,38 @@
+--- /src/com/google/javascript/jscomp/ProcessClosurePrimitives.java
++++ /src/com/google/javascript/jscomp/ProcessClosurePrimitives.java
+@@ -786,20 +786,21 @@
+         } else {
+           // In this case, the name was implicitly provided by two independent
+           // modules. We need to move this code up to a common module.
+-          int indexOfDot = namespace.indexOf('.');
+-          if (indexOfDot == -1) {
+-            // Any old place is fine.
+-            compiler.getNodeForCodeInsertion(minimumModule)
+-                .addChildToBack(replacementNode);
+-          } else {
+-            // Add it after the parent namespace.
+-            ProvidedName parentName =
+-                providedNames.get(namespace.substring(0, indexOfDot));
+-            Preconditions.checkNotNull(parentName);
+-            Preconditions.checkNotNull(parentName.replacementNode);
+-            parentName.replacementNode.getParent().addChildAfter(
+-                replacementNode, parentName.replacementNode);
+-          }
++replacementNode.addChildToFront(createNamespaceLiteral());
++new Node(Token.VAR,replacementNode).putBooleanProp(Node.IS_NAMESPACE,true);
++if(compiler.getCodingConvention().isConstant(namespace)){
++replacementNode.putBooleanProp(Node.IS_CONSTANT_NAME,true);
++}
++Preconditions.checkState(isNamespacePlaceholder(new Node(Token.VAR,replacementNode)));
++int indexOfDot=namespace.indexOf('.');
++if(indexOfDot==-1){
++compiler.getNodeForCodeInsertion(minimumModule).addChildToBack(replacementNode);
++}else {
++ProvidedName parentName=providedNames.get(namespace.substring(0,indexOfDot));
++Preconditions.checkNotNull(parentName);
++Preconditions.checkNotNull(parentName.replacementNode);
++parentName.replacementNode.getParent().addChildAfter(replacementNode,parentName.replacementNode);
++}
+         }
+         if (explicitNode != null) {
+           explicitNode.detachFromParent();

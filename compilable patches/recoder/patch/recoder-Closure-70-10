@@ -1,0 +1,21 @@
+--- /src/com/google/javascript/jscomp/TypedScopeCreator.java
++++ /src/com/google/javascript/jscomp/TypedScopeCreator.java
+@@ -1731,7 +1731,7 @@
+     /**
+      * Declares all of a function's arguments.
+      */
+-    private void declareArguments(Node functionNode) {
++private void declareArguments(Node functionNode) {
+       Node astParameters = functionNode.getFirstChild().getNext();
+       Node body = astParameters.getNext();
+       FunctionType functionType = (FunctionType) functionNode.getJSType();
+@@ -1741,8 +1741,7 @@
+           Node jsDocParameter = jsDocParameters.getFirstChild();
+           for (Node astParameter : astParameters.children()) {
+             if (jsDocParameter != null) {
+-              defineSlot(astParameter, functionNode,
+-                  jsDocParameter.getJSType(), true);
++defineSlot(astParameter, functionNode, astParameters.getJSType(), true);
+               jsDocParameter = jsDocParameter.getNext();
+             } else {
+               defineSlot(astParameter, functionNode, null, true);

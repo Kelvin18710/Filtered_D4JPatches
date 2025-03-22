@@ -1,0 +1,10 @@
+--- /src/java/org/apache/commons/cli/HelpFormatter.java
++++ /src/java/org/apache/commons/cli/HelpFormatter.java
+@@ -810,6 +810,7 @@
+         {
+             text = padding + text.substring(pos).trim();
+             pos = findWrapPos(text, width, nextLineTabStop);
++	setLongOptPrefix(text);
+ 
+             if (pos == -1)
+             {

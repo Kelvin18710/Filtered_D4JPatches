@@ -1,0 +1,10 @@
+--- /src/main/java/org/jsoup/parser/HtmlTreeBuilder.java
++++ /src/main/java/org/jsoup/parser/HtmlTreeBuilder.java
+@@ -425,6 +425,7 @@
+                 transition(HtmlTreeBuilderState.InBody);
+                 break; // frag
+             }
++	setFosterInserts(last);
+         }
+     }
+ 

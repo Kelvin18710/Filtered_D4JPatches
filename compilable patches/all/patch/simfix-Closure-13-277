@@ -1,0 +1,20 @@
+--- /src/com/google/javascript/jscomp/PeepholeOptimizationsPass.java
++++ /src/com/google/javascript/jscomp/PeepholeOptimizationsPass.java
+@@ -122,11 +122,12 @@
+     int visits = 0;
+     do {
+       Node c = node.getFirstChild();
+-      while(c != null) {
+-        traverse(c);
+-        Node next = c.getNext();
+-        c = next;
+-      }
++while(c!=null){
++c.replaceChild(node,node.getNext());
++traverse(c);
++Node next=c.getNext();
++c=next;
++}
+ 
+       visit(node);
+       visits++;

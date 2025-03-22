@@ -1,0 +1,20 @@
+--- /source/org/jfree/chart/plot/MultiplePiePlot.java
++++ /source/org/jfree/chart/plot/MultiplePiePlot.java
+@@ -142,7 +142,7 @@
+      */
+     public MultiplePiePlot(CategoryDataset dataset) {
+         super();
+-        this.dataset = dataset;
++        
+         PiePlot piePlot = new PiePlot(null);
+         this.pieChart = new JFreeChart(piePlot);
+         this.pieChart.removeLegend();
+@@ -153,6 +153,8 @@
+         seriesTitle.setPosition(RectangleEdge.BOTTOM);
+         this.pieChart.setTitle(seriesTitle);
+         this.aggregatedItemsKey = "Other";
++	this.dataset = dataset;
++
+         this.aggregatedItemsPaint = Color.lightGray;
+         this.sectionPaints = new HashMap();
+     }

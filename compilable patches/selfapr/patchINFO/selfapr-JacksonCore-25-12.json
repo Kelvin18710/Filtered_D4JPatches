@@ -1,0 +1,7 @@
+{
+    "ID": "selfapr-JacksonCore-25-12",
+    "tool": "selfapr",
+    "correctness": "-",
+    "bug_id": "25",
+    "project": "JacksonCore"
+}

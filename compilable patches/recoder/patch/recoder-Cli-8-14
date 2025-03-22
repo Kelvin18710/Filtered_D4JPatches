@@ -1,0 +1,20 @@
+--- /src/java/org/apache/commons/cli/HelpFormatter.java
++++ /src/java/org/apache/commons/cli/HelpFormatter.java
+@@ -789,7 +789,7 @@
+      *
+      * @return the StringBuffer with the rendered Options contents.
+      */
+-    protected StringBuffer renderWrappedText(StringBuffer sb, int width, 
++protected StringBuffer renderWrappedText(StringBuffer sb, int width, 
+                                              int nextLineTabStop, String text)
+     {
+         int pos = findWrapPos(text, width, 0);
+@@ -809,7 +809,7 @@
+         while (true)
+         {
+             text = padding + text.substring(pos).trim();
+-            pos = findWrapPos(text, width, nextLineTabStop);
++sb.append(text);
+ 
+             if (pos == -1)
+             {

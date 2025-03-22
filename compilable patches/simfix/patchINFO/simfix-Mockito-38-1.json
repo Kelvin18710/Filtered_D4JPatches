@@ -1,0 +1,7 @@
+{
+    "ID": "simfix-Mockito-38-1",
+    "tool": "simfix",
+    "correctness": "-",
+    "bug_id": "38",
+    "project": "Mockito"
+}

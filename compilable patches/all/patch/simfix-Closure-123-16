@@ -1,0 +1,18 @@
+--- /src/com/google/javascript/jscomp/CodeGenerator.java
++++ /src/com/google/javascript/jscomp/CodeGenerator.java
+@@ -281,9 +281,12 @@
+ 
+       case Token.HOOK: {
+         Preconditions.checkState(childCount == 3);
+-        int p = NodeUtil.precedence(type);
+-        Context rhsContext = Context.OTHER;
+-        addExpr(first, p + 1, context);
++int p=NodeUtil.precedence(type);
++Context rhsContext=Context.OTHER;
++if(NodeUtil.containsType(first,Token.CALL,NodeUtil.MATCH_NOT_FUNCTION)){
++type=NodeUtil.precedence(first.getType())+1;
++}
++addExpr(first,p+1,context);
+         cc.addOp("?", true);
+         addExpr(first.getNext(), 1, rhsContext);
+         cc.addOp(":", true);

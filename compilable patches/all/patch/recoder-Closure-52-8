@@ -1,0 +1,21 @@
+--- /src/com/google/javascript/jscomp/CodeGenerator.java
++++ /src/com/google/javascript/jscomp/CodeGenerator.java
+@@ -734,7 +734,7 @@
+     cc.endSourceMapping(n);
+   }
+ 
+-  static boolean isSimpleNumber(String s) {
++static boolean isSimpleNumber(String s) {
+     int len = s.length();
+     for (int index = 0; index < len; index++) {
+       char c = s.charAt(index);
+@@ -742,8 +742,7 @@
+         return false;
+       }
+     }
+-    return len > 0;
+-  }
++return (len != 0);  }
+ 
+   static double getSimpleNumber(String s) {
+     if (isSimpleNumber(s)) {

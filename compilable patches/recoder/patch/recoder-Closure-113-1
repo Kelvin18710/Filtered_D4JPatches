@@ -1,0 +1,21 @@
+--- /src/com/google/javascript/jscomp/ProcessClosurePrimitives.java
++++ /src/com/google/javascript/jscomp/ProcessClosurePrimitives.java
+@@ -292,7 +292,7 @@
+   /**
+    * Handles a goog.require call.
+    */
+-  private void processRequireCall(NodeTraversal t, Node n, Node parent) {
++private void processRequireCall(NodeTraversal t, Node n, Node parent) {
+     Node left = n.getFirstChild();
+     Node arg = left.getNext();
+     if (verifyLastArgumentIsString(t, left, arg)) {
+@@ -326,8 +326,7 @@
+       // the checks for broken requires turned off. In these cases, we
+       // allow broken requires to be preserved by the first run to
+       // let them be caught in the subsequent run.
+-      if (provided != null) {
+-        parent.detachFromParent();
++if((provided == null)){        parent.detachFromParent();
+         compiler.reportCodeChange();
+       }
+     }

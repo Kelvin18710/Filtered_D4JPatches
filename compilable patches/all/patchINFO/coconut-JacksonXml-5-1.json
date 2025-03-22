@@ -1,0 +1,7 @@
+{
+    "ID": "coconut-JacksonXml-5-1",
+    "tool": "coconut",
+    "correctness": "-",
+    "bug_id": "5",
+    "project": "JacksonXml"
+}

@@ -1,0 +1,19 @@
+--- /src/com/google/javascript/jscomp/ProcessClosurePrimitives.java
++++ /src/com/google/javascript/jscomp/ProcessClosurePrimitives.java
+@@ -326,10 +326,12 @@
+       // the checks for broken requires turned off. In these cases, we
+       // allow broken requires to be preserved by the first run to
+       // let them be caught in the subsequent run.
+-      if (provided != null) {
+-        parent.detachFromParent();
+-        compiler.reportCodeChange();
+-      }
++Preconditions.checkState(parent!=null,"Cannot find continue target.");
++left=left;
++if(provided!=null){
++parent.detachFromParent();
++compiler.reportCodeChange();
++}
+     }
+   }
+ 

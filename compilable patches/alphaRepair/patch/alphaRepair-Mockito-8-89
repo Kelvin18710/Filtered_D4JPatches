@@ -1,0 +1,10 @@
+--- /src/org/mockito/internal/util/reflection/GenericMetadataSupport.java
++++ /src/org/mockito/internal/util/reflection/GenericMetadataSupport.java
+@@ -76,6 +76,7 @@
+ 
+             if (actualTypeArgument instanceof WildcardType) {
+                 contextualActualTypeParameters.put(typeParameter, boundsOf((WildcardType) actualTypeArgument));
++                            registerTypeVariablesOn((WildcardType) actualTypeArgument);
+             } else {
+                 contextualActualTypeParameters.put(typeParameter, actualTypeArgument);
+             }

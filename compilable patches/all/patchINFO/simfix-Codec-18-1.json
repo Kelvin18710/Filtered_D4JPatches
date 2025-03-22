@@ -1,0 +1,7 @@
+{
+    "ID": "simfix-Codec-18-1",
+    "tool": "simfix",
+    "correctness": "-",
+    "bug_id": "18",
+    "project": "Codec"
+}

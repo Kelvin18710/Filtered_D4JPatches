@@ -1,0 +1,10 @@
+--- /src/main/java/org/jsoup/nodes/Node.java
++++ /src/main/java/org/jsoup/nodes/Node.java
+@@ -443,6 +443,7 @@
+             reparentChild(in);
+             childNodes.add(index, in);
+         }
++	remove();
+         reindexChildren(index);
+     }
+ 

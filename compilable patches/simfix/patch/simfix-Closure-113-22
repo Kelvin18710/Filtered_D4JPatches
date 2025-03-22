@@ -1,0 +1,20 @@
+--- /src/com/google/javascript/jscomp/ProcessClosurePrimitives.java
++++ /src/com/google/javascript/jscomp/ProcessClosurePrimitives.java
+@@ -326,10 +326,13 @@
+       // the checks for broken requires turned off. In these cases, we
+       // allow broken requires to be preserved by the first run to
+       // let them be caught in the subsequent run.
+-      if (provided != null) {
+-        parent.detachFromParent();
+-        compiler.reportCodeChange();
+-      }
++if(provided!=null){
++if(moduleGraph!=null&&t.getModule()!=provided.explicitModule&&!moduleGraph.dependsOn(t.getModule(),provided.explicitModule)){
++compiler.report(t.makeError(n,XMODULE_REQUIRE_ERROR,ns,provided.explicitModule.getName(),t.getModule().getName()));
++}
++parent.detachFromParent();
++compiler.reportCodeChange();
++}
+     }
+   }
+ 

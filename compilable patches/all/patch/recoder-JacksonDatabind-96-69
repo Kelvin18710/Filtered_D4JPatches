@@ -1,0 +1,23 @@
+--- /src/main/java/com/fasterxml/jackson/databind/deser/BasicDeserializerFactory.java
++++ /src/main/java/com/fasterxml/jackson/databind/deser/BasicDeserializerFactory.java
+@@ -698,7 +698,7 @@
+      *
+      * @since 2.9.2
+      */
+-    protected void _addExplicitAnyCreator(DeserializationContext ctxt,
++protected void _addExplicitAnyCreator(DeserializationContext ctxt,
+             BeanDescription beanDesc, CreatorCollector creators,
+             CreatorCandidate candidate)
+         throws JsonMappingException
+@@ -732,8 +732,9 @@
+             // 25-May-2018, tatu: as per [databind#2051], looks like we have to get
+             //    not implicit name, but name with possible strategy-based-rename
+ //            paramName = candidate.findImplicitParamName(0);
+-            paramName = candidate.findImplicitParamName(0);
+-            useProps = (paramName != null) && paramDef.couldSerialize();
++if((!useProps && (paramDef != null))){
++            paramName = candidate.findImplicitParamName(0);            useProps = (paramName != null) && paramDef.couldSerialize();
++}
+         }
+         if (useProps) {
+             SettableBeanProperty[] properties = new SettableBeanProperty[] {

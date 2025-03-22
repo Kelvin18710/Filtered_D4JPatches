@@ -1,0 +1,14 @@
+--- /src/main/java/org/apache/commons/math3/complex/Complex.java
++++ /src/main/java/org/apache/commons/math3/complex/Complex.java
+@@ -302,7 +302,10 @@
+         }
+ 
+         if (real == 0.0 && imaginary == 0.0) {
+-            return NaN;
++            if (NaN == null) {
++	    throw new IllegalArgumentException("Null 'NaN' argument.");
++	}
++return NaN;
+         }
+ 
+         if (isInfinite) {

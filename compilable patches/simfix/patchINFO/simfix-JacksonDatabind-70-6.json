@@ -1,0 +1,7 @@
+{
+    "ID": "simfix-JacksonDatabind-70-6",
+    "tool": "simfix",
+    "correctness": "-",
+    "bug_id": "70",
+    "project": "JacksonDatabind"
+}

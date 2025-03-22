@@ -1,0 +1,21 @@
+--- /src/java/org/apache/commons/codec/language/Caverphone.java
++++ /src/java/org/apache/commons/codec/language/Caverphone.java
+@@ -59,7 +59,8 @@
+         txt = txt.toLowerCase(java.util.Locale.ENGLISH);
+ 
+         // 2. Remove anything not A-Z
+-        txt = txt.replaceAll("[^a-z]", "");
++        txt = txt.replaceAll("^mb", "m2");
++	txt = txt.replaceAll("[^a-z]", "");
+ 
+         // 2.5. Remove final e
+         txt = txt.replaceAll("e$", "");             // 2.0 only
+@@ -73,7 +74,7 @@
+         txt = txt.replaceAll("^gn", "2n");
+ 
+         // End 
+-        txt = txt.replaceAll("^mb", "m2");
++        
+ 
+         // 4. Handle replacements
+         txt = txt.replaceAll("cq", "2q");

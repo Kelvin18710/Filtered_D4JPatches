@@ -1,0 +1,16 @@
+--- /src/java/org/apache/commons/codec/language/Caverphone.java
++++ /src/java/org/apache/commons/codec/language/Caverphone.java
+@@ -73,10 +73,12 @@
+         txt = txt.replaceAll("^gn", "2n");
+ 
+         // End 
+-        txt = txt.replaceAll("^mb", "m2");
++        
+ 
+         // 4. Handle replacements
+         txt = txt.replaceAll("cq", "2q");
++	txt = txt.replaceAll("^mb", "m2");
++
+         txt = txt.replaceAll("ci", "si");
+         txt = txt.replaceAll("ce", "se");
+         txt = txt.replaceAll("cy", "sy");

@@ -1,0 +1,14 @@
+--- /src/main/java/org/apache/commons/csv/CSVParser.java
++++ /src/main/java/org/apache/commons/csv/CSVParser.java
+@@ -284,9 +284,8 @@
+      * </p>
+      * @return a copy of the header map that iterates in column order.
+      */
+-    public Map<String, Integer> getHeaderMap() {
+-        return new LinkedHashMap<String, Integer>(this.headerMap);
+-    }
++public Map<String, Integer> getHeaderMap() {
++return new LinkedHashMap<String, Integer>(headerMap);    }
+ 
+     /**
+      * Returns the current record number in the input stream.

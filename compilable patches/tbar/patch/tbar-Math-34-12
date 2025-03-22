@@ -1,0 +1,17 @@
+--- /src/main/java/org/apache/commons/math3/genetics/ListPopulation.java
++++ /src/main/java/org/apache/commons/math3/genetics/ListPopulation.java
+@@ -199,13 +199,5 @@
+         return this.chromosomes.toString();
+     }
+ 
+-    /**
+-     * Returns an iterator over the unmodifiable list of chromosomes.
+-     * <p>Any call to {@link Iterator#remove()} will result in a {@link UnsupportedOperationException}.</p>
+-     *
+-     * @return chromosome iterator
+-     */
+-    public Iterator<Chromosome> iterator() {
+-        return chromosomes.iterator();
+-    }
++    
+ }

@@ -1,0 +1,20 @@
+--- /source/org/jfree/data/time/TimeSeries.java
++++ /source/org/jfree/data/time/TimeSeries.java
+@@ -915,7 +915,7 @@
+      *
+      * @throws CloneNotSupportedException if there is a cloning problem.
+      */
+-    public TimeSeries createCopy(RegularTimePeriod start, RegularTimePeriod end)
++public TimeSeries createCopy(RegularTimePeriod start, RegularTimePeriod end)
+         throws CloneNotSupportedException {
+ 
+         if (start == null) {
+@@ -941,7 +941,7 @@
+             endIndex = -(endIndex + 1); // this is first item AFTER end period
+             endIndex = endIndex - 1;    // so this is last item BEFORE end
+         }
+-        if (endIndex < 0) {
++if((endIndex == endIndex)){
+             emptyRange = true;
+         }
+         if (emptyRange) {

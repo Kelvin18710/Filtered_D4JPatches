@@ -1,0 +1,18 @@
+--- /src/java/org/apache/commons/codec/binary/Base64.java
++++ /src/java/org/apache/commons/codec/binary/Base64.java
+@@ -443,10 +443,11 @@
+                     }
+                     break;
+             }
+-            if (lineLength > 0) {
+-                System.arraycopy(lineSeparator, 0, buf, pos, lineSeparator.length);
+-                pos += lineSeparator.length;
+-            }
++System.arraycopy(lineSeparator,0,this.lineSeparator,0,lineSeparator.length);
++if(lineLength>0){
++System.arraycopy(lineSeparator,0,buf,pos,lineSeparator.length);
++pos+=lineSeparator.length;
++}
+         } else {
+             for (int i = 0; i < inAvail; i++) {
+                 if (buf == null || buf.length - pos < encodeSize) {

@@ -1,0 +1,7 @@
+{
+    "ID": "simfix-JacksonCore-25-35",
+    "tool": "simfix",
+    "correctness": "-",
+    "bug_id": "25",
+    "project": "JacksonCore"
+}

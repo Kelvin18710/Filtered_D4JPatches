@@ -1,0 +1,20 @@
+--- /src/com/google/javascript/jscomp/TypedScopeCreator.java
++++ /src/com/google/javascript/jscomp/TypedScopeCreator.java
+@@ -1984,7 +1984,7 @@
+       }
+     }
+ 
+-    @Override public void visit(NodeTraversal t, Node n, Node parent) {
++@Override public void visit(NodeTraversal t, Node n, Node parent) {
+       if (t.inGlobalScope()) {
+         return;
+       }
+@@ -1993,7 +1993,7 @@
+         data.get(t.getScopeRoot()).recordNonEmptyReturn();
+       }
+ 
+-      if (t.getScopeDepth() <= 2) {
++if((n.isGetProp() && n.isUnscopedQualifiedName())){
+         // The first-order function analyzer looks at two types of variables:
+         //
+         // 1) Local variables that are assigned in inner scopes ("escaped vars")

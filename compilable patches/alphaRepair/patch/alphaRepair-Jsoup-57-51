@@ -1,0 +1,12 @@
+--- /src/main/java/org/jsoup/nodes/Attributes.java
++++ /src/main/java/org/jsoup/nodes/Attributes.java
+@@ -123,6 +123,9 @@
+             String attrKey = it.next();
+             if (attrKey.equalsIgnoreCase(key))
+                 attributes.remove(attrKey);
++            else {
++                it.remove();
++            }
+         }
+     }
+ 

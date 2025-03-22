@@ -1,0 +1,23 @@
+--- /src/main/java/com/fasterxml/jackson/databind/deser/BeanDeserializer.java
++++ /src/main/java/com/fasterxml/jackson/databind/deser/BeanDeserializer.java
+@@ -805,11 +805,15 @@
+                             continue; // never gets here
+                         }
+                         // if so, need to copy all remaining tokens into buffer
+-                        while (t == JsonToken.FIELD_NAME) {
+-                            p.nextToken(); // to skip name
+-                            tokens.copyCurrentStructure(p);
+-                            t = p.nextToken();
+-                        }
++p.nextToken();
++if(p.nextToken()!=JsonToken.END_OBJECT){
++throw JsonMappingException.from(p,"Current token not END_OBJECT (to match wrapper object with root name \'"+propName);
++}
++while(t==JsonToken.FIELD_NAME){
++p.nextToken();
++tokens.copyCurrentStructure(p);
++t=p.nextToken();
++}
+                         if (bean.getClass() != _beanType.getRawClass()) {
+                             // !!! 08-Jul-2011, tatu: Could theoretically support; but for now
+                             //   it's too complicated, so bail out

@@ -1,0 +1,14 @@
+--- /src/main/java/org/jsoup/nodes/Entities.java
++++ /src/main/java/org/jsoup/nodes/Entities.java
+@@ -112,7 +112,10 @@
+                         accum.append("&amp;");
+                         break;
+                     case 0xA0:
+-                        if (escapeMode != EscapeMode.xhtml)
++                        if (EscapeMode.xhtml == null) {
++	    return;
++	}
++if (escapeMode != EscapeMode.xhtml)
+                             accum.append("&nbsp;");
+                         else
+                             accum.append(c);

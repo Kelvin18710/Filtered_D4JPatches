@@ -1,0 +1,17 @@
+--- /source/org/jfree/chart/plot/MultiplePiePlot.java
++++ /source/org/jfree/chart/plot/MultiplePiePlot.java
+@@ -142,11 +142,13 @@
+      */
+     public MultiplePiePlot(CategoryDataset dataset) {
+         super();
+-        this.dataset = dataset;
++        
+         PiePlot piePlot = new PiePlot(null);
+         this.pieChart = new JFreeChart(piePlot);
+         this.pieChart.removeLegend();
+         this.dataExtractOrder = TableOrder.BY_COLUMN;
++	this.dataset = dataset;
++
+         this.pieChart.setBackgroundPaint(null);
+         TextTitle seriesTitle = new TextTitle("Series Title",
+                 new Font("SansSerif", Font.BOLD, 12));

@@ -1,0 +1,18 @@
+--- /src/main/java/org/jsoup/parser/CharacterReader.java
++++ /src/main/java/org/jsoup/parser/CharacterReader.java
+@@ -88,11 +88,10 @@
+                 while(++offset < length && startChar != input[offset]);
+             int i = offset + 1;
+             int last = i + seq.length()-1;
+-            if (offset < length) {
+-                for (int j = 1; i < last && seq.charAt(j) == input[i]; i++, j++);
+-                if (i == last) // found full sequence
+-                    return offset - pos;
+-            }
++if(pos<length){
++for(int j=1;i<last&&seq.charAt(j)==input[i];i++,j++)
++if(i==last)return offset-pos;
++}
+         }
+         return -1;
+     }

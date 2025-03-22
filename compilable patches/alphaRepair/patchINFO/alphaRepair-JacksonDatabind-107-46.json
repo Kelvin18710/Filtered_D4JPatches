@@ -1,0 +1,7 @@
+{
+    "ID": "alphaRepair-JacksonDatabind-107-46",
+    "tool": "alphaRepair",
+    "correctness": "-",
+    "bug_id": "107",
+    "project": "JacksonDatabind"
+}

@@ -1,0 +1,10 @@
+--- /src/com/google/javascript/jscomp/ProcessClosurePrimitives.java
++++ /src/com/google/javascript/jscomp/ProcessClosurePrimitives.java
+@@ -787,6 +787,7 @@
+           // In this case, the name was implicitly provided by two independent
+           // modules. We need to move this code up to a common module.
+           int indexOfDot = namespace.indexOf('.');
++          Preconditions.checkArgument(indexOfDot >= 0, namespace);
+           if (indexOfDot == -1) {
+             // Any old place is fine.
+             compiler.getNodeForCodeInsertion(minimumModule)

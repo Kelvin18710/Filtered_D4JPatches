@@ -1,0 +1,19 @@
+--- /src/com/google/javascript/jscomp/CodeGenerator.java
++++ /src/com/google/javascript/jscomp/CodeGenerator.java
+@@ -1012,8 +1012,14 @@
+     for (int i = 0; i < s.length(); i++) {
+       char c = s.charAt(i);
+       switch (c) {
+-        case '\0': sb.append("\\0"); break;
+-        case '\n': sb.append("\\n"); break;
++case '{' :
++
++case '\0' :
++sb.append("\\0");
++break;
++
++case '\n' :
++
+         case '\r': sb.append("\\r"); break;
+         case '\t': sb.append("\\t"); break;
+         case '\\': sb.append(backslashEscape); break;

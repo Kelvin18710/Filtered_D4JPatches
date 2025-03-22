@@ -1,0 +1,7 @@
+{
+    "ID": "alphaRepair-Mockito-8-89",
+    "tool": "alphaRepair",
+    "correctness": "-",
+    "bug_id": "8",
+    "project": "Mockito"
+}

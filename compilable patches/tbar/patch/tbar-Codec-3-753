@@ -1,0 +1,10 @@
+--- /src/java/org/apache/commons/codec/language/DoubleMetaphone.java
++++ /src/java/org/apache/commons/codec/language/DoubleMetaphone.java
+@@ -457,6 +457,7 @@
+             } else {
+                 result.append('J', 'K');
+             }
++	setMaxCodeLen(index);
+             index += 2;
+         } else if (charAt(value, index + 1) == 'G') {
+             index += 2;

@@ -1,0 +1,15 @@
+--- /source/org/jfree/data/time/TimeSeries.java
++++ /source/org/jfree/data/time/TimeSeries.java
+@@ -941,9 +941,9 @@
+             endIndex = -(endIndex + 1); // this is first item AFTER end period
+             endIndex = endIndex - 1;    // so this is last item BEFORE end
+         }
+-        if (endIndex < 0) {
+-            emptyRange = true;
+-        }
++if(startIndex<0){
++emptyRange=true;
++}
+         if (emptyRange) {
+             TimeSeries copy = (TimeSeries) super.clone();
+             copy.data = new java.util.ArrayList();

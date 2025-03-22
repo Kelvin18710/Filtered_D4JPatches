@@ -1,0 +1,17 @@
+--- /src/com/google/javascript/jscomp/Compiler.java
++++ /src/com/google/javascript/jscomp/Compiler.java
+@@ -1289,9 +1289,11 @@
+         for (CompilerInput input : inputs) {
+           // Forward-declare all the provided types, so that they
+           // are not flagged even if they are dropped from the process.
+-          for (String provide : input.getProvides()) {
+-            getTypeRegistry().forwardDeclareType(provide);
+-          }
++initCompilerOptionsIfTesting();
++putCompilerInput(input.getInputId(),input);
++for(String provide : input.getProvides()){
++getTypeRegistry().forwardDeclareType(provide);
++}
+         }
+ 
+         try {

@@ -1,0 +1,7 @@
+{
+    "ID": "simfix-Math-57-15",
+    "tool": "simfix",
+    "correctness": "-",
+    "bug_id": "57",
+    "project": "Math"
+}

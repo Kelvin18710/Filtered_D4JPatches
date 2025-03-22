@@ -1,0 +1,13 @@
+--- /src/java/org/apache/commons/math/util/MathUtils.java
++++ /src/java/org/apache/commons/math/util/MathUtils.java
+@@ -408,8 +408,8 @@
+      * @return the greatest common divisor, never zero
+      * @since 1.1
+      */
+-    public static int gcd(int u, int v) {
+-        if (u * v == 0) {
++public static int gcd(int u, int v) {
++if((((u * v) == 0) || (v < v))){
+             return (Math.abs(u) + Math.abs(v));
+         }
+         // keep u and v negative, as negative integers range down to

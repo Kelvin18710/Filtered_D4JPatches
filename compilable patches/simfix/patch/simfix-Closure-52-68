@@ -1,0 +1,22 @@
+--- /src/com/google/javascript/jscomp/CodeGenerator.java
++++ /src/com/google/javascript/jscomp/CodeGenerator.java
+@@ -736,12 +736,13 @@
+ 
+   static boolean isSimpleNumber(String s) {
+     int len = s.length();
+-    for (int index = 0; index < len; index++) {
+-      char c = s.charAt(index);
+-      if (c < '0' || c > '9') {
+-        return false;
+-      }
+-    }
++for(int index=0;index<len;index++){
++++len;
++int c=s.charAt(index);
++if(c<'0'||c>'9'){
++return false;
++}
++}
+     return len > 0;
+   }
+ 

@@ -1,0 +1,27 @@
+--- /src/com/google/javascript/jscomp/CodeConsumer.java
++++ /src/com/google/javascript/jscomp/CodeConsumer.java
+@@ -237,13 +237,13 @@
+     }
+   }
+ 
+-  void addNumber(double x) {
++void addNumber(double x) {
+     // This is not pretty printing. This is to prevent misparsing of x- -4 as
+     // x--4 (which is a syntax error).
+     char prev = getLastChar();
+     boolean negativeZero = isNegativeZero(x);
+-    if (x < 0 && prev == '-') {
+-      add(" ");
++if((x < 0)){
++    if (x < 0 && prev == '-') {      add(" ");
+     }
+ 
+     if ((long) x == x && !negativeZero) {
+@@ -264,6 +264,7 @@
+     } else {
+       add(String.valueOf(x));
+     }
++}
+   }
+ 
+   static boolean isNegativeZero(double x) {

@@ -1,0 +1,10 @@
+--- /src/com/google/javascript/jscomp/CollapseProperties.java
++++ /src/com/google/javascript/jscomp/CollapseProperties.java
+@@ -183,6 +183,7 @@
+           }
+         }
+       }
++	checkNamespaces();
+ 
+       // Check if {@code name} has any aliases left after the
+       // local-alias-inlining above.

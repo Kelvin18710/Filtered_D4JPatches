@@ -1,0 +1,7 @@
+{
+    "ID": "cure-JacksonDatabind-37-2",
+    "tool": "cure",
+    "correctness": "-",
+    "bug_id": "37",
+    "project": "JacksonDatabind"
+}

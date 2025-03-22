@@ -1,0 +1,7 @@
+{
+    "ID": "rewardRepair-JacksonXml-5-50",
+    "tool": "rewardRepair",
+    "correctness": "-",
+    "bug_id": "5",
+    "project": "JacksonXml"
+}

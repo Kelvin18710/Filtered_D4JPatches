@@ -1,0 +1,7 @@
+{
+    "ID": "simfix-Chart-20-37",
+    "tool": "simfix",
+    "correctness": "-",
+    "bug_id": "20",
+    "project": "Chart"
+}

@@ -1,0 +1,28 @@
+--- /src/com/google/javascript/jscomp/CodeGenerator.java
++++ /src/com/google/javascript/jscomp/CodeGenerator.java
+@@ -104,7 +104,7 @@
+     add(n, Context.OTHER);
+   }
+ 
+-  void add(Node n, Context context) {
++void add(Node n, Context context) {
+     if (!cc.continueProcessing()) {
+       return;
+     }
+@@ -282,13 +282,14 @@
+       case Token.HOOK: {
+         Preconditions.checkState(childCount == 3);
+         int p = NodeUtil.precedence(type);
+-        Context rhsContext = Context.OTHER;
+-        addExpr(first, p + 1, context);
++if(n.getFirstChild().isNumber()){
++        Context rhsContext = Context.OTHER;        addExpr(first, p + 1, context);
+         cc.addOp("?", true);
+         addExpr(first.getNext(), 1, rhsContext);
+         cc.addOp(":", true);
+         addExpr(last, 1, rhsContext);
+         break;
++}
+       }
+ 
+       case Token.REGEXP:

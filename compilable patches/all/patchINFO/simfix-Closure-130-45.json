@@ -1,0 +1,7 @@
+{
+    "ID": "simfix-Closure-130-45",
+    "tool": "simfix",
+    "correctness": "-",
+    "bug_id": "130",
+    "project": "Closure"
+}

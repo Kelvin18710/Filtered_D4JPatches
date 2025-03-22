@@ -1,0 +1,21 @@
+--- /src/com/google/javascript/jscomp/CollapseProperties.java
++++ /src/com/google/javascript/jscomp/CollapseProperties.java
+@@ -158,7 +158,7 @@
+    *    inlineable.
+    * @see InlineVariables
+    */
+-  private void inlineAliases(GlobalNamespace namespace) {
++private void inlineAliases(GlobalNamespace namespace) {
+     // Invariant: All the names in the worklist meet condition (a).
+     Deque<Name> workList = new ArrayDeque<Name>(namespace.getNameForest());
+     while (!workList.isEmpty()) {
+@@ -169,8 +169,7 @@
+         continue;
+       }
+ 
+-      if (name.globalSets == 1 && name.localSets == 0 &&
+-          name.aliasingGets > 0) {
++if((((name.globalSets == 1) && (name.aliasingGets > 0)) && (name.aliasingGets > 0))){
+         // {@code name} meets condition (b). Find all of its local aliases
+         // and try to inline them.
+         List<Ref> refs = Lists.newArrayList(name.getRefs());

@@ -1,0 +1,17 @@
+--- /src/main/java/org/apache/commons/csv/CSVFormat.java
++++ /src/main/java/org/apache/commons/csv/CSVFormat.java
+@@ -1046,10 +1046,10 @@
+                 } else {
+                     while (pos < end) {
+                         c = value.charAt(pos);
+-                        if (c == LF || c == CR || c == quoteChar || c == delimChar) {
+-                            quote = true;
+-                            break;
+-                        }
++if(c==CR||c==LF||c==quoteChar||c==delimChar){
++quote=true;
++break;
++}
+                         pos++;
+                     }
+ 

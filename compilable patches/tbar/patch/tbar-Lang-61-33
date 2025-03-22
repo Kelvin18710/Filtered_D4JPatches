@@ -1,0 +1,10 @@
+--- /src/java/org/apache/commons/lang/text/StrBuilder.java
++++ /src/java/org/apache/commons/lang/text/StrBuilder.java
+@@ -1774,6 +1774,7 @@
+         }
+         char[] thisBuf = buffer;
+         int len = thisBuf.length - strLen;
++	validateIndex(strLen);
+         outer:
+         for (int i = startIndex; i < len; i++) {
+             for (int j = 0; j < strLen; j++) {

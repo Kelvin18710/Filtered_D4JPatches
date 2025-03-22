@@ -1,0 +1,7 @@
+{
+    "ID": "alphaRepair-Codec-3-35",
+    "tool": "alphaRepair",
+    "correctness": "-",
+    "bug_id": "3",
+    "project": "Codec"
+}

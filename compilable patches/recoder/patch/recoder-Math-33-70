@@ -1,0 +1,20 @@
+--- /src/main/java/org/apache/commons/math3/optimization/linear/SimplexTableau.java
++++ /src/main/java/org/apache/commons/math3/optimization/linear/SimplexTableau.java
+@@ -324,7 +324,7 @@
+      * Removes the phase 1 objective function, positive cost non-artificial variables,
+      * and the non-basic artificial variables from this tableau.
+      */
+-    protected void dropPhase1Objective() {
++protected void dropPhase1Objective() {
+         if (getNumObjectiveFunctions() == 1) {
+             return;
+         }
+@@ -335,7 +335,7 @@
+         // positive cost non-artificial variables
+         for (int i = getNumObjectiveFunctions(); i < getArtificialVariableOffset(); i++) {
+             final double entry = tableau.getEntry(0, i);
+-            if (Precision.compareTo(entry, 0d, maxUlps) > 0) {
++if(((Precision.compareTo(entry, 0d, maxUlps) > 0) && (entry == entry))){
+                 columnsToDrop.add(i);
+             }
+         }

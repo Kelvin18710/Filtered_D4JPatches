@@ -1,0 +1,12 @@
+--- /src/main/java/org/apache/commons/collections4/keyvalue/MultiKey.java
++++ /src/main/java/org/apache/commons/collections4/keyvalue/MultiKey.java
+@@ -274,7 +274,8 @@
+      * only stable for the same process).
+      * @return the instance with recalculated hash code
+      */
+-    private Object readResolve() {
++        public MultiKey<?> recalculateHashCode(final Object[] keys)
++    {
+         calculateHashCode(keys);
+         return this;
+     }

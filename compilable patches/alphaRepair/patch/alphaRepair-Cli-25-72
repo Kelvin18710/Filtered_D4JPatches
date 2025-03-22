@@ -1,0 +1,11 @@
+--- /src/java/org/apache/commons/cli/HelpFormatter.java
++++ /src/java/org/apache/commons/cli/HelpFormatter.java
+@@ -823,6 +823,8 @@
+         {
+             // stops infinite loop happening
+             nextLineTabStop = width - 1;
++
++            return sb;
+         }
+ 
+         // all following lines must be padded with nextLineTabStop space 

@@ -1,0 +1,34 @@
+--- /src/java/org/apache/commons/cli/HelpFormatter.java
++++ /src/java/org/apache/commons/cli/HelpFormatter.java
+@@ -806,20 +806,17 @@
+         // characters
+         final String padding = createPadding(nextLineTabStop);
+ 
+-        while (true)
+-        {
+-            text = padding + text.substring(pos).trim();
+-            pos = findWrapPos(text, width, nextLineTabStop);
+-
+-            if (pos == -1)
+-            {
+-                sb.append(text);
+-
+-                return sb;
+-            }
+-
+-            sb.append(rtrim(text.substring(0, pos))).append(defaultNewLine);
+-        }
++sb.append(" ");
++sb.append(" :: ").append(this.defaultOptPrefix);
++while(true){
++text=padding+text.substring(pos).trim();
++pos=findWrapPos(text,width,nextLineTabStop);
++if(pos==-1){
++sb.append(text);
++return sb;
++}
++sb.append(rtrim(text.substring(0,pos))).append(defaultNewLine);
++}
+     }
+ 
+     /**

@@ -1,0 +1,22 @@
+--- /src/java/org/apache/commons/codec/language/Caverphone.java
++++ /src/java/org/apache/commons/codec/language/Caverphone.java
+@@ -73,7 +73,7 @@
+         txt = txt.replaceAll("^gn", "2n");
+ 
+         // End 
+-        txt = txt.replaceAll("^mb", "m2");
++        
+ 
+         // 4. Handle replacements
+         txt = txt.replaceAll("cq", "2q");
+@@ -131,7 +131,9 @@
+ 
+         // 5. Handle removals
+         txt = txt.replaceAll("2", "");
+-        txt = txt.replaceAll("3$", "A");       // 2.0 only
++        txt = txt.replaceAll("3$", "A");
++	txt = txt.replaceAll("^mb", "m2");
++       // 2.0 only
+         txt = txt.replaceAll("3", "");
+ 
+         // 6. put ten 1s on the end

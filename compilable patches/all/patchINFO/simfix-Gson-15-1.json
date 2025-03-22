@@ -1,0 +1,7 @@
+{
+    "ID": "simfix-Gson-15-1",
+    "tool": "simfix",
+    "correctness": "-",
+    "bug_id": "15",
+    "project": "Gson"
+}

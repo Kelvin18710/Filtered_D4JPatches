@@ -1,0 +1,21 @@
+--- /src/java/org/apache/commons/codec/binary/Base64.java
++++ /src/java/org/apache/commons/codec/binary/Base64.java
+@@ -658,17 +658,7 @@
+         return encodeBase64(binaryData, false);
+     }
+ 
+-    /**
+-     * Encodes binary data using the base64 algorithm into 76 character blocks separated by CRLF.
+-     *
+-     * @param binaryData
+-     *            binary data to encode
+-     * @return String containing Base64 characters.
+-     * @since 1.4
+-     */    
+-    public static String encodeBase64String(byte[] binaryData) {
+-        return StringUtils.newStringUtf8(encodeBase64(binaryData, true));
+-    }
++    
+     
+     /**
+      * Encodes binary data using a URL-safe variation of the base64 algorithm but does not chunk the output. The

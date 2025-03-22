@@ -1,0 +1,11 @@
+--- /src/com/google/javascript/jscomp/PeepholeOptimizationsPass.java
++++ /src/com/google/javascript/jscomp/PeepholeOptimizationsPass.java
+@@ -123,7 +123,7 @@
+     do {
+       Node c = node.getFirstChild();
+       while(c != null) {
+-        traverse(c);
++if(c.hasChildren())  {  traverse(c);  }  else  {  Preconditions.checkState(visits  <  0, "too  few  interations ");  }
+         Node next = c.getNext();
+         c = next;
+       }

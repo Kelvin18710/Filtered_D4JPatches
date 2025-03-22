@@ -1,0 +1,7 @@
+{
+    "ID": "coconut-JacksonDatabind-82-4",
+    "tool": "coconut",
+    "correctness": "-",
+    "bug_id": "82",
+    "project": "JacksonDatabind"
+}

@@ -1,0 +1,32 @@
+--- /src/main/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java
++++ /src/main/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java
+@@ -1960,13 +1960,7 @@
+             }
+             char c = _inputBuffer[_inputPtr];
+             int i = (int) c;
+-            if (i <= maxCode) {
+-                if (codes[i] != 0) {
+-                    break;
+-                }
+-            } else if (!Character.isJavaIdentifierPart(c)) {
+-                break;
+-            }
++            
+             ++_inputPtr;
+             hash = (hash * CharsToNameCanonicalizer.HASH_MULT) + i;
+             // Ok, let's add char to output:
+@@ -1977,6 +1971,14 @@
+                 outBuf = _textBuffer.finishCurrentSegment();
+                 outPtr = 0;
+             }
++	if (i <= maxCode) {
++                if (codes[i] != 0) {
++                    break;
++                }
++            } else if (!Character.isJavaIdentifierPart(c)) {
++                break;
++            }
++
+         }
+         _textBuffer.setCurrentLength(outPtr);
+         {

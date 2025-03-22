@@ -1,0 +1,7 @@
+{
+    "ID": "tbar-JacksonDatabind-97-7",
+    "tool": "tbar",
+    "correctness": "-",
+    "bug_id": "97",
+    "project": "JacksonDatabind"
+}

@@ -1,0 +1,22 @@
+--- /src/main/java/com/fasterxml/jackson/databind/jsontype/impl/TypeDeserializerBase.java
++++ /src/main/java/com/fasterxml/jackson/databind/jsontype/impl/TypeDeserializerBase.java
+@@ -143,7 +143,7 @@
+     /**********************************************************
+      */
+ 
+-    protected final JsonDeserializer<Object> _findDeserializer(DeserializationContext ctxt,
++protected final JsonDeserializer<Object> _findDeserializer(DeserializationContext ctxt,
+             String typeId) throws IOException
+     {
+         JsonDeserializer<Object> deser = _deserializers.get(typeId);
+@@ -162,8 +162,8 @@
+                     JavaType actual = _handleUnknownTypeId(ctxt, typeId);
+                     if (actual == null) { // what should this be taken to mean?
+                         // 17-Jan-2019, tatu: As per [databind#2221], better NOT return `null` but...
+-                        return null;
+-                    }
++_deserializers.put(typeId, deser);
++                        return null;                    }
+                     // ... would this actually work?
+                     deser = ctxt.findContextualValueDeserializer(actual, _property);
+                 }

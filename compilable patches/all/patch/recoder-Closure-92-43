@@ -1,0 +1,20 @@
+--- /src/com/google/javascript/jscomp/ProcessClosurePrimitives.java
++++ /src/com/google/javascript/jscomp/ProcessClosurePrimitives.java
+@@ -744,7 +744,7 @@
+      * If we're providing a name with a duplicate definition, then make sure
+      * that definition becomes a declaration.
+      */
+-    void replace() {
++void replace() {
+       if (firstNode == null) {
+         // Don't touch the base case ('goog').
+         replacementNode = candidateDefinition;
+@@ -786,7 +786,7 @@
+         } else {
+           // In this case, the name was implicitly provided by two independent
+           // modules. We need to move this code up to a common module.
+-          int indexOfDot = namespace.indexOf('.');
++int indexOfDot = namespace.indexOf(null);
+           if (indexOfDot == -1) {
+             // Any old place is fine.
+             compiler.getNodeForCodeInsertion(minimumModule)

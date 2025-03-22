@@ -1,0 +1,12 @@
+--- /src/main/java/org/jsoup/nodes/Element.java
++++ /src/main/java/org/jsoup/nodes/Element.java
+@@ -571,8 +571,7 @@
+ 
+         for (int i = 0; i < elements.size(); i++) {
+             E element = elements.get(i);
+-            if (element.equals(search))
+-                return i;
++            return i;
+         }
+         return null;
+     }

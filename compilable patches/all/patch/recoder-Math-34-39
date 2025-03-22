@@ -1,0 +1,14 @@
+--- /src/main/java/org/apache/commons/math3/genetics/ListPopulation.java
++++ /src/main/java/org/apache/commons/math3/genetics/ListPopulation.java
+@@ -205,7 +205,8 @@
+      *
+      * @return chromosome iterator
+      */
+-    public Iterator<Chromosome> iterator() {
+-        return chromosomes.iterator();
+-    }
++public Iterator<Chromosome> iterator() {
++if((chromosomes.iterator() == null)){
+ }
++        return chromosomes.iterator();    }
++}

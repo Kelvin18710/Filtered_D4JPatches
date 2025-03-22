@@ -1,0 +1,20 @@
+--- /src/main/java/com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java
++++ /src/main/java/com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java
+@@ -469,7 +469,7 @@
+      * Note: designed to be overridable, and effort is made to keep interface
+      * similar between versions.
+      */
+-    protected void addBeanProps(DeserializationContext ctxt,
++protected void addBeanProps(DeserializationContext ctxt,
+             BeanDescription beanDesc, BeanDeserializerBuilder builder)
+         throws JsonMappingException
+     {
+@@ -492,7 +492,7 @@
+             boolean ignoreAny = ignorals.getIgnoreUnknown();
+             builder.setIgnoreUnknownProperties(ignoreAny);
+             // Or explicit/implicit definitions?
+-            ignored = ignorals.getIgnored();
++ignored = ignorals.getIgnored();
+             for (String propName : ignored) {
+                 builder.addIgnorable(propName);
+             }

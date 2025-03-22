@@ -1,0 +1,7 @@
+{
+    "ID": "sequencer-Closure-18-10",
+    "tool": "sequencer",
+    "correctness": "-",
+    "bug_id": "18",
+    "project": "Closure"
+}

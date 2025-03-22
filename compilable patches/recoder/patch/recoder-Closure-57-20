@@ -1,0 +1,20 @@
+--- /src/com/google/javascript/jscomp/ClosureCodingConvention.java
++++ /src/com/google/javascript/jscomp/ClosureCodingConvention.java
+@@ -185,7 +185,7 @@
+     return extractClassNameIfGoog(node, parent, "goog.require");
+   }
+ 
+-  private static String extractClassNameIfGoog(Node node, Node parent,
++private static String extractClassNameIfGoog(Node node, Node parent,
+       String functionName){
+     String className = null;
+     if (NodeUtil.isExprCall(parent)) {
+@@ -194,7 +194,7 @@
+         String qualifiedName = callee.getQualifiedName();
+         if (functionName.equals(qualifiedName)) {
+           Node target = callee.getNext();
+-          if (target != null) {
++if(((callee != null) && (target != null))){
+             className = target.getString();
+           }
+         }

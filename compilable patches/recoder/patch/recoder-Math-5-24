@@ -1,0 +1,19 @@
+--- /src/main/java/org/apache/commons/math3/complex/Complex.java
++++ /src/main/java/org/apache/commons/math3/complex/Complex.java
+@@ -296,14 +296,13 @@
+     }
+ 
+     /** {@inheritDoc} */
+-    public Complex reciprocal() {
++public Complex reciprocal() {
+         if (isNaN) {
+             return NaN;
+         }
+ 
+         if (real == 0.0 && imaginary == 0.0) {
+-            return NaN;
+-        }
++return sin().NaN;        }
+ 
+         if (isInfinite) {
+             return ZERO;

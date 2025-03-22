@@ -1,0 +1,7 @@
+{
+    "ID": "alphaRepair-Closure-130-95",
+    "tool": "alphaRepair",
+    "correctness": "-",
+    "bug_id": "130",
+    "project": "Closure"
+}

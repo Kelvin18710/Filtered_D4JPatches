@@ -1,0 +1,7 @@
+{
+    "ID": "recoder-JacksonDatabind-46-2",
+    "tool": "recoder",
+    "correctness": "-",
+    "bug_id": "46",
+    "project": "JacksonDatabind"
+}

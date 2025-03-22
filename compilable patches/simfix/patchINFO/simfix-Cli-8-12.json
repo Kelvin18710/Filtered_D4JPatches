@@ -1,0 +1,7 @@
+{
+    "ID": "simfix-Cli-8-12",
+    "tool": "simfix",
+    "correctness": "-",
+    "bug_id": "8",
+    "project": "Cli"
+}

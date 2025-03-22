@@ -1,0 +1,22 @@
+--- /src/main/java/org/joda/time/DateTimeZone.java
++++ /src/main/java/org/joda/time/DateTimeZone.java
+@@ -877,7 +877,7 @@
+      * @param instantLocal  the millisecond instant, relative to this time zone, to get the offset for
+      * @return the millisecond offset to subtract from local time to get UTC time
+      */
+-    public int getOffsetFromLocal(long instantLocal) {
++public int getOffsetFromLocal(long instantLocal) {
+         // get the offset at instantLocal (first estimate)
+         final int offsetLocal = getOffset(instantLocal);
+         // adjust instantLocal using the estimate and recalc the offset
+@@ -897,8 +897,8 @@
+                     return offsetLocal;
+                 }
+             }
+-        } else if (offsetLocal > 0) {
+-            long prev = previousTransition(instantAdjusted);
++if(isFixed()){
++return offsetLocal;}        } else if (offsetLocal > 0) {            long prev = previousTransition(instantAdjusted);
+             if (prev < instantAdjusted) {
+                 int offsetPrev = getOffset(prev);
+                 int diff = offsetPrev - offsetLocal;

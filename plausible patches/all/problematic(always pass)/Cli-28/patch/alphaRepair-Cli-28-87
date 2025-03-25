@@ -1,0 +1,14 @@
+--- /src/java/org/apache/commons/cli/Parser.java
++++ /src/java/org/apache/commons/cli/Parser.java
+@@ -287,7 +287,10 @@
+                 {
+                     // if the value is not yes, true or 1 then don't add the
+                     // option to the CommandLine
+-                    break;
++                    break;                }
++                else
++                {
++                    opt.addValueForProcessing(value);
+                 }
+ 
+                 cmd.addOption(opt);

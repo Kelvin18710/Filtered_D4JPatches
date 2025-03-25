@@ -1,0 +1,7 @@
+{
+    "ID": "rewardRepair-JacksonCore-5-1",
+    "tool": "rewardRepair",
+    "correctness": "-",
+    "bug_id": "5",
+    "project": "JacksonCore"
+}

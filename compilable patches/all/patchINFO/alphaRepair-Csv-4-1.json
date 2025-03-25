@@ -1,7 +1,7 @@
 {
     "ID": "alphaRepair-Csv-4-1",
     "tool": "alphaRepair",
-    "correctness": "-",
+    "correctness": "incorrect",
     "bug_id": "4",
     "project": "Csv"
 }

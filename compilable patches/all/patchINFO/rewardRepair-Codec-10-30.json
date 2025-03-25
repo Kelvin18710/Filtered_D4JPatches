@@ -1,7 +1,7 @@
 {
     "ID": "rewardRepair-Codec-10-30",
     "tool": "rewardRepair",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "10",
     "project": "Codec"
 }

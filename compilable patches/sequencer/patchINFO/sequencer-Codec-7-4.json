@@ -1,7 +1,7 @@
 {
     "ID": "sequencer-Codec-7-4",
     "tool": "sequencer",
-    "correctness": "-",
+    "correctness": "incorrect",
     "bug_id": "7",
     "project": "Codec"
 }

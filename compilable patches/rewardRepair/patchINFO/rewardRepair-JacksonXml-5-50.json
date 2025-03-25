@@ -1,7 +1,7 @@
 {
     "ID": "rewardRepair-JacksonXml-5-50",
     "tool": "rewardRepair",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "5",
     "project": "JacksonXml"
 }

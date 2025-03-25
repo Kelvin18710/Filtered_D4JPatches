@@ -1,7 +1,7 @@
 {
     "ID": "tbar-Math-82-66",
     "tool": "tbar",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "82",
     "project": "Math"
 }

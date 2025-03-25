@@ -1,7 +1,7 @@
 {
     "ID": "selfapr-Lang-59-16",
     "tool": "selfapr",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "59",
     "project": "Lang"
 }

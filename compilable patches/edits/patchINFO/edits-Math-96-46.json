@@ -1,7 +1,7 @@
 {
     "ID": "edits-Math-96-46",
     "tool": "edits",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "96",
     "project": "Math"
 }

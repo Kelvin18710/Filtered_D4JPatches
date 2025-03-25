@@ -1,7 +1,7 @@
 {
     "ID": "recoder-Time-4-50",
     "tool": "recoder",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "4",
     "project": "Time"
 }

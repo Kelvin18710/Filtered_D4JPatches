@@ -1,7 +1,7 @@
 {
     "ID": "simfix-JacksonDatabind-57-5",
     "tool": "simfix",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "57",
     "project": "JacksonDatabind"
 }

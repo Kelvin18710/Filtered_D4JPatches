@@ -1,7 +1,7 @@
 {
     "ID": "coconut-Csv-1-7",
     "tool": "coconut",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "1",
     "project": "Csv"
 }

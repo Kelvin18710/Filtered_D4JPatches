@@ -1,7 +1,7 @@
 {
     "ID": "rewardRepair-Csv-11-95",
     "tool": "rewardRepair",
-    "correctness": "-",
+    "correctness": "incorrect",
     "bug_id": "11",
     "project": "Csv"
 }

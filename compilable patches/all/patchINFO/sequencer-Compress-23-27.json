@@ -1,7 +1,7 @@
 {
     "ID": "sequencer-Compress-23-27",
     "tool": "sequencer",
-    "correctness": "-",
+    "correctness": "incorrect",
     "bug_id": "23",
     "project": "Compress"
 }

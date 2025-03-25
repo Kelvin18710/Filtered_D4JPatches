@@ -1,7 +1,7 @@
 {
     "ID": "rewardRepair-Mockito-26-48",
     "tool": "rewardRepair",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "26",
     "project": "Mockito"
 }

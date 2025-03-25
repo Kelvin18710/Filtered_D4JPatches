@@ -1,7 +1,7 @@
 {
     "ID": "tbar-Lang-26-44",
     "tool": "tbar",
-    "correctness": "-",
+    "correctness": "correct",
     "bug_id": "26",
     "project": "Lang"
 }

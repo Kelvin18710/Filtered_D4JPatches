@@ -1,7 +1,7 @@
 {
     "ID": "selfapr-Csv-11-31",
     "tool": "selfapr",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "11",
     "project": "Csv"
 }

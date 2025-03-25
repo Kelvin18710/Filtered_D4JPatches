@@ -1,7 +1,7 @@
 {
     "ID": "tbar-Gson-13-888",
     "tool": "tbar",
-    "correctness": "-",
+    "correctness": "incorrect",
     "bug_id": "13",
     "project": "Gson"
 }

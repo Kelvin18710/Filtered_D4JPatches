@@ -1,7 +1,7 @@
 {
     "ID": "cure-Lang-24-1",
     "tool": "cure",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "24",
     "project": "Lang"
 }

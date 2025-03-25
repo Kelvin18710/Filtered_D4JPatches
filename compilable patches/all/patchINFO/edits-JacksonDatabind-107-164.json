@@ -1,7 +1,7 @@
 {
     "ID": "edits-JacksonDatabind-107-164",
     "tool": "edits",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "107",
     "project": "JacksonDatabind"
 }

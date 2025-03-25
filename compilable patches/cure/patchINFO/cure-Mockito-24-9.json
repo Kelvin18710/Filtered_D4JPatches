@@ -1,7 +1,7 @@
 {
     "ID": "cure-Mockito-24-9",
     "tool": "cure",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "24",
     "project": "Mockito"
 }

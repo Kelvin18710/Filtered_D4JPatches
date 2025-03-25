@@ -1,7 +1,7 @@
 {
     "ID": "edits-Codec-10-138",
     "tool": "edits",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "10",
     "project": "Codec"
 }

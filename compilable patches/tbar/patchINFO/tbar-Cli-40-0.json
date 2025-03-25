@@ -1,7 +1,7 @@
 {
     "ID": "tbar-Cli-40-0",
     "tool": "tbar",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "40",
     "project": "Cli"
 }

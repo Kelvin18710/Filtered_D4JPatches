@@ -1,7 +1,7 @@
 {
     "ID": "sequencer-Math-41-14",
     "tool": "sequencer",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "41",
     "project": "Math"
 }

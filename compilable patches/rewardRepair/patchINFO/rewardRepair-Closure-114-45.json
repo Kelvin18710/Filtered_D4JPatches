@@ -1,7 +1,7 @@
 {
     "ID": "rewardRepair-Closure-114-45",
     "tool": "rewardRepair",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "114",
     "project": "Closure"
 }

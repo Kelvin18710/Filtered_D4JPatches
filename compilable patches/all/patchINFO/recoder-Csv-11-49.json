@@ -1,7 +1,7 @@
 {
     "ID": "recoder-Csv-11-49",
     "tool": "recoder",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "11",
     "project": "Csv"
 }

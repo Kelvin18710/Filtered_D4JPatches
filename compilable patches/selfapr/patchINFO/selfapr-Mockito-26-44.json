@@ -1,7 +1,7 @@
 {
     "ID": "selfapr-Mockito-26-44",
     "tool": "selfapr",
-    "correctness": "-",
+    "correctness": "correct",
     "bug_id": "26",
     "project": "Mockito"
 }

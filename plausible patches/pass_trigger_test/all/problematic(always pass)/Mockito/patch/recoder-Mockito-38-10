@@ -1,0 +1,12 @@
+--- /src/org/mockito/internal/verification/argumentmatching/ArgumentMatchingTool.java
++++ /src/org/mockito/internal/verification/argumentmatching/ArgumentMatchingTool.java
+@@ -44,7 +44,6 @@
+         }
+     }
+ 
+-    private boolean toStringEquals(Matcher m, Object arg) {
+-        return StringDescription.toString(m).equals(arg.toString());
+-    }
++private boolean toStringEquals(Matcher m, Object arg) {
++return StringDescription.toString(m).equals((Object)arg);    }
+ }

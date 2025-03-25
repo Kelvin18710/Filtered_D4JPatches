@@ -1,7 +1,7 @@
 {
     "ID": "alphaRepair-Chart-13-27",
     "tool": "alphaRepair",
-    "correctness": "-",
+    "correctness": "incorrect",
     "bug_id": "13",
     "project": "Chart"
 }

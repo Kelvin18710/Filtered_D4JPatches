@@ -1,7 +1,7 @@
 {
     "ID": "sequencer-Codec-18-56",
     "tool": "sequencer",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "18",
     "project": "Codec"
 }

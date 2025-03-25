@@ -1,7 +1,7 @@
 {
     "ID": "selfapr-Closure-92-66",
     "tool": "selfapr",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "92",
     "project": "Closure"
 }

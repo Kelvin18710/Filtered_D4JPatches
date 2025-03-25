@@ -1,7 +1,7 @@
 {
     "ID": "cure-JacksonXml-5-2",
     "tool": "cure",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "5",
     "project": "JacksonXml"
 }

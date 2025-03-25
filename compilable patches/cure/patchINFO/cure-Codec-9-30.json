@@ -1,7 +1,7 @@
 {
     "ID": "cure-Codec-9-30",
     "tool": "cure",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "9",
     "project": "Codec"
 }

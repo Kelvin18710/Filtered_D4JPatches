@@ -1,7 +1,7 @@
 {
     "ID": "cure-Closure-92-25",
     "tool": "cure",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "92",
     "project": "Closure"
 }

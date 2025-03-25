@@ -1,7 +1,7 @@
 {
     "ID": "alphaRepair-Lang-59-21",
     "tool": "alphaRepair",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "59",
     "project": "Lang"
 }

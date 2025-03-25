@@ -1,7 +1,7 @@
 {
     "ID": "coconut-Jsoup-86-48",
     "tool": "coconut",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "86",
     "project": "Jsoup"
 }

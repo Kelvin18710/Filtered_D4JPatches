@@ -1,7 +1,7 @@
 {
     "ID": "sequencer-JacksonDatabind-70-13",
     "tool": "sequencer",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "70",
     "project": "JacksonDatabind"
 }

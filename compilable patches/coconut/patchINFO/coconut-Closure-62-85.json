@@ -1,7 +1,7 @@
 {
     "ID": "coconut-Closure-62-85",
     "tool": "coconut",
-    "correctness": "-",
+    "correctness": "incorrect",
     "bug_id": "62",
     "project": "Closure"
 }

@@ -1,7 +1,7 @@
 {
     "ID": "rewardRepair-Jsoup-62-99",
     "tool": "rewardRepair",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "62",
     "project": "Jsoup"
 }

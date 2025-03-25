@@ -1,0 +1,15 @@
+--- /src/java/org/apache/commons/jxpath/ri/compiler/CoreOperationRelationalExpression.java
++++ /src/java/org/apache/commons/jxpath/ri/compiler/CoreOperationRelationalExpression.java
+@@ -38,10 +38,8 @@
+         super(args);
+     }
+ 
+-    public final Object computeValue(EvalContext context) {
+-        return compute(args[0].computeValue(context), args[1].computeValue(context)) 
+-                ? Boolean.TRUE : Boolean.FALSE;
+-    }
++public final Object computeValue(EvalContext context) {
++return ((args[1] == null))?Boolean.TRUE:Boolean.FALSE;    }
+ 
+     protected final int getPrecedence() {
+         return 3;

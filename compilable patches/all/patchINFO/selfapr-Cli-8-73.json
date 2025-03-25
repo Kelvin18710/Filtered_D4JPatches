@@ -1,7 +1,7 @@
 {
     "ID": "selfapr-Cli-8-73",
     "tool": "selfapr",
-    "correctness": "-",
+    "correctness": "incorrect",
     "bug_id": "8",
     "project": "Cli"
 }

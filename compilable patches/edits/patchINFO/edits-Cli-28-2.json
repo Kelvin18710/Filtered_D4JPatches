@@ -1,7 +1,7 @@
 {
     "ID": "edits-Cli-28-2",
     "tool": "edits",
-    "correctness": "-",
+    "correctness": "correct",
     "bug_id": "28",
     "project": "Cli"
 }

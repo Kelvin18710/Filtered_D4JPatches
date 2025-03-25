@@ -1,7 +1,7 @@
 {
     "ID": "cure-Cli-28-31",
     "tool": "cure",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "28",
     "project": "Cli"
 }

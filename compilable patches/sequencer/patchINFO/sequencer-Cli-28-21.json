@@ -1,7 +1,7 @@
 {
     "ID": "sequencer-Cli-28-21",
     "tool": "sequencer",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "28",
     "project": "Cli"
 }

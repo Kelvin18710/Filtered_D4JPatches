@@ -1,7 +1,7 @@
 {
     "ID": "cure-Chart-24-18",
     "tool": "cure",
-    "correctness": "-",
+    "correctness": "incorrect",
     "bug_id": "24",
     "project": "Chart"
 }

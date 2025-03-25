@@ -1,7 +1,7 @@
 {
     "ID": "coconut-Lang-29-100",
     "tool": "coconut",
-    "correctness": "-",
+    "correctness": "correct",
     "bug_id": "29",
     "project": "Lang"
 }

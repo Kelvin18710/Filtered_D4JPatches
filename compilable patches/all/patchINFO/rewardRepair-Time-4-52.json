@@ -1,7 +1,7 @@
 {
     "ID": "rewardRepair-Time-4-52",
     "tool": "rewardRepair",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "4",
     "project": "Time"
 }

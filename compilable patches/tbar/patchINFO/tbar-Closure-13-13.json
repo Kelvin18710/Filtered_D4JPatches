@@ -1,7 +1,7 @@
 {
     "ID": "tbar-Closure-13-13",
     "tool": "tbar",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "13",
     "project": "Closure"
 }

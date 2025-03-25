@@ -1,7 +1,7 @@
 {
     "ID": "rewardRepair-Cli-8-37",
     "tool": "rewardRepair",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "8",
     "project": "Cli"
 }

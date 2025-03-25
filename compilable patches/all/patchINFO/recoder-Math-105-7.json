@@ -1,7 +1,7 @@
 {
     "ID": "recoder-Math-105-7",
     "tool": "recoder",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "105",
     "project": "Math"
 }

@@ -1,7 +1,7 @@
 {
     "ID": "selfapr-Collections-26-44",
     "tool": "selfapr",
-    "correctness": "-",
+    "correctness": "incorrect",
     "bug_id": "26",
     "project": "Collections"
 }

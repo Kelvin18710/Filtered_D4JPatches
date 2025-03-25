@@ -1,7 +1,7 @@
 {
     "ID": "simfix-Gson-13-418",
     "tool": "simfix",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "13",
     "project": "Gson"
 }

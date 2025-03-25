@@ -1,7 +1,7 @@
 {
     "ID": "rewardRepair-JxPath-10-29",
     "tool": "rewardRepair",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "10",
     "project": "JxPath"
 }

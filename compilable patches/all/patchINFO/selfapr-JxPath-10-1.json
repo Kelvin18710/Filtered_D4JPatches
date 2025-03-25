@@ -1,7 +1,7 @@
 {
     "ID": "selfapr-JxPath-10-1",
     "tool": "selfapr",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "10",
     "project": "JxPath"
 }

@@ -1,7 +1,7 @@
 {
     "ID": "edits-JacksonXml-5-10",
     "tool": "edits",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "5",
     "project": "JacksonXml"
 }

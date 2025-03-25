@@ -1,7 +1,7 @@
 {
     "ID": "cure-JacksonCore-25-13",
     "tool": "cure",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "25",
     "project": "JacksonCore"
 }

@@ -1,0 +1,10 @@
+alphaRepair: 442
+coconut: 336
+cure: 470
+edits: 19
+recoder: 291
+rewardRepair: 747
+selfapr: 674
+sequencer: 275
+simfix: 109
+tbar: 457

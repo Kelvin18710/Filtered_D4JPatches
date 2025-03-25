@@ -1,7 +1,7 @@
 {
     "ID": "alphaRepair-Codec-7-8",
     "tool": "alphaRepair",
-    "correctness": "-",
+    "correctness": "incorrect",
     "bug_id": "7",
     "project": "Codec"
 }

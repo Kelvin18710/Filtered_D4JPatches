@@ -1,7 +1,7 @@
 {
     "ID": "sequencer-Chart-1-37",
     "tool": "sequencer",
-    "correctness": "-",
+    "correctness": "incorrect",
     "bug_id": "1",
     "project": "Chart"
 }

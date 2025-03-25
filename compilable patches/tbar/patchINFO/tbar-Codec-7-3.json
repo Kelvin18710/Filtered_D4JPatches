@@ -1,7 +1,7 @@
 {
     "ID": "tbar-Codec-7-3",
     "tool": "tbar",
-    "correctness": "-",
+    "correctness": "incorrect",
     "bug_id": "7",
     "project": "Codec"
 }

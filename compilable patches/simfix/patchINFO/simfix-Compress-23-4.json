@@ -1,7 +1,7 @@
 {
     "ID": "simfix-Compress-23-4",
     "tool": "simfix",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "23",
     "project": "Compress"
 }

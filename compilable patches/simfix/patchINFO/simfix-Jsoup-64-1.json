@@ -1,7 +1,7 @@
 {
     "ID": "simfix-Jsoup-64-1",
     "tool": "simfix",
-    "correctness": "-",
+    "correctness": "incorrect",
     "bug_id": "64",
     "project": "Jsoup"
 }

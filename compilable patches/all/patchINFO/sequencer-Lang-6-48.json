@@ -1,7 +1,7 @@
 {
     "ID": "sequencer-Lang-6-48",
     "tool": "sequencer",
-    "correctness": "-",
+    "correctness": "incorrect",
     "bug_id": "6",
     "project": "Lang"
 }

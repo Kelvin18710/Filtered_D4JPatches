@@ -1,7 +1,7 @@
 {
     "ID": "rewardRepair-JacksonDatabind-16-72",
     "tool": "rewardRepair",
-    "correctness": "-",
+    "correctness": "correct",
     "bug_id": "16",
     "project": "JacksonDatabind"
 }

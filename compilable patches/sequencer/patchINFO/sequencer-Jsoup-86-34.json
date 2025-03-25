@@ -1,7 +1,7 @@
 {
     "ID": "sequencer-Jsoup-86-34",
     "tool": "sequencer",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "86",
     "project": "Jsoup"
 }

@@ -1,7 +1,7 @@
 {
     "ID": "rewardRepair-Chart-11-1",
     "tool": "rewardRepair",
-    "correctness": "-",
+    "correctness": "correct",
     "bug_id": "11",
     "project": "Chart"
 }

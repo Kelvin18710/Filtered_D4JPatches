@@ -1,7 +1,7 @@
 {
     "ID": "recoder-Chart-8-3",
     "tool": "recoder",
-    "correctness": "-",
+    "correctness": "correct",
     "bug_id": "8",
     "project": "Chart"
 }

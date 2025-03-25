@@ -1,7 +1,7 @@
 {
     "ID": "coconut-Compress-19-85",
     "tool": "coconut",
-    "correctness": "-",
+    "correctness": "correct",
     "bug_id": "19",
     "project": "Compress"
 }

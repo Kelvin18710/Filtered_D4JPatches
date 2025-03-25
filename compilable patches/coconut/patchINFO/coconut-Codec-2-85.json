@@ -1,7 +1,7 @@
 {
     "ID": "coconut-Codec-2-85",
     "tool": "coconut",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "2",
     "project": "Codec"
 }

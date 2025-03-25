@@ -1,7 +1,7 @@
 {
     "ID": "cure-Jsoup-46-19",
     "tool": "cure",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "46",
     "project": "Jsoup"
 }

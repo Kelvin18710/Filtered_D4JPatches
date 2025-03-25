@@ -1,7 +1,7 @@
 {
     "ID": "cure-Time-19-87",
     "tool": "cure",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "19",
     "project": "Time"
 }

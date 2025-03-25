@@ -1,7 +1,7 @@
 {
     "ID": "selfapr-Jsoup-17-98",
     "tool": "selfapr",
-    "correctness": "-",
+    "correctness": "incorrect",
     "bug_id": "17",
     "project": "Jsoup"
 }

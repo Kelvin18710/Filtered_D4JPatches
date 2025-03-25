@@ -1,7 +1,7 @@
 {
     "ID": "sequencer-Gson-13-77",
     "tool": "sequencer",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "13",
     "project": "Gson"
 }

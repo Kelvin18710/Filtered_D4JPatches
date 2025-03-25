@@ -1,7 +1,7 @@
 {
     "ID": "recoder-Mockito-34-32",
     "tool": "recoder",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "34",
     "project": "Mockito"
 }

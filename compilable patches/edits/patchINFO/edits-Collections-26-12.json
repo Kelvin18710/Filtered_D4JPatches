@@ -1,7 +1,7 @@
 {
     "ID": "edits-Collections-26-12",
     "tool": "edits",
-    "correctness": "-",
+    "correctness": "incorrect",
     "bug_id": "26",
     "project": "Collections"
 }

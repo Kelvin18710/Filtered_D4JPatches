@@ -1,7 +1,7 @@
 {
     "ID": "tbar-Time-4-32",
     "tool": "tbar",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "4",
     "project": "Time"
 }

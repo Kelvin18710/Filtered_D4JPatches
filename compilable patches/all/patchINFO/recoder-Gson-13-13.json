@@ -1,7 +1,7 @@
 {
     "ID": "recoder-Gson-13-13",
     "tool": "recoder",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "13",
     "project": "Gson"
 }

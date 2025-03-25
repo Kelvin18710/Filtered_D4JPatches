@@ -1,7 +1,7 @@
 {
     "ID": "rewardRepair-Lang-61-73",
     "tool": "rewardRepair",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "61",
     "project": "Lang"
 }

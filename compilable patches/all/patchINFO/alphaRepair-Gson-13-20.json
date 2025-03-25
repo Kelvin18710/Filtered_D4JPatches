@@ -1,7 +1,7 @@
 {
     "ID": "alphaRepair-Gson-13-20",
     "tool": "alphaRepair",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "13",
     "project": "Gson"
 }

@@ -1,7 +1,7 @@
 {
     "ID": "alphaRepair-Jsoup-34-63",
     "tool": "alphaRepair",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "34",
     "project": "Jsoup"
 }

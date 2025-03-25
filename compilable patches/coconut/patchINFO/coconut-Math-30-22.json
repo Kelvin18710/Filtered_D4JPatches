@@ -1,7 +1,7 @@
 {
     "ID": "coconut-Math-30-22",
     "tool": "coconut",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "30",
     "project": "Math"
 }

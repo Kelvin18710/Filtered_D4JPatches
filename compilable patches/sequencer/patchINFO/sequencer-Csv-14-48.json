@@ -1,7 +1,7 @@
 {
     "ID": "sequencer-Csv-14-48",
     "tool": "sequencer",
-    "correctness": "-",
+    "correctness": "incorrect",
     "bug_id": "14",
     "project": "Csv"
 }

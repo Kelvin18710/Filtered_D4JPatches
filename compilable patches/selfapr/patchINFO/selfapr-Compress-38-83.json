@@ -1,7 +1,7 @@
 {
     "ID": "selfapr-Compress-38-83",
     "tool": "selfapr",
-    "correctness": "-",
+    "correctness": "incorrect",
     "bug_id": "38",
     "project": "Compress"
 }

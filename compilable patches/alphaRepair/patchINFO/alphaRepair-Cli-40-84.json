@@ -1,7 +1,7 @@
 {
     "ID": "alphaRepair-Cli-40-84",
     "tool": "alphaRepair",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "40",
     "project": "Cli"
 }

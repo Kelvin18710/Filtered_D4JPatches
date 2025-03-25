@@ -1,7 +1,7 @@
 {
     "ID": "alphaRepair-Closure-114-93",
     "tool": "alphaRepair",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "114",
     "project": "Closure"
 }

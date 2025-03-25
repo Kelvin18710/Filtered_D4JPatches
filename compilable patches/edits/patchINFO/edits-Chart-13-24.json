@@ -1,7 +1,7 @@
 {
     "ID": "edits-Chart-13-24",
     "tool": "edits",
-    "correctness": "-",
+    "correctness": "incorrect",
     "bug_id": "13",
     "project": "Chart"
 }

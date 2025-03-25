@@ -1,7 +1,0 @@
-{
-    "ID": "alphaRepair-JacksonCore-5-2",
-    "tool": "alphaRepair",
-    "correctness": "-",
-    "bug_id": "5",
-    "project": "JacksonCore"
-}

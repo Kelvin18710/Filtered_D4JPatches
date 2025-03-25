@@ -1,7 +1,7 @@
 {
     "ID": "rewardRepair-Compress-38-12",
     "tool": "rewardRepair",
-    "correctness": "-",
+    "correctness": "incorrect",
     "bug_id": "38",
     "project": "Compress"
 }

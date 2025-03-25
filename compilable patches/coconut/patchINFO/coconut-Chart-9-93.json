@@ -1,7 +1,7 @@
 {
     "ID": "coconut-Chart-9-93",
     "tool": "coconut",
-    "correctness": "-",
+    "correctness": "incorrect",
     "bug_id": "9",
     "project": "Chart"
 }

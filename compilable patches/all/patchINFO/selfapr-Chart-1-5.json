@@ -1,7 +1,7 @@
 {
     "ID": "selfapr-Chart-1-5",
     "tool": "selfapr",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "1",
     "project": "Chart"
 }

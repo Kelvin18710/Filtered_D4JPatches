@@ -1,7 +1,7 @@
 {
     "ID": "recoder-Lang-59-33",
     "tool": "recoder",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "59",
     "project": "Lang"
 }

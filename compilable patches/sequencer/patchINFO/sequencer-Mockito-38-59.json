@@ -1,7 +1,7 @@
 {
     "ID": "sequencer-Mockito-38-59",
     "tool": "sequencer",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "38",
     "project": "Mockito"
 }

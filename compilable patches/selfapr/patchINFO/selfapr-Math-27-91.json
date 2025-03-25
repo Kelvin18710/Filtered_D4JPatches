@@ -1,7 +1,7 @@
 {
     "ID": "selfapr-Math-27-91",
     "tool": "selfapr",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "27",
     "project": "Math"
 }

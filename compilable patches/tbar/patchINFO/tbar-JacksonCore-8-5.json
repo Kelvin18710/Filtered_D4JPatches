@@ -1,7 +1,7 @@
 {
     "ID": "tbar-JacksonCore-8-5",
     "tool": "tbar",
-    "correctness": "-",
+    "correctness": "incorrect",
     "bug_id": "8",
     "project": "JacksonCore"
 }

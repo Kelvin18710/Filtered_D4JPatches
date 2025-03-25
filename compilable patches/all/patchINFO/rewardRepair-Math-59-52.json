@@ -1,7 +1,7 @@
 {
     "ID": "rewardRepair-Math-59-52",
     "tool": "rewardRepair",
-    "correctness": "-",
+    "correctness": "correct",
     "bug_id": "59",
     "project": "Math"
 }

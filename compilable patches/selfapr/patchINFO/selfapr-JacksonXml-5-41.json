@@ -1,7 +1,7 @@
 {
     "ID": "selfapr-JacksonXml-5-41",
     "tool": "selfapr",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "5",
     "project": "JacksonXml"
 }

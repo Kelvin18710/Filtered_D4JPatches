@@ -1,7 +1,7 @@
 {
     "ID": "edits-JacksonCore-5-34",
     "tool": "edits",
-    "correctness": "-",
+    "correctness": "correct",
     "bug_id": "5",
     "project": "JacksonCore"
 }

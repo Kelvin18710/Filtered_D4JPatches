@@ -1,7 +1,7 @@
 {
     "ID": "selfapr-Time-19-55",
     "tool": "selfapr",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "19",
     "project": "Time"
 }

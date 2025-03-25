@@ -1,7 +1,7 @@
 {
     "ID": "cure-Csv-11-23",
     "tool": "cure",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "11",
     "project": "Csv"
 }

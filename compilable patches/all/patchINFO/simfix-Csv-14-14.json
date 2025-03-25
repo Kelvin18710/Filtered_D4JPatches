@@ -1,7 +1,7 @@
 {
     "ID": "simfix-Csv-14-14",
     "tool": "simfix",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "14",
     "project": "Csv"
 }

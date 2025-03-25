@@ -1,7 +1,7 @@
 {
     "ID": "simfix-JacksonCore-25-203",
     "tool": "simfix",
-    "correctness": "-",
+    "correctness": "incorrect",
     "bug_id": "25",
     "project": "JacksonCore"
 }

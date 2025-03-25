@@ -1,7 +1,7 @@
 {
     "ID": "selfapr-Gson-15-34",
     "tool": "selfapr",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "15",
     "project": "Gson"
 }

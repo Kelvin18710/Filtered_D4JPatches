@@ -1,7 +1,7 @@
 {
     "ID": "cure-Gson-13-25",
     "tool": "cure",
-    "correctness": "-",
+    "correctness": "incorrect",
     "bug_id": "13",
     "project": "Gson"
 }

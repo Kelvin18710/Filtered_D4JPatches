@@ -1,7 +1,7 @@
 {
     "ID": "cure-Math-80-19",
     "tool": "cure",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "80",
     "project": "Math"
 }

@@ -1,7 +1,7 @@
 {
     "ID": "recoder-JacksonCore-5-0",
     "tool": "recoder",
-    "correctness": "-",
+    "correctness": "correct",
     "bug_id": "5",
     "project": "JacksonCore"
 }

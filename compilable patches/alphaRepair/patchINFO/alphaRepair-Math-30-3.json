@@ -1,7 +1,7 @@
 {
     "ID": "alphaRepair-Math-30-3",
     "tool": "alphaRepair",
-    "correctness": "-",
+    "correctness": "correct",
     "bug_id": "30",
     "project": "Math"
 }

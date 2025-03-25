@@ -1,7 +1,7 @@
 {
     "ID": "tbar-Chart-1-9",
     "tool": "tbar",
-    "correctness": "-",
+    "correctness": "incorrect",
     "bug_id": "1",
     "project": "Chart"
 }

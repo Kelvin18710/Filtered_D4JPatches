@@ -1,7 +1,7 @@
 {
     "ID": "tbar-Csv-12-1",
     "tool": "tbar",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "12",
     "project": "Csv"
 }

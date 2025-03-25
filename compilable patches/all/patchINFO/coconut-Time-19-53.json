@@ -1,7 +1,7 @@
 {
     "ID": "coconut-Time-19-53",
     "tool": "coconut",
-    "correctness": "-",
+    "correctness": "correct",
     "bug_id": "19",
     "project": "Time"
 }

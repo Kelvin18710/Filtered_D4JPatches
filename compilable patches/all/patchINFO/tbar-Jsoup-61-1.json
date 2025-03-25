@@ -1,7 +1,7 @@
 {
     "ID": "tbar-Jsoup-61-1",
     "tool": "tbar",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "61",
     "project": "Jsoup"
 }

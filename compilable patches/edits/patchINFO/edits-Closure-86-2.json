@@ -1,7 +1,7 @@
 {
     "ID": "edits-Closure-86-2",
     "tool": "edits",
-    "correctness": "-",
+    "correctness": "correct",
     "bug_id": "86",
     "project": "Closure"
 }

@@ -1,7 +1,7 @@
 {
     "ID": "tbar-Compress-19-1",
     "tool": "tbar",
-    "correctness": "-",
+    "correctness": "correct",
     "bug_id": "19",
     "project": "Compress"
 }

@@ -1,0 +1,19 @@
+--- /src/java/org/apache/commons/cli/Parser.java
++++ /src/java/org/apache/commons/cli/Parser.java
+@@ -249,7 +249,7 @@
+      *
+      * @param properties The value properties to be processed.
+      */
+-    protected void processProperties(Properties properties)
++protected void processProperties(Properties properties)
+     {
+         if (properties == null)
+         {
+@@ -287,7 +287,6 @@
+                 {
+                     // if the value is not yes, true or 1 then don't add the
+                     // option to the CommandLine
+-                    break;
+                 }
+ 
+                 cmd.addOption(opt);

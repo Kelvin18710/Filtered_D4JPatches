@@ -1,7 +1,7 @@
 {
     "ID": "selfapr-Codec-18-29",
     "tool": "selfapr",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "18",
     "project": "Codec"
 }

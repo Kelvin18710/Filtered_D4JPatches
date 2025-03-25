@@ -1,7 +1,7 @@
 {
     "ID": "tbar-Mockito-38-27",
     "tool": "tbar",
-    "correctness": "-",
+    "correctness": "incorrect",
     "bug_id": "38",
     "project": "Mockito"
 }

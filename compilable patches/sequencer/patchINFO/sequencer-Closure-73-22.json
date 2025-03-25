@@ -1,7 +1,7 @@
 {
     "ID": "sequencer-Closure-73-22",
     "tool": "sequencer",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "73",
     "project": "Closure"
 }

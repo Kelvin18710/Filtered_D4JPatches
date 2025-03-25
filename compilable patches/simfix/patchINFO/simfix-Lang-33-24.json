@@ -1,7 +1,7 @@
 {
     "ID": "simfix-Lang-33-24",
     "tool": "simfix",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "33",
     "project": "Lang"
 }

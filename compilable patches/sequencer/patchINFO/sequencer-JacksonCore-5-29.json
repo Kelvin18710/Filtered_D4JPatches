@@ -1,7 +1,7 @@
 {
     "ID": "sequencer-JacksonCore-5-29",
     "tool": "sequencer",
-    "correctness": "-",
+    "correctness": "correct",
     "bug_id": "5",
     "project": "JacksonCore"
 }

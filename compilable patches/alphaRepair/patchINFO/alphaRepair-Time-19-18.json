@@ -1,7 +1,7 @@
 {
     "ID": "alphaRepair-Time-19-18",
     "tool": "alphaRepair",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "19",
     "project": "Time"
 }

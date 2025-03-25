@@ -1,7 +1,7 @@
 {
     "ID": "recoder-Jsoup-61-40",
     "tool": "recoder",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "61",
     "project": "Jsoup"
 }

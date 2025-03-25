@@ -1,7 +1,7 @@
 {
     "ID": "coconut-JacksonCore-25-40",
     "tool": "coconut",
-    "correctness": "-",
+    "correctness": "incorrect",
     "bug_id": "25",
     "project": "JacksonCore"
 }

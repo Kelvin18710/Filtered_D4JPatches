@@ -1,7 +1,7 @@
 {
     "ID": "simfix-JxPath-10-6",
     "tool": "simfix",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "10",
     "project": "JxPath"
 }

@@ -1,7 +1,7 @@
 {
     "ID": "alphaRepair-Compress-23-11",
     "tool": "alphaRepair",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "23",
     "project": "Compress"
 }

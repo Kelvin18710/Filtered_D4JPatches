@@ -1,7 +1,7 @@
 {
     "ID": "recoder-Codec-4-22",
     "tool": "recoder",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "4",
     "project": "Codec"
 }

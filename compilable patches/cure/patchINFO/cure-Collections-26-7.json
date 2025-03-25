@@ -1,7 +1,7 @@
 {
     "ID": "cure-Collections-26-7",
     "tool": "cure",
-    "correctness": "-",
+    "correctness": "incorrect",
     "bug_id": "26",
     "project": "Collections"
 }

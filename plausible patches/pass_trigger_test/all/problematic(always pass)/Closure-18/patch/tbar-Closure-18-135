@@ -1,0 +1,10 @@
+--- /src/com/google/javascript/jscomp/Compiler.java
++++ /src/com/google/javascript/jscomp/Compiler.java
+@@ -1317,6 +1317,7 @@
+           }
+         }
+       }
++	rebuildInputsFromModules();
+ 
+       hoistNoCompileFiles();
+ 

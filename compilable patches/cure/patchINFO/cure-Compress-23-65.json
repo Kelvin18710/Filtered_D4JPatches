@@ -1,7 +1,7 @@
 {
     "ID": "cure-Compress-23-65",
     "tool": "cure",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "23",
     "project": "Compress"
 }

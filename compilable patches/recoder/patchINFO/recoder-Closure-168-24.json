@@ -1,7 +1,7 @@
 {
     "ID": "recoder-Closure-168-24",
     "tool": "recoder",
-    "correctness": "-",
+    "correctness": "unknown",
     "bug_id": "168",
     "project": "Closure"
 }

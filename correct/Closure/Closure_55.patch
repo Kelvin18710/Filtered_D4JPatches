@@ -1,0 +1,13 @@
+--- /src/com/google/javascript/jscomp/FunctionRewriter.java
++++ /src/com/google/javascript/jscomp/FunctionRewriter.java
+@@ -114,7 +114,8 @@
+   }
+ 
+   private static boolean isReduceableFunctionExpression(Node n) {
+-    return NodeUtil.isFunctionExpression(n);
++    return NodeUtil.isFunctionExpression(n)
++        && !NodeUtil.isGetOrSetKey(n.getParent());
+   }
+ 
+   /**
+

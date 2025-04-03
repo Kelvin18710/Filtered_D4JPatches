@@ -1,0 +1,16 @@
+--- /src/java/org/apache/commons/cli/PosixParser.java
++++ /src/java/org/apache/commons/cli/PosixParser.java
+@@ -302,8 +302,9 @@
+             }
+             else
+             {
+-                tokens.add("-" + ch);
++                tokens.add(token);
++                break;
+             }
+         }
+     }
+-}
++}
+\ 文件末尾没有换行符
+

@@ -1,0 +1,18 @@
+--- /src/main/java/org/apache/commons/compress/archivers/tar/TarArchiveInputStream.java
++++ /src/main/java/org/apache/commons/compress/archivers/tar/TarArchiveInputStream.java
+@@ -195,7 +195,13 @@
+             return null;
+         }
+ 
+-        currEntry = new TarArchiveEntry(headerBuf);
++        try {
++            currEntry = new TarArchiveEntry(headerBuf);
++        } catch (IllegalArgumentException e) {
++            IOException ioe = new IOException("Error detected parsing the header");
++            ioe.initCause(e);
++            throw ioe;
++        }
+         entryOffset = 0;
+         entrySize = currEntry.getSize();
+ 
+
